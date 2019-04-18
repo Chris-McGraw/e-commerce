@@ -7,8 +7,6 @@
 
 
 :root {
-  font-size: 28px;
-
   font-size: 24px;
 }
 
@@ -48,7 +46,7 @@ ul {
 
   width: 100%;
   height: 2rem;
-  padding: 0px 40px;
+  padding: 0px $margin-main;
 
   background-color: white;
   border-bottom: 1px solid black;
@@ -60,7 +58,7 @@ ul {
 #nav-link-list-top {
   position: absolute;
   @extend %vertical-centered;
-  right: 40px;
+  right: $margin-main;
 
   width: auto;
 
@@ -96,7 +94,7 @@ ul {
 
   width: 100%;
   height: 1.25rem;
-  padding-left: 40px;
+  padding-left: $margin-main;
 
   background-color: white;
   border-bottom: 1px solid black;
@@ -120,7 +118,7 @@ ul {
 
 #search-bar-container {
   position: absolute;
-  right: 40px;
+  right: $margin-main;
 
   width: 25%;
   height: 100%;
@@ -230,14 +228,14 @@ ul {
 #category-tile-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 10px;
+  grid-column-gap: $margin-sm;
+  grid-row-gap: $margin-sm;
 
   position: relative;
 
   height: auto;
   width: 100%;
-  padding: 40px;
+  padding: $margin-main;
 
   background-color: white;
 
@@ -288,14 +286,14 @@ ul {
 #campaign-section-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: $margin-sm;
+  grid-row-gap: $margin-sm;
 
   position: relative;
 
   height: auto;
   width: 100%;
-  padding: 40px;
+  padding: $margin-main;
 
   background-color: white;
 
@@ -334,7 +332,7 @@ ul {
 
   height: auto;
   width: 100%;
-  padding: 40px;
+  padding: $margin-main;
 
   background-color: white;
 }
@@ -344,37 +342,31 @@ ul {
   align-items: center;
 
   height: auto;
-  padding: 0px 40px;
-
-  border: 1px solid black;
+  padding: 0px $margin-main;
 }
 
 #popular-item-header {
-  margin-bottom: 20px;
+  margin-bottom: $margin-sm;
 
   text-align: center;
   font-family: sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   color: black;
-
-  border: 1px solid red;
 }
 
 #popular-item-carousel-inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
+  grid-column-gap: $margin-sm;
 
   width: 100%;
   height: 6rem;
-
-  border: 1px solid red;
 }
 
 #arrow-left-icon {
   position: absolute;
-  left: 40px;
+  left: $margin-main;
 
   font-size: 1rem;
 
@@ -383,7 +375,7 @@ ul {
 
 #arrow-right-icon {
   position: absolute;
-  right: 40px;
+  right: $margin-main;
 
   font-size: 1rem;
 
@@ -408,7 +400,7 @@ ul {
 
   height: auto;
   width: 100%;
-  padding: 40px 80px;
+  padding: $margin-main $margin-lg;
 
   background-color: white;
   background-image: url("../images/shoe-urban.jpg");
@@ -428,7 +420,7 @@ ul {
 }
 
 #feature-tile-header {
-  margin-bottom: 20px;
+  margin-bottom: $margin-sm;
 
   font-family: sans-serif;
   font-size: 1.25rem;
@@ -439,7 +431,7 @@ ul {
 }
 
 #feature-button-shop {
-  margin-bottom: 10px;
+  margin-bottom: $margin-x-sm;
 }
 
 .feature-button {
@@ -474,11 +466,11 @@ ul {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 0px;
-  grid-row-gap: 20px;
+  grid-row-gap: $margin-sm;
 
   height: auto;
   width: 100%;
-  padding: 40px;
+  padding: $margin-main;
 
   background-color: black;
 }
@@ -550,14 +542,14 @@ ul {
 #footer-section-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: $margin-sm;
+  grid-row-gap: $margin-sm;
 
   position: relative;
 
   height: auto;
   width: 100%;
-  padding: 40px 80px;
+  padding: $margin-main $margin-lg;
 
   background-color: lightGray;
 }
@@ -572,7 +564,7 @@ ul {
 }
 
 .footer-tile-header {
-  margin-bottom: 20px;
+  margin-bottom: $margin-sm;
 
   font-family: sans-serif;
   font-size: 0.8rem;
@@ -581,7 +573,7 @@ ul {
 }
 
 .footer-tile-list-item {
-  margin-bottom: 10px;
+  margin-bottom: $margin-x-sm;
 
   font-size: 0.6rem;
 }
@@ -595,7 +587,7 @@ ul {
 
   height: auto;
   width: 100%;
-  padding: 20px;
+  padding: $margin-sm;
 
   text-align: center;
 
@@ -634,7 +626,7 @@ ul {
   }
 
   #footer-section-container {
-    padding: 40px;
+    padding: $margin-main;
   }
 
   .footer-tile {
