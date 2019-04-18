@@ -541,7 +541,7 @@ ul {
 
   height: auto;
   width: 100%;
-  padding: 40px;
+  padding: 40px 80px;
 
   background-color: lightGray;
 }
@@ -615,6 +615,10 @@ ul {
 
   #register-email-container {
     grid-column: span 5;
+  }
+
+  #footer-section-container {
+    padding: 40px;
   }
 
   .footer-tile {
