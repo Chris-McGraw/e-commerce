@@ -273,10 +273,10 @@ ul {
 
 #popular-item-carousel-inner {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 0.875rem;
   width: 100%;
-  height: 6rem;
+  height: 11rem;
 }
 
 #arrow-left-icon {
@@ -297,7 +297,29 @@ ul {
   grid-column: span 1;
   height: 100%;
   background-color: lightGray;
+  background-size: cover;
+  background-position: center bottom;
   border: 1px solid black;
+}
+
+#car-tile-1 {
+  background-image: url("../images/pants/men-pants-dark.jpg");
+}
+
+#car-tile-2 {
+  background-image: url("../images/pants/women-pants-tan.jpg");
+}
+
+#car-tile-3 {
+  background-image: url("../images/pants/men-pants-blue.jpg");
+}
+
+#car-tile-4 {
+  background-image: url("../images/pants/women-pants-dark.jpg");
+}
+
+#car-tile-5 {
+  background-image: url("../images/pants/men-pants-gray.jpg");
 }
 
 #feature-section-container {
