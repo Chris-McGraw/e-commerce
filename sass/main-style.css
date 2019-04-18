@@ -443,7 +443,7 @@ ul {
   height: auto;
   width: 100%;
   padding: 1.75rem 3.5rem;
-  background-color: lightGray;
+  background-color: #efefef;
 }
 
 .footer-tile {
@@ -478,7 +478,7 @@ ul {
 #copyright-text {
   font-family: sans-serif;
   font-size: 0.5rem;
-  color: white;
+  color: #efefef;
 }
 
 /* -------------------------- MEDIA QUERY <= 1000 -------------------------- */

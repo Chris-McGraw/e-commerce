@@ -574,7 +574,7 @@ ul {
   width: 100%;
   padding: $margin-main $margin-lg;
 
-  background-color: lightGray;
+  background-color: $light-gray;
 }
 
 .footer-tile {
@@ -620,7 +620,7 @@ ul {
 #copyright-text {
   font-family: sans-serif;
   font-size: 0.5rem;
-  color: white;
+  color: $light-gray;
 }
 
 
