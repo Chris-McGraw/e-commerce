@@ -328,11 +328,6 @@ ul {
 
 
 #popular-item-section-container {
-  /* display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px; */
-
   position: relative;
 
   height: auto;
@@ -344,43 +339,45 @@ ul {
 
 #popular-item-carousel {
   display: grid;
-  grid-template-columns: repeat(18, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 10px;
   align-items: center;
 
   height: 8rem;
-
-  border: 1px solid black;
+  padding: 0px 40px;
 }
 
-.carousel-arrow-container {
-  display: flex;
-  grid-column: span 1;
-  justify-content: center;
-  align-items: center;
+#popular-item-carousel-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
 
-  height: 1.75rem;
-
-  border: 1px solid black;
+  height: 6rem;
 }
 
 #arrow-left-icon {
+  position: absolute;
+  @extend %vertical-centered;
+  left: 40px;
+
   font-size: 1rem;
 
   cursor: pointer;
 }
 
 #arrow-right-icon {
+  position: absolute;
+  @extend %vertical-centered;
+  right: 40px;
+
   font-size: 1rem;
 
   cursor: pointer;
 }
 
 .carousel-tile {
-  grid-column: span 4;
+  grid-column: span 1;
 
-  height: 6rem;
+  height: 100%;
 
   background-color: lightGray;
   border: 1px solid black;
@@ -544,7 +541,7 @@ ul {
 
   height: auto;
   width: 100%;
-  padding: 40px;
+  padding: 40px 80px;
 
   background-color: lightGray;
 }
@@ -618,6 +615,10 @@ ul {
 
   #register-email-container {
     grid-column: span 5;
+  }
+
+  #footer-section-container {
+    padding: 40px;
   }
 
   .footer-tile {
