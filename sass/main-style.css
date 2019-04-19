@@ -182,7 +182,6 @@ ul {
   width: 100%;
   padding: 1.75rem;
   background-color: white;
-  border-bottom: 1px solid black;
 }
 
 .category-tile {
@@ -215,35 +214,70 @@ ul {
   background-position: center 90%; */
 }
 
+/* --------------------------- CAMPAIGN SECTION --------------------------- */
 #campaign-section-container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 0.875rem;
-  grid-row-gap: 0.875rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
   position: relative;
-  height: auto;
+  height: 14rem;
   width: 100%;
-  padding: 1.75rem;
   background-color: white;
-  border-bottom: 1px solid black;
 }
 
 .campaign-tile {
   display: flex;
-  grid-column: span 6;
+  grid-column: span 1;
   justify-content: center;
-  height: 10rem;
+  align-items: center;
+  height: 100%;
   background-color: lightGray;
-  border: 1px solid black;
+}
+
+.campaign-tile-inner {
+  position: relative;
+  top: 15%;
+  height: auto;
+  text-align: center;
+}
+
+#campaign-tile-one {
+  background-image: url("../images/shoe-graffiti-close.jpg");
+  background-size: cover;
+  background-position: center bottom;
+}
+
+#campaign-tile-two {
+  background-image: url("../images/shoe-pennyboard.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.campaign-tile-header {
+  margin-bottom: 0.875rem;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1.5px 1.5px 1px black;
 }
 
 .campaign-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  top: 6.75rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 6rem;
   height: 2rem;
-  background-color: lightGray;
-  border: 1px solid black;
+  font-family: sans-serif;
+  font-size: 0.7rem;
+  font-weight: normal;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
 }
 
 /* ------------------------- POPULAR ITEM SECTION ------------------------- */
@@ -502,7 +536,7 @@ ul {
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
   .campaign-tile {
-    grid-column: span 12;
+    grid-column: span 2;
   }
 
   #register-text {
