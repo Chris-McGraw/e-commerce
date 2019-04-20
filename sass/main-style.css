@@ -368,11 +368,12 @@ ul {
   background-image: url("../images/pants/men-pants-gray.jpg");
 }
 
+/* ---------------------------- FEATURE SECTION ---------------------------- */
 #feature-section-container {
   position: relative;
-  height: auto;
+  height: 14rem;
   width: 100%;
-  padding: 1.75rem 3.5rem;
+  padding: 0 3.5rem;
   background-color: white;
   background-image: url("../images/shoe-urban.jpg");
   background-size: cover;
@@ -382,11 +383,7 @@ ul {
 #feature-tile {
   display: flex;
   align-items: center;
-  height: 10rem;
-}
-
-#feature-tile-inner {
-  height: auto;
+  height: 100%;
 }
 
 #feature-tile-header {
@@ -535,6 +532,10 @@ ul {
 }
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
+  #campaign-section-container {
+    height: 28rem;
+  }
+
   .campaign-tile {
     grid-column: span 2;
   }
