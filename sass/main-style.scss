@@ -29,6 +29,14 @@ ul {
   list-style: none;
 }
 
+button {
+  background-image: none;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
 
 
 
@@ -471,12 +479,13 @@ ul {
 
 
 
+/* ---------------------------- FEATURE SECTION ---------------------------- */
 #feature-section-container {
   position: relative;
 
-  height: auto;
+  height: 14rem;
   width: 100%;
-  padding: $margin-main $margin-lg;
+  padding: 0 $margin-lg;
 
   background-color: white;
   background-image: url("../images/shoe-urban.jpg");
@@ -488,11 +497,7 @@ ul {
   display: flex;
   align-items: center;
 
-  height: 10rem;
-}
-
-#feature-tile-inner {
-  height: auto;
+  height: 100%;
 }
 
 #feature-tile-header {
@@ -506,7 +511,7 @@ ul {
   text-shadow: 1.5px 1.5px 1px black;
 }
 
-#feature-button-shop {
+#feature-button-top {
   margin-bottom: $margin-x-sm;
 }
 
@@ -601,10 +606,6 @@ ul {
   color: white;
 
   background-color: #224361;
-  border: none;
-  outline: none;
-
-  cursor: pointer;
 }
 
 .submit-arrow {
@@ -689,6 +690,10 @@ ul {
 
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
+  #campaign-section-container {
+    height: 28rem;
+  }
+
   .campaign-tile {
     grid-column: span 2;
   }

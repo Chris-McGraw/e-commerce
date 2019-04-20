@@ -28,6 +28,13 @@ ul {
   list-style: none;
 }
 
+button {
+  background-image: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .nav-link {
   display: inline-block;
   cursor: pointer;
@@ -368,11 +375,12 @@ ul {
   background-image: url("../images/pants/men-pants-gray.jpg");
 }
 
+/* ---------------------------- FEATURE SECTION ---------------------------- */
 #feature-section-container {
   position: relative;
-  height: auto;
+  height: 14rem;
   width: 100%;
-  padding: 1.75rem 3.5rem;
+  padding: 0 3.5rem;
   background-color: white;
   background-image: url("../images/shoe-urban.jpg");
   background-size: cover;
@@ -382,11 +390,7 @@ ul {
 #feature-tile {
   display: flex;
   align-items: center;
-  height: 10rem;
-}
-
-#feature-tile-inner {
-  height: auto;
+  height: 100%;
 }
 
 #feature-tile-header {
@@ -398,7 +402,7 @@ ul {
   text-shadow: 1.5px 1.5px 1px black;
 }
 
-#feature-button-shop {
+#feature-button-top {
   margin-bottom: 0.4375rem;
 }
 
@@ -471,9 +475,6 @@ ul {
   height: 2.4rem;
   color: white;
   background-color: #224361;
-  border: none;
-  outline: none;
-  cursor: pointer;
 }
 
 .submit-arrow {
@@ -535,6 +536,10 @@ ul {
 }
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
+  #campaign-section-container {
+    height: 28rem;
+  }
+
   .campaign-tile {
     grid-column: span 2;
   }
