@@ -293,7 +293,8 @@ button {
   height: auto;
   width: 100%;
   padding: 1.75rem;
-  background-color: #efefef;
+  /* background-color: $light-gray; */
+  background-color: red;
 }
 
 #popular-item-carousel {
@@ -356,7 +357,7 @@ button {
 }
 
 #car-tile-1 {
-  background-image: url("../images/pants/men-pants-dark.jpg");
+  background-image: url("../images/men-pants-dark.jpg");
 }
 
 #car-tile-2 {
