@@ -193,7 +193,7 @@ button {
 
 .category-tile {
   grid-column: span 4;
-  height: 8rem;
+  height: 12rem;
   border: 1px solid black;
   background-color: lightGray;
 }
@@ -210,15 +210,15 @@ button {
 }
 
 #category-tile-men {
-  /* background-image: url("../images/shoe-men.jpg");
+  background-image: url("../images/male-model-crop.png");
   background-size: cover;
-  background-position: center 90%; */
+  background-position: center;
 }
 
 #category-tile-women {
-  /* background-image: url("../images/shoe-women.jpg");
+  background-image: url("../images/female-model-crop.png");
   background-size: cover;
-  background-position: center 90%; */
+  background-position: center;
 }
 
 /* --------------------------- CAMPAIGN SECTION --------------------------- */
@@ -256,9 +256,9 @@ button {
 }
 
 #campaign-tile-two {
-  background-image: url("../images/shoe-pennyboard.jpg");
+  background-image: url("../images/shoe-blur-close.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
 }
 
 .campaign-tile-header {
