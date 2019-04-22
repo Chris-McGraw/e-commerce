@@ -294,7 +294,7 @@ button {
   width: 100%;
   padding: 1.75rem;
   /* background-color: $light-gray; */
-  background-color: red;
+  background-color: blue;
 }
 
 #popular-item-carousel {
@@ -361,19 +361,19 @@ button {
 }
 
 #car-tile-2 {
-  background-image: url("../images/pants/women-pants-tan.jpg");
+  background-image: url("https://chris-mcgraw.github.io/e-commerce/images/pants/women-pants-tan.jpg");
 }
 
 #car-tile-3 {
-  background-image: url("../images/pants/men-pants-blue.jpg");
+  background-image: url("../images/men-pants-blue.jpg");
 }
 
 #car-tile-4 {
-  background-image: url("../images/pants/women-pants-dark.jpg");
+  background-image: url("../images/women-pants-dark.jpg");
 }
 
 #car-tile-5 {
-  background-image: url("../images/pants/men-pants-gray.jpg");
+  background-image: url("../images/men-pants-gray.jpg");
 }
 
 /* ---------------------------- FEATURE SECTION ---------------------------- */
