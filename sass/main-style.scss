@@ -184,18 +184,14 @@ button {
   position: relative;
 
   width: 100%;
-  height: 11rem;
+  height: 20rem;
 
   text-align: center;
 
   background-color: lightGray;
-
-  /* background-image: url("images/shoe-cover.jpg"); */
-  /* background-image: url("../images/shoe-skateboard.jpg"); */
-
+  background-image: url("../images/shoe-pennyboard.jpg");
   background-size: cover;
-
-  background-position: center 70%;
+  background-position: center 35%;
 }
 
 #home-promotion-container {
