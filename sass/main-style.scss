@@ -229,17 +229,18 @@ button {
 
 
 
+/* --------------------------- CATEGORY SECTION --------------------------- */
 #category-tile-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: $margin-sm;
+  grid-column-gap: $margin-main;
   grid-row-gap: $margin-sm;
 
   position: relative;
 
   height: auto;
   width: 100%;
-  padding: $margin-main;
+  padding: $margin-main $margin-lg;
 
   background-color: white;
 }
@@ -247,7 +248,7 @@ button {
 .category-tile {
   grid-column: span 4;
 
-  height: 12rem;
+  height: 16rem;
 
   border: 1px solid black;
 
@@ -276,6 +277,12 @@ button {
 
 #category-tile-women {
   background-image: url("../images/female-model-crop.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#category-tile-children {
+  background-image: url("../images/child-model.jpg");
   background-size: cover;
   background-position: center;
 }
