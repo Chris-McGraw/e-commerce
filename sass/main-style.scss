@@ -4,8 +4,6 @@
 
 
 
-
-
 :root {
   font-size: 24px;
 }
@@ -39,8 +37,7 @@ button {
 
 
 
-
-
+/* -------------------------------- NAVBAR -------------------------------- */
 .nav-link {
   display: inline-block;
 
@@ -160,10 +157,6 @@ button {
   cursor: text;
 }
 
-
-
-
-
 #navbar-placeholder {
   z-index: 10;
   position: relative;
@@ -178,8 +171,7 @@ button {
 
 
 
-
-
+/* ---------------------------- BANNER SECTION ---------------------------- */
 #home-banner {
   position: relative;
 
@@ -224,8 +216,6 @@ button {
 #home-promotion-bottom {
   font-size: 0.75rem;
 }
-
-
 
 
 
@@ -285,8 +275,6 @@ button {
   background-size: cover;
   background-position: center;
 }
-
-
 
 
 
@@ -368,8 +356,6 @@ button {
   background-color: black;
   border: 1px solid white;
 }
-
-
 
 
 
@@ -478,8 +464,6 @@ button {
 
 
 
-
-
 /* ---------------------------- FEATURE SECTION ---------------------------- */
 #feature-section-container {
   position: relative;
@@ -542,8 +526,7 @@ button {
 
 
 
-
-
+/* --------------------------- REGISTER SECTION --------------------------- */
 #register-section-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -615,8 +598,7 @@ button {
 
 
 
-
-
+/* ---------------------------- FOOTER SECTION ---------------------------- */
 #footer-section-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -658,8 +640,7 @@ button {
 
 
 
-
-
+/* --------------------------- COPYRIGHT SECTION --------------------------- */
 #copyright-section-container {
   position: relative;
 

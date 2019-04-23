@@ -31,6 +31,7 @@ button {
   cursor: pointer;
 }
 
+/* -------------------------------- NAVBAR -------------------------------- */
 .nav-link {
   display: inline-block;
   cursor: pointer;
@@ -137,6 +138,7 @@ button {
   border-bottom: 1px solid red;
 }
 
+/* ---------------------------- BANNER SECTION ---------------------------- */
 #home-banner {
   position: relative;
   width: 100%;
@@ -428,6 +430,7 @@ button {
   font-size: 0.8rem;
 }
 
+/* --------------------------- REGISTER SECTION --------------------------- */
 #register-section-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -483,6 +486,7 @@ button {
   font-size: 0.8rem;
 }
 
+/* ---------------------------- FOOTER SECTION ---------------------------- */
 #footer-section-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -515,6 +519,7 @@ button {
   font-size: 0.6rem;
 }
 
+/* --------------------------- COPYRIGHT SECTION --------------------------- */
 #copyright-section-container {
   position: relative;
   height: auto;
