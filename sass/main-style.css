@@ -186,7 +186,7 @@ button {
 }
 
 #home-promotion-bottom {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 /* --------------------------- CATEGORY SECTION --------------------------- */
@@ -215,7 +215,7 @@ button {
   top: 1rem;
   left: 1rem;
   font-family: sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: white;
 }
 
@@ -333,7 +333,7 @@ button {
   margin-top: 0.875rem;
   text-align: center;
   font-family: sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: bold;
   color: black;
   /* border: 1px solid red; */
