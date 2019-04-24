@@ -44,6 +44,31 @@ button {
   cursor: pointer;
 }
 
+#navbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 50;
+  position: fixed;
+  top: 0;
+
+  width: 6.5rem;
+  height: 3.25rem;
+  padding: 0px $margin-main;
+
+  font-family: serif;
+  font-size: 1.8rem;
+  color: black;
+
+  background-color: white;
+  border-right: 1px solid $medium-gray;
+  border-bottom: 1px solid $medium-gray;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 #navbar-top {
   z-index: 30;
   position: fixed;
@@ -54,7 +79,7 @@ button {
   padding: 0px $margin-main;
 
   background-color: white;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $medium-gray;
 
   -webkit-user-select: none;
   user-select: none;
@@ -68,26 +93,26 @@ button {
   width: auto;
 
   font-family: sans-serif;
-  font-size: 0.6rem;
+  font-size: $font-sm;
   color: black;
 }
 
 .nav-link-top-margin {
-  margin-right: 0.8rem;
+  margin-right: $margin-sm;
 }
 
 #login-icon {
   position: relative;
   transform: translateY(-6%);
 
-  font-size: 0.65rem;
+  font-size: $font-icon;
 }
 
 #cart-icon {
   position: relative;
   transform: translateY(-6%);
 
-  font-size: 0.65rem;
+  font-size: $font-icon;
 }
 
 #navbar-bottom {
@@ -97,10 +122,11 @@ button {
 
   width: 100%;
   height: 2rem;
-  padding-left: $margin-main;
+
+  padding-left: $margin-sm + 6.5;
 
   background-color: white;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $medium-gray;
 
   -webkit-user-select: none;
   user-select: none;
@@ -111,12 +137,12 @@ button {
   @extend %vertical-centered;
 
   font-family: sans-serif;
-  font-size: 0.6rem;
+  font-size: $font-sm;
   color: black;
 }
 
 .nav-link-bottom-margin {
-  margin-right: 0.4rem;
+  margin-right: $margin-x-sm;
 }
 
 #search-bar-container {
@@ -125,8 +151,6 @@ button {
 
   width: 25%;
   height: 100%;
-
-  /* border: 1px solid red; */
 }
 
 #search-icon {
@@ -134,7 +158,7 @@ button {
   left: 0.2em;
   transform: translateY(40%);
 
-  font-size: 0.8rem;
+  font-size: $font-icon;
 }
 
 #search-bar {
@@ -148,7 +172,7 @@ button {
   height: 1.25rem;
   padding-left: 1.15rem;
 
-  font-size: 0.6rem;
+  font-size: $font-sm;
 
   border: none;
   border: 1px solid black;
@@ -197,24 +221,16 @@ button {
 
   font-family: sans-serif;
   color: white;
-
-  /* text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000; */
-
-  text-shadow: 1.5px 1.5px 1px black;
-
-  /* border: 1px dashed black; */
 }
 
 #home-promotion-top {
   font-size: 2rem;
+  text-shadow: 0rem 0rem 0.25rem black;
 }
 
 #home-promotion-bottom {
-  font-size: 0.75rem;
+  font-size: $font-icon;
+  text-shadow: 0rem 0.0rem 0.1rem black;
 }
 
 
@@ -252,10 +268,9 @@ button {
   left: 1rem;
 
   font-family: sans-serif;
-  font-size: 0.75rem;
+  font-size: $font-icon;
   color: white;
-
-  /* border: 1px dashed red; */
+  text-shadow: 0 0 0.1rem black;
 }
 
 #category-tile-men {
@@ -329,11 +344,10 @@ button {
   margin-bottom: $margin-sm;
 
   font-family: sans-serif;
-  font-size: 1.25rem;
+  font-size: $font-h2;
   font-weight: bold;
   color: white;
-
-  text-shadow: 1.5px 1.5px 1px black;
+  text-shadow: 0 0 0.15rem black;
 }
 
 .campaign-button {
@@ -383,7 +397,7 @@ button {
 
   text-align: center;
   font-family: sans-serif;
-  font-size: 1.25rem;
+  font-size: $font-h2;
   font-weight: bold;
   color: black;
 
@@ -395,7 +409,7 @@ button {
 
   text-align: center;
   font-family: sans-serif;
-  font-size: 0.75rem;
+  font-size: $font-icon;
   font-weight: bold;
   color: black;
 
@@ -489,11 +503,10 @@ button {
   margin-bottom: $margin-sm;
 
   font-family: sans-serif;
-  font-size: 1.25rem;
+  font-size: $font-h2;
   font-weight: bold;
   color: white;
-
-  text-shadow: 1.5px 1.5px 1px black;
+  text-shadow: 0 0 0.15rem black;
 }
 
 #feature-button-top {
@@ -521,7 +534,7 @@ button {
 
 .button-arrow {
   margin-left: 0.4rem;
-  font-size: 0.8rem;
+  font-size: $font-icon;
 }
 
 
@@ -570,7 +583,7 @@ button {
   padding-left: 1.15rem;
   padding-right: 3.55rem;
 
-  font-size: 0.8rem;
+  font-size: $font-icon;
   font-weight: 200;
 
   border: none;
@@ -593,7 +606,7 @@ button {
 }
 
 .submit-arrow {
-  font-size: 0.8rem;
+  font-size: $font-icon;
 }
 
 
@@ -611,7 +624,7 @@ button {
   width: 100%;
   padding: $margin-main $margin-lg;
 
-  background-color: $light-gray;
+  background-color: white;
 }
 
 .footer-tile {
@@ -627,7 +640,7 @@ button {
   margin-bottom: $margin-sm;
 
   font-family: sans-serif;
-  font-size: 0.8rem;
+  font-size: $font-icon;
   font-weight: bold;
   color: black;
 }
@@ -635,7 +648,7 @@ button {
 .footer-tile-list-item {
   margin-bottom: $margin-x-sm;
 
-  font-size: 0.6rem;
+  font-size: $font-sm;
 }
 
 
