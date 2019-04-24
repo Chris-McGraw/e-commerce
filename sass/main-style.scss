@@ -221,15 +221,16 @@ button {
 
   font-family: sans-serif;
   color: white;
-  text-shadow: 1.5px 1.5px 1px black;
 }
 
 #home-promotion-top {
   font-size: 2rem;
+  text-shadow: 0rem 0rem 0.25rem black;
 }
 
 #home-promotion-bottom {
   font-size: $font-icon;
+  text-shadow: 0rem 0.0rem 0.1rem black;
 }
 
 
@@ -269,6 +270,7 @@ button {
   font-family: sans-serif;
   font-size: $font-icon;
   color: white;
+  text-shadow: 0 0 0.1rem black;
 }
 
 #category-tile-men {
@@ -345,7 +347,7 @@ button {
   font-size: $font-h2;
   font-weight: bold;
   color: white;
-  text-shadow: 1.5px 1.5px 1px black;
+  text-shadow: 0 0 0.15rem black;
 }
 
 .campaign-button {
@@ -504,7 +506,7 @@ button {
   font-size: $font-h2;
   font-weight: bold;
   color: white;
-  text-shadow: 1.5px 1.5px 1px black;
+  text-shadow: 0 0 0.15rem black;
 }
 
 #feature-button-top {
