@@ -206,8 +206,9 @@ button {
 .category-tile {
   grid-column: span 1;
   height: 100%;
+  background-size: cover;
+  background-position: center;
   background-color: lightGray;
-  border: 1px solid black;
 }
 
 .category-tile-title {
@@ -223,20 +224,14 @@ button {
 
 #category-tile-men {
   background-image: url("../images/male-model-crop.png");
-  background-size: cover;
-  background-position: center;
 }
 
 #category-tile-women {
   background-image: url("../images/female-model-crop.png");
-  background-size: cover;
-  background-position: center;
 }
 
 #category-tile-children {
   background-image: url("../images/child-model.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 /* --------------------------- CAMPAIGN SECTION --------------------------- */
@@ -557,6 +552,11 @@ button {
 }
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
+  #category-section-container {
+    grid-column-gap: 2px;
+    padding: 1.75rem 1.75rem;
+  }
+
   #campaign-section-container {
     height: 40rem;
   }
