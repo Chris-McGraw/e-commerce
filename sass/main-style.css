@@ -5,6 +5,7 @@
 
 :root {
   font-size: 24px;
+  font-weight: 400;
 }
 
 * {
@@ -74,8 +75,10 @@ button {
   position: absolute;
   right: 1.75rem;
   width: auto;
-  font-family: sans-serif;
-  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+  font-weight: 300;
   color: black;
 }
 
@@ -110,8 +113,10 @@ button {
 
 #nav-link-list-bottom {
   position: absolute;
-  font-family: sans-serif;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.6rem;
+  font-weight: 400;
   color: black;
 }
 
@@ -140,7 +145,9 @@ button {
   width: 100%;
   height: 1.25rem;
   padding-left: 1.15rem;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.6rem;
+  font-weight: 400;
   border: none;
   border: 1px solid black;
   outline: none;
@@ -176,17 +183,21 @@ button {
   left: 0;
   right: 0;
   margin: auto;
-  font-family: sans-serif;
   color: white;
 }
 
 #home-promotion-top {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
   font-size: 2rem;
+  font-weight: 600;
   text-shadow: 0rem 0rem 0.25rem black;
 }
 
 #home-promotion-bottom {
-  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
   text-shadow: 0rem 0rem 0.1rem black;
 }
 
@@ -216,10 +227,14 @@ button {
   position: relative;
   top: 1rem;
   left: 1rem;
-  font-family: sans-serif;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
+  font-weight: 400;
   color: white;
   text-shadow: 0 0 0.1rem black;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #category-tile-men {
@@ -276,9 +291,10 @@ button {
 
 .campaign-tile-header {
   margin-bottom: 0.875rem;
-  font-family: sans-serif;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 600;
   color: white;
   text-shadow: 0 0 0.15rem black;
 }
@@ -292,9 +308,9 @@ button {
   transform: translateX(-50%);
   width: 6rem;
   height: 2rem;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 0.7rem;
-  font-weight: normal;
+  font-weight: 300;
   color: white;
   background-color: black;
   border: 1px solid white;
@@ -319,9 +335,10 @@ button {
 #popular-item-header {
   margin-bottom: 0.875rem;
   text-align: center;
-  font-family: sans-serif;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 400;
   color: black;
   /* border: 1px solid red; */
 }
@@ -329,9 +346,9 @@ button {
 #popular-item-header-2 {
   margin-top: 0.875rem;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 300;
   color: black;
   /* border: 1px solid red; */
 }
@@ -408,9 +425,10 @@ button {
 
 #feature-tile-header {
   margin-bottom: 0.875rem;
-  font-family: sans-serif;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 600;
   color: white;
   text-shadow: 0 0 0.15rem black;
 }
@@ -426,9 +444,9 @@ button {
   position: relative;
   width: 6rem;
   height: 2rem;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 0.7rem;
-  font-weight: normal;
+  font-weight: 300;
   color: white;
   background-color: black;
   border: 1px solid white;
@@ -454,9 +472,9 @@ button {
 #register-text {
   grid-column: span 3;
   height: 2.4rem;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   color: white;
 }
 
@@ -474,8 +492,9 @@ button {
   height: 2.4rem;
   padding-left: 1.15rem;
   padding-right: 3.55rem;
+  font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
-  font-weight: 200;
+  font-weight: 300;
   border: none;
   outline: none;
   cursor: text;
@@ -511,21 +530,23 @@ button {
 .footer-tile {
   grid-column: span 1;
   height: auto;
-  font-family: sans-serif;
   color: black;
 }
 
 .footer-tile-header {
   margin-bottom: 0.875rem;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 600;
   color: black;
 }
 
 .footer-tile-list-item {
   margin-bottom: 0.4375rem;
+  padding-left: 0.2rem;
+  font-family: "Roboto", sans-serif;
   font-size: 0.6rem;
+  font-weight: 300;
 }
 
 /* --------------------------- COPYRIGHT SECTION --------------------------- */
@@ -539,8 +560,9 @@ button {
 }
 
 #copyright-text {
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.5rem;
+  font-weight: 400;
   color: white;
 }
 
@@ -563,6 +585,10 @@ button {
 
   .campaign-tile {
     grid-column: span 2;
+  }
+
+  #feature-section-container {
+    padding: 0 1.75rem;
   }
 
   #register-text {
