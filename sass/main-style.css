@@ -183,6 +183,7 @@ button {
   left: 0;
   right: 0;
   margin: auto;
+  padding: 1.75rem;
   color: white;
 }
 
@@ -471,16 +472,21 @@ button {
 
 #register-text {
   grid-column: span 3;
-  height: 2.4rem;
+  height: auto;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: white;
+  white-space: pre;
+}
+
+#register-discount {
+  color: #be332d;
 }
 
 #register-email-container {
   grid-column: span 2;
-  height: 2.4rem;
+  height: 2.5rem;
   text-align: right;
 }
 
@@ -489,7 +495,7 @@ button {
   -webkit-border-radius: 0;
   display: block;
   width: 100%;
-  height: 2.4rem;
+  height: 2.5rem;
   padding-left: 1.15rem;
   padding-right: 3.55rem;
   font-family: "Roboto", sans-serif;
@@ -503,11 +509,12 @@ button {
 #register-email-submit {
   z-index: 20;
   position: relative;
-  top: -2.4rem;
-  width: 2.4rem;
-  height: 2.4rem;
+  top: -2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   color: white;
-  background-color: #224361;
+  /* background-color: #224361; */
+  background-color: #be332d;
 }
 
 .submit-arrow {
@@ -605,6 +612,15 @@ button {
 
   .footer-tile {
     grid-column: span 3;
+  }
+}
+@media screen and (max-width: 450px) {
+  #register-text {
+    white-space: normal;
+  }
+
+  .register-text-grouped {
+    white-space: nowrap;
   }
 }
 
