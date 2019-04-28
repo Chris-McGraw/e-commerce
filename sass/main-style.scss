@@ -582,7 +582,7 @@ button {
 }
 
 #register-discount {
-  color: red;
+  color: $discount-red;
 }
 
 #register-email-container {
@@ -625,7 +625,7 @@ button {
   color: white;
 
   /* background-color: #224361; */
-  background-color: red;
+  background-color: $discount-red;
 }
 
 .submit-arrow {
