@@ -710,8 +710,30 @@ button {
   }
 }
 
+
+
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
+
+  /* #navbar-logo {
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+    border-left: 1px solid $medium-gray;
+  } */
+
+  #navbar-top {
+    height: 3.25rem;
+  }
+
+  #navbar-bottom {
+    display: none;
+  }
+
+
+
   #category-section-container {
     grid-column-gap: 2px;
 
@@ -747,6 +769,9 @@ button {
   }
 }
 
+
+
+/* -------------------------- MEDIA QUERY <= 450 -------------------------- */
 @media screen and (max-width: 450px) {
   #register-text {
     white-space: normal;
