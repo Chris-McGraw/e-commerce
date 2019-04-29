@@ -196,6 +196,7 @@ button {
 }
 
 #home-promotion-bottom {
+  padding: 0px 0.875rem;
   font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
