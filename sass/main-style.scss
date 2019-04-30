@@ -93,10 +93,10 @@ button {
 
   width: auto;
 
-  text-transform: uppercase;
   font-family: $font-stack-secondary;
   font-size: 0.5rem;
   font-weight: $font-secondary-light;
+  text-transform: uppercase;
   color: black;
 }
 
@@ -139,10 +139,10 @@ button {
   position: absolute;
   @extend %vertical-centered;
 
-  text-transform: uppercase;
   font-family: $font-stack-main;
   font-size: $font-sm;
   font-weight: $font-main-normal;
+  text-transform: uppercase;
   color: black;
 }
 
@@ -231,10 +231,10 @@ button {
 }
 
 #home-promotion-top {
-  text-transform: uppercase;
   font-family: $font-stack-main;
   font-size: 2rem;
   font-weight: $font-main-bold;
+  text-transform: uppercase;
   text-shadow: 0rem 0rem 0.25rem black;
 }
 
@@ -278,15 +278,16 @@ button {
   display: inline-block;
 
   position: relative;
-  top: 1rem;
-  left: 1rem;
+  top: $margin-sm;
+  left: $margin-sm;
 
-  text-transform: uppercase;
   font-family: $font-stack-main;
   font-size: $font-icon;
   font-weight: $font-main-normal;
-  color: white;
+  text-transform: uppercase;
   text-shadow: 0 0 0.1rem black;
+  letter-spacing: 0.2rem;
+  color: white;
 
   -webkit-user-select: none;
   user-select: none;
@@ -356,12 +357,12 @@ button {
 .campaign-tile-header {
   margin-bottom: $margin-sm;
 
-  text-transform: uppercase;
   font-family: $font-stack-main;
   font-size: $font-h2;
   font-weight: $font-main-bold;
-  color: white;
+  text-transform: uppercase;
   text-shadow: 0 0 0.15rem black;
+  color: white;
 }
 
 .campaign-button {
@@ -409,11 +410,11 @@ button {
 #popular-item-header {
   margin-bottom: $margin-sm;
 
-  text-align: center;
-  text-transform: uppercase;
   font-family: $font-stack-main;
   font-size: $font-h2;
   font-weight: $font-main-normal;
+  text-align: center;
+  text-transform: uppercase;
   color: black;
 
   /* border: 1px solid red; */
@@ -422,10 +423,10 @@ button {
 #popular-item-header-2 {
   margin-top: $margin-sm;
 
-  text-align: center;
   font-family: $font-stack-secondary;
   font-size: $font-icon;
   font-weight: $font-secondary-light;
+  text-align: center;
   color: black;
 
   /* border: 1px solid red; */
@@ -517,12 +518,12 @@ button {
 #feature-tile-header {
   margin-bottom: $margin-sm;
 
-  text-transform: uppercase;
   font-family: $font-stack-main;
   font-size: $font-h2;
   font-weight: $font-main-bold;
-  color: white;
+  text-transform: uppercase;
   text-shadow: 0 0 0.15rem black;
+  color: white;
 }
 
 #feature-button-top {
@@ -730,6 +731,14 @@ button {
 
   #navbar-bottom {
     display: none;
+  }
+
+  .category-tile-title {
+    left: $margin-x-sm;
+
+    writing-mode: tb-rl;
+    text-orientation: upright;
+    letter-spacing: normal;
   }
 
 

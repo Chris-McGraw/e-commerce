@@ -75,10 +75,10 @@ button {
   position: absolute;
   right: 1.75rem;
   width: auto;
-  text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-size: 0.5rem;
   font-weight: 300;
+  text-transform: uppercase;
   color: black;
 }
 
@@ -113,10 +113,10 @@ button {
 
 #nav-link-list-bottom {
   position: absolute;
-  text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-size: 0.6rem;
   font-weight: 400;
+  text-transform: uppercase;
   color: black;
 }
 
@@ -188,10 +188,10 @@ button {
 }
 
 #home-promotion-top {
-  text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 600;
+  text-transform: uppercase;
   text-shadow: 0rem 0rem 0.25rem black;
 }
 
@@ -227,14 +227,15 @@ button {
 .category-tile-title {
   display: inline-block;
   position: relative;
-  top: 1rem;
-  left: 1rem;
-  text-transform: uppercase;
+  top: 0.875rem;
+  left: 0.875rem;
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
-  color: white;
+  text-transform: uppercase;
   text-shadow: 0 0 0.1rem black;
+  letter-spacing: 0.2rem;
+  color: white;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -293,12 +294,12 @@ button {
 
 .campaign-tile-header {
   margin-bottom: 0.875rem;
-  text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
-  color: white;
+  text-transform: uppercase;
   text-shadow: 0 0 0.15rem black;
+  color: white;
 }
 
 .campaign-button {
@@ -336,21 +337,21 @@ button {
 
 #popular-item-header {
   margin-bottom: 0.875rem;
-  text-align: center;
-  text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
   color: black;
   /* border: 1px solid red; */
 }
 
 #popular-item-header-2 {
   margin-top: 0.875rem;
-  text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   font-weight: 300;
+  text-align: center;
   color: black;
   /* border: 1px solid red; */
 }
@@ -427,12 +428,12 @@ button {
 
 #feature-tile-header {
   margin-bottom: 0.875rem;
-  text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
-  color: white;
+  text-transform: uppercase;
   text-shadow: 0 0 0.15rem black;
+  color: white;
 }
 
 #feature-button-top {
@@ -596,6 +597,13 @@ button {
 
   #navbar-bottom {
     display: none;
+  }
+
+  .category-tile-title {
+    left: 0.4375rem;
+    writing-mode: tb-rl;
+    text-orientation: upright;
+    letter-spacing: normal;
   }
 
   #category-section-container {
