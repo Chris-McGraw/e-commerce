@@ -772,8 +772,20 @@ button {
     transition: transform 300ms ease-in-out, width 300ms ease-in-out, opacity 300ms ease-in-out; */
   }
 
-  #nav-link-list-top {;
+  #nav-link-list-top {
     right: $margin-sm;
+  }
+
+  #login-icon {
+    transform: translateY(0);
+
+    font-size: 1rem;
+  }
+
+  #cart-icon {
+    transform: translateY(0);
+
+    font-size: 1rem;
   }
 
   .nav-link {

@@ -633,6 +633,16 @@ button {
     right: 0.875rem;
   }
 
+  #login-icon {
+    transform: translateY(0);
+    font-size: 1rem;
+  }
+
+  #cart-icon {
+    transform: translateY(0);
+    font-size: 1rem;
+  }
+
   .nav-link {
     display: none;
   }
