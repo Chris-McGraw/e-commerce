@@ -86,6 +86,10 @@ button {
   user-select: none;
 }
 
+#hamburger-menu {
+  display: none;
+}
+
 #nav-link-list-top {
   position: absolute;
   @extend %vertical-centered;
@@ -98,6 +102,8 @@ button {
   font-weight: $font-secondary-light;
   text-transform: uppercase;
   color: black;
+
+  /* border: 1px dashed red; */
 }
 
 .nav-link-top-margin {
@@ -715,18 +721,58 @@ button {
 
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
-
-  /* #navbar-logo {
+  #navbar-logo {
     left: 0;
     right: 0;
 
     margin: auto;
 
-    border-left: 1px solid $medium-gray;
-  } */
+    /* border-left: 1px solid $medium-gray; */
+    border-right: none;
+  }
 
   #navbar-top {
     height: 3.25rem;
+  }
+
+  #hamburger-menu {
+    display: block;
+
+    z-index: 30;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: $margin-sm;
+
+    width: 27px;
+
+    /* cursor: pointer; */
+  }
+
+  .hamburger-bar {
+    position: relative;
+    left: 0;
+    right: 0;
+
+    width: 25px;
+    height: 2px;
+    margin: 6px auto;
+
+    color: black;
+
+    border-radius: 10px;
+    background-color: black;
+
+    /* cursor: pointer;
+    transition: transform 300ms ease-in-out, width 300ms ease-in-out, opacity 300ms ease-in-out; */
+  }
+
+  #nav-link-list-top {;
+    right: $margin-sm;
+  }
+
+  .nav-link {
+    display: none;
   }
 
   #navbar-bottom {
@@ -740,8 +786,6 @@ button {
     text-orientation: upright;
     letter-spacing: normal;
   }
-
-
 
   #category-section-container {
     grid-column-gap: 2px;
