@@ -244,8 +244,13 @@ button {
   text-shadow: 0rem 0rem 0.25rem black;
 }
 
+#promotion-text-grouped {
+  white-space: nowrap;
+}
+
 #home-promotion-bottom {
   padding: 0px $margin-sm;
+
   font-family: $font-stack-secondary;
   font-size: $font-h2;
   font-weight: $font-secondary-normal;
@@ -824,6 +829,31 @@ button {
 
 
 
+/* -------------------------- MEDIA QUERY <= 600 -------------------------- */
+@media screen and (max-width: 600px) {
+  #hamburger-menu {
+    left: $margin-x-sm;
+  }
+
+  #nav-link-list-top {;
+    right: $margin-x-sm;
+  }
+
+  #home-promotion-container {
+    padding: $margin-sm;
+  }
+
+  #home-promotion-top {
+    font-size: 1.8rem;
+  }
+
+  #home-promotion-bottom {
+    font-size: 1.125rem;
+  }
+}
+
+
+
 /* -------------------------- MEDIA QUERY <= 450 -------------------------- */
 @media screen and (max-width: 450px) {
   #register-text {
@@ -832,5 +862,14 @@ button {
 
   .register-text-grouped {
     white-space: nowrap;
+  }
+}
+
+
+
+/* -------------------------- MEDIA QUERY <= 350 -------------------------- */
+@media screen and (max-width: 350px) {
+  #promotion-text-grouped {
+    white-space: normal;
   }
 }

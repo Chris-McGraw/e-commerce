@@ -200,6 +200,10 @@ button {
   text-shadow: 0rem 0rem 0.25rem black;
 }
 
+#promotion-text-grouped {
+  white-space: nowrap;
+}
+
 #home-promotion-bottom {
   padding: 0px 0.875rem;
   font-family: "Roboto", sans-serif;
@@ -677,6 +681,28 @@ button {
     grid-column: span 3;
   }
 }
+/* -------------------------- MEDIA QUERY <= 600 -------------------------- */
+@media screen and (max-width: 600px) {
+  #hamburger-menu {
+    left: 0.4375rem;
+  }
+
+  #nav-link-list-top {
+    right: 0.4375rem;
+  }
+
+  #home-promotion-container {
+    padding: 0.875rem;
+  }
+
+  #home-promotion-top {
+    font-size: 1.8rem;
+  }
+
+  #home-promotion-bottom {
+    font-size: 1.125rem;
+  }
+}
 /* -------------------------- MEDIA QUERY <= 450 -------------------------- */
 @media screen and (max-width: 450px) {
   #register-text {
@@ -685,6 +711,12 @@ button {
 
   .register-text-grouped {
     white-space: nowrap;
+  }
+}
+/* -------------------------- MEDIA QUERY <= 350 -------------------------- */
+@media screen and (max-width: 350px) {
+  #promotion-text-grouped {
+    white-space: normal;
   }
 }
 
