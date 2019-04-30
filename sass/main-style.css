@@ -165,8 +165,8 @@ button {
   top: 0;
   width: 100%;
   height: 3.25rem;
-  background-color: yellow;
-  border-bottom: 1px solid red;
+  background-color: white;
+  border-bottom: 1px solid white;
 }
 
 /* ---------------------------- BANNER SECTION ---------------------------- */
@@ -198,6 +198,10 @@ button {
   font-weight: 600;
   text-transform: uppercase;
   text-shadow: 0rem 0rem 0.25rem black;
+}
+
+#promotion-text-grouped {
+  white-space: nowrap;
 }
 
 #home-promotion-bottom {
@@ -629,6 +633,16 @@ button {
     right: 0.875rem;
   }
 
+  #login-icon {
+    transform: translateY(0);
+    font-size: 1rem;
+  }
+
+  #cart-icon {
+    transform: translateY(0);
+    font-size: 1rem;
+  }
+
   .nav-link {
     display: none;
   }
@@ -645,7 +659,7 @@ button {
   }
 
   #category-section-container {
-    grid-column-gap: 2px;
+    grid-column-gap: 0.875rem;
     padding: 1.75rem 1.75rem;
   }
 
@@ -677,6 +691,33 @@ button {
     grid-column: span 3;
   }
 }
+/* -------------------------- MEDIA QUERY <= 600 -------------------------- */
+@media screen and (max-width: 600px) {
+  #hamburger-menu {
+    left: 0.4375rem;
+  }
+
+  #nav-link-list-top {
+    right: 0.4375rem;
+  }
+
+  #home-promotion-container {
+    padding: 0.875rem;
+  }
+
+  #home-promotion-top {
+    font-size: 1.8rem;
+  }
+
+  #home-promotion-bottom {
+    font-size: 1.125rem;
+  }
+
+  #category-section-container {
+    grid-column-gap: 2px;
+    padding: 1.75rem 0.875rem;
+  }
+}
 /* -------------------------- MEDIA QUERY <= 450 -------------------------- */
 @media screen and (max-width: 450px) {
   #register-text {
@@ -685,6 +726,12 @@ button {
 
   .register-text-grouped {
     white-space: nowrap;
+  }
+}
+/* -------------------------- MEDIA QUERY <= 350 -------------------------- */
+@media screen and (max-width: 350px) {
+  #promotion-text-grouped {
+    white-space: normal;
   }
 }
 
