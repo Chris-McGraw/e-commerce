@@ -805,7 +805,7 @@ button {
   }
 
   #category-section-container {
-    grid-column-gap: 2px;
+    grid-column-gap: $margin-sm;
 
     padding: $margin-main $margin-main;
   }
@@ -861,6 +861,12 @@ button {
 
   #home-promotion-bottom {
     font-size: 1.125rem;
+  }
+
+  #category-section-container {
+    grid-column-gap: 2px;
+
+    padding: $margin-main $margin-sm;
   }
 }
 
