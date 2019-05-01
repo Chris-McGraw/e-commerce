@@ -276,16 +276,20 @@ button {
 .campaign-tile {
   display: flex;
   grid-column: span 1;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  justify-content: flex-start;
+  height: auto;
+  padding: 0 1.75rem;
   background-color: lightGray;
 }
 
 .campaign-tile-inner {
   position: relative;
-  top: 15%;
+  top: auto;
+  bottom: 0;
+  width: 100%;
   height: auto;
+  margin-top: auto;
+  margin-bottom: 3.5rem;
   text-align: center;
 }
 
@@ -302,12 +306,20 @@ button {
 }
 
 .campaign-tile-header {
-  margin-bottom: 0.875rem;
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   text-transform: uppercase;
   text-shadow: 0 0 0.15rem black;
+  color: white;
+}
+
+.campaign-tile-sub-header {
+  margin-bottom: 0.875rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-shadow: 0 0 0.1rem black;
   color: white;
 }
 
@@ -323,6 +335,7 @@ button {
   font-family: "Roboto", sans-serif;
   font-size: 0.7rem;
   font-weight: 300;
+  text-transform: uppercase;
   color: white;
   background-color: black;
   border: 1px solid white;
