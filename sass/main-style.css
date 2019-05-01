@@ -698,10 +698,6 @@ button {
     grid-column: span 2;
   }
 
-  #feature-section-container {
-    padding: 0 1.75rem;
-  }
-
   #register-text {
     grid-column: span 5;
   }
@@ -710,24 +706,12 @@ button {
     grid-column: span 5;
   }
 
-  #footer-section-container {
-    padding: 1.75rem;
-  }
-
   .footer-tile {
     grid-column: span 3;
   }
 }
 /* -------------------------- MEDIA QUERY <= 600 -------------------------- */
 @media screen and (max-width: 600px) {
-  #hamburger-menu {
-    left: 0.4375rem;
-  }
-
-  #nav-link-list-top {
-    right: 0.4375rem;
-  }
-
   #home-promotion-container {
     padding: 0.875rem;
   }
@@ -745,8 +729,28 @@ button {
     padding: 1.75rem 0.875rem;
   }
 
+  #popular-item-carousel {
+    padding: 0px 0.875rem;
+  }
+
+  #arrow-left-icon {
+    left: 0.875rem;
+  }
+
+  #arrow-right-icon {
+    right: 0.875rem;
+  }
+
   #feature-section-container {
-    padding: 0 0.875rem;
+    padding: 0 1.75rem;
+  }
+
+  #register-section-container {
+    padding: 1.75rem 0.875rem;
+  }
+
+  #footer-section-container {
+    padding: 1.75rem;
   }
 }
 /* -------------------------- MEDIA QUERY <= 450 -------------------------- */
@@ -759,8 +763,8 @@ button {
     white-space: nowrap;
   }
 }
-/* -------------------------- MEDIA QUERY <= 366 -------------------------- */
-@media screen and (max-width: 366px) {
+/* -------------------------- MEDIA QUERY <= 401 -------------------------- */
+@media screen and (max-width: 401px) {
   #feature-tile-sub-header {
     width: 188px;
   }
