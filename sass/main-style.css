@@ -753,8 +753,8 @@ button {
     padding: 1.75rem;
   }
 }
-/* -------------------------- MEDIA QUERY <= 450 -------------------------- */
-@media screen and (max-width: 450px) {
+/* -------------------------- MEDIA QUERY <= 418 -------------------------- */
+@media screen and (max-width: 418px) {
   #register-text {
     white-space: normal;
   }
