@@ -336,19 +336,23 @@ button {
 .campaign-tile {
   display: flex;
   grid-column: span 1;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
 
-  height: 100%;
+  height: auto;
+  padding: 0 $margin-main;
 
   background-color: lightGray;
 }
 
 .campaign-tile-inner {
   position: relative;
-  top: 15%;
+  top: auto;
+  bottom: 0;
 
+  width: 100%;
   height: auto;
+  margin-top: auto;
+  margin-bottom: $margin-lg;
 
   text-align: center;
 }
@@ -366,13 +370,21 @@ button {
 }
 
 .campaign-tile-header {
-  margin-bottom: $margin-sm;
-
   font-family: $font-stack-main;
   font-size: $font-h2;
   font-weight: $font-main-bold;
   text-transform: uppercase;
   text-shadow: 0 0 0.15rem black;
+  color: white;
+}
+
+.campaign-tile-sub-header {
+  margin-bottom: $margin-sm;
+
+  font-family: $font-stack-secondary;
+  font-size: $font-icon;
+  font-weight: $font-secondary-light;
+  text-shadow: 0 0 0.1rem black;
   color: white;
 }
 
@@ -391,6 +403,7 @@ button {
   font-family: $font-stack-secondary;
   font-size: 0.7rem;
   font-weight: $font-secondary-light;
+  text-transform: uppercase;
   color: white;
 
   background-color: black;
