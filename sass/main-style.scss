@@ -397,7 +397,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
 
-  width: 6rem;
+  width: 6.5rem;
   height: 2rem;
 
   font-family: $font-stack-secondary;
@@ -540,13 +540,22 @@ button {
 }
 
 #feature-tile-header {
-  margin-bottom: $margin-sm;
-
   font-family: $font-stack-main;
   font-size: $font-h2;
   font-weight: $font-main-bold;
   text-transform: uppercase;
   text-shadow: 0 0 0.15rem black;
+  color: white;
+}
+
+#feature-tile-sub-header {
+  width: 378px;
+  margin-bottom: $margin-sm;
+
+  font-family: $font-stack-secondary;
+  font-size: $font-icon;
+  font-weight: $font-secondary-light;
+  text-shadow: 0 0 0.1rem black;
   color: white;
 }
 
@@ -561,12 +570,13 @@ button {
 
   position: relative;
 
-  width: 6rem;
+  width: 6.5rem;
   height: 2rem;
 
   font-family: $font-stack-secondary;
   font-size: 0.7rem;
   font-weight: $font-secondary-light;
+  text-transform: uppercase;
   color: white;
 
   background-color: black;
@@ -733,6 +743,10 @@ button {
   :root {
     font-size: 20px;
   }
+
+  #feature-tile-sub-header {
+    width: 316px;
+  }
 }
 
 
@@ -881,6 +895,10 @@ button {
 
     padding: $margin-main $margin-sm;
   }
+
+  #feature-section-container {
+    padding: 0 $margin-sm;
+  }
 }
 
 
@@ -893,6 +911,15 @@ button {
 
   .register-text-grouped {
     white-space: nowrap;
+  }
+}
+
+
+
+/* -------------------------- MEDIA QUERY <= 366 -------------------------- */
+@media screen and (max-width: 366px) {
+  #feature-tile-sub-header {
+    width: 188px;
   }
 }
 
