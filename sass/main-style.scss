@@ -845,20 +845,12 @@ button {
     grid-column: span 2;
   }
 
-  #feature-section-container {
-    padding: 0 $margin-main;
-  }
-
   #register-text {
     grid-column: span 5;
   }
 
   #register-email-container {
     grid-column: span 5;
-  }
-
-  #footer-section-container {
-    padding: $margin-main;
   }
 
   .footer-tile {
@@ -870,14 +862,6 @@ button {
 
 /* -------------------------- MEDIA QUERY <= 600 -------------------------- */
 @media screen and (max-width: 600px) {
-  #hamburger-menu {
-    left: $margin-x-sm;
-  }
-
-  #nav-link-list-top {;
-    right: $margin-x-sm;
-  }
-
   #home-promotion-container {
     padding: $margin-sm;
   }
@@ -896,8 +880,28 @@ button {
     padding: $margin-main $margin-sm;
   }
 
+  #popular-item-carousel {
+    padding: 0px $margin-sm;
+  }
+
+  #arrow-left-icon {
+    left: $margin-sm;
+  }
+
+  #arrow-right-icon {
+    right: $margin-sm;
+  }
+
   #feature-section-container {
-    padding: 0 $margin-sm;
+    padding: 0 $margin-main;
+  }
+
+  #register-section-container {
+    padding: $margin-main $margin-sm;
+  }
+
+  #footer-section-container {
+    padding: $margin-main;
   }
 }
 
@@ -916,8 +920,8 @@ button {
 
 
 
-/* -------------------------- MEDIA QUERY <= 366 -------------------------- */
-@media screen and (max-width: 366px) {
+/* -------------------------- MEDIA QUERY <= 401 -------------------------- */
+@media screen and (max-width: 401px) {
   #feature-tile-sub-header {
     width: 188px;
   }
