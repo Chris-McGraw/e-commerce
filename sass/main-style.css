@@ -32,6 +32,18 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+i {
+  cursor: pointer;
+}
+
 /* -------------------------------- NAVBAR -------------------------------- */
 .nav-link {
   display: inline-block;
@@ -571,7 +583,7 @@ button {
 /* ---------------------------- FOOTER SECTION ---------------------------- */
 #footer-section-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 0.875rem;
   grid-row-gap: 0.875rem;
   position: relative;
@@ -601,6 +613,17 @@ button {
   font-family: "Roboto", sans-serif;
   font-size: 0.6rem;
   font-weight: 300;
+}
+
+#footer-tile-social-list {
+  padding-left: 0.2rem;
+}
+
+.footer-tile-social-icon {
+  display: inline-block;
+  position: relative;
+  top: -0.35rem;
+  font-size: 0.6rem;
 }
 
 /* --------------------------- COPYRIGHT SECTION --------------------------- */
