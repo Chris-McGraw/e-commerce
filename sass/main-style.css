@@ -250,11 +250,12 @@ button {
 }
 
 #category-tile-men {
-  background-image: url("../images/male-model-crop.png");
+  background-image: url("../images/male-model-crop-top.png");
 }
 
 #category-tile-women {
-  background-image: url("../images/female-model-crop.png");
+  background-image: url("../images/female-model-crop-top.png");
+  background-position: 25% center;
 }
 
 #category-tile-children {
