@@ -420,7 +420,8 @@ button {
   width: 100%;
   padding: $margin-main;
 
-  background-color: $light-gray;
+  /* background-color: $light-gray; */
+  background-color: white;
 }
 
 #popular-item-carousel {
@@ -439,18 +440,6 @@ button {
   font-weight: $font-main-normal;
   text-align: center;
   text-transform: uppercase;
-  color: black;
-
-  /* border: 1px solid red; */
-}
-
-#popular-item-header-2 {
-  margin-top: $margin-sm;
-
-  font-family: $font-stack-secondary;
-  font-size: $font-icon;
-  font-weight: $font-secondary-light;
-  text-align: center;
   color: black;
 
   /* border: 1px solid red; */
@@ -494,9 +483,37 @@ button {
   background-size: cover;
   background-position: center bottom;
   border: 1px solid black;
+
+  /* background-color: white; */
+  background-color: $light-gray;
 }
 
-#car-tile-1 {
+#popular-item-page-select {
+  margin-top: $margin-sm;
+
+  font-family: $font-stack-secondary;
+  font-size: $font-icon;
+  text-align: center;
+
+
+  /* border: 1px solid red; */
+}
+
+.popular-item-page-number {
+  display: inline-block;
+
+  font-weight: $font-secondary-light;
+  color: $medium-gray;
+
+  cursor: pointer;
+}
+
+.popular-item-page-selected {
+  font-weight: $font-secondary-normal;
+  color: black;
+}
+
+/* #car-tile-1 {
   background-image: url("../images/men-pants-dark.jpg");
 }
 
@@ -514,7 +531,7 @@ button {
 
 #car-tile-5 {
   background-image: url("../images/men-pants-gray.jpg");
-}
+} */
 
 
 
