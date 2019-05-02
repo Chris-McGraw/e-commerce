@@ -250,11 +250,12 @@ button {
 }
 
 #category-tile-men {
-  background-image: url("../images/male-model-crop.png");
+  background-image: url("../images/male-model-crop-top.png");
 }
 
 #category-tile-women {
-  background-image: url("../images/female-model-crop.png");
+  background-image: url("../images/female-model-crop-top.png");
+  background-position: 25% center;
 }
 
 #category-tile-children {
@@ -347,7 +348,8 @@ button {
   height: auto;
   width: 100%;
   padding: 1.75rem;
-  background-color: #efefef;
+  /* background-color: $light-gray; */
+  background-color: white;
 }
 
 #popular-item-carousel {
@@ -364,16 +366,6 @@ button {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  color: black;
-  /* border: 1px solid red; */
-}
-
-#popular-item-header-2 {
-  margin-top: 0.875rem;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 300;
-  text-align: center;
   color: black;
   /* border: 1px solid red; */
 }
@@ -408,9 +400,31 @@ button {
   background-size: cover;
   background-position: center bottom;
   border: 1px solid black;
+  /* background-color: white; */
+  background-color: #efefef;
 }
 
-#car-tile-1 {
+#popular-item-page-select {
+  margin-top: 0.875rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+.popular-item-page-number {
+  display: inline-block;
+  font-weight: 300;
+  color: #d7d7d7;
+  cursor: pointer;
+}
+
+.popular-item-page-selected {
+  font-weight: 400;
+  color: black;
+}
+
+/* #car-tile-1 {
   background-image: url("../images/men-pants-dark.jpg");
 }
 
@@ -428,8 +442,7 @@ button {
 
 #car-tile-5 {
   background-image: url("../images/men-pants-gray.jpg");
-}
-
+} */
 /* ---------------------------- FEATURE SECTION ---------------------------- */
 #feature-section-container {
   position: relative;
