@@ -653,6 +653,12 @@ i {
     width: 316px;
   }
 }
+/* -------------------------- MEDIA QUERY <= 900 -------------------------- */
+@media screen and (max-width: 900px) {
+  .footer-tile {
+    grid-column: span 2;
+  }
+}
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
   #navbar-logo {
@@ -741,10 +747,6 @@ i {
   #register-email-container {
     grid-column: span 5;
   }
-
-  .footer-tile {
-    grid-column: span 3;
-  }
 }
 /* -------------------------- MEDIA QUERY <= 600 -------------------------- */
 @media screen and (max-width: 600px) {
@@ -787,6 +789,10 @@ i {
 
   #footer-section-container {
     padding: 1.75rem;
+  }
+
+  .footer-tile {
+    grid-column: span 4;
   }
 }
 /* -------------------------- MEDIA QUERY <= 418 -------------------------- */
