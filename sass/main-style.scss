@@ -233,6 +233,15 @@ i {
   background-image: url("../images/shoe-pennyboard.jpg");
   background-size: cover;
   background-position: center 35%;
+
+  /* background-image: url("../images/shoe-in-hand.jpg");
+  background-position: center;
+
+  background-image: url("../images/shoe-track.jpg");
+  background-position: center 85%;
+
+  background-image: url("../images/shoe-fog.jpg");
+  background-position: center 35%; */
 }
 
 #home-promotion-container {
@@ -267,6 +276,47 @@ i {
   font-size: $font-h2;
   font-weight: $font-secondary-normal;
   text-shadow: 0rem 0.0rem 0.1rem black;
+}
+
+#home-banner-page-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: auto;
+  margin-bottom: $margin-main;
+}
+
+.banner-page-circle-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid white;
+  border-radius: 100%;
+
+  cursor: pointer;
+}
+
+#home-banner-page-number-center {
+  margin: 0 0.2rem;
+}
+
+.banner-page-circle-inner {
+  width: 14px;
+  height: 14px;
+
+  border-radius: 100%;
+  background-color: white;
+
+  cursor: pointer;
 }
 
 
@@ -792,6 +842,16 @@ i {
   #feature-tile-sub-header {
     width: 316px;
   }
+
+  .banner-page-circle-outer {
+    height: 18px;
+    width: 18px;
+  }
+
+  .banner-page-circle-inner {
+    height: 12px;
+    width: 12px;
+  }
 }
 
 
@@ -922,6 +982,16 @@ i {
 
   #home-promotion-bottom {
     font-size: 1.125rem;
+  }
+
+  .banner-page-circle-outer {
+    height: 16px;
+    width: 16px;
+  }
+
+  .banner-page-circle-inner {
+    height: 10px;
+    width: 10px;
   }
 
   #category-section-container {
