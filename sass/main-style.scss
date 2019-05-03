@@ -36,6 +36,18 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+i {
+  cursor: pointer;
+}
+
 
 
 /* -------------------------------- NAVBAR -------------------------------- */
@@ -691,7 +703,7 @@ button {
 /* ---------------------------- FOOTER SECTION ---------------------------- */
 #footer-section-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: $margin-sm;
   grid-row-gap: $margin-sm;
 
@@ -730,6 +742,21 @@ button {
   font-weight: $font-secondary-light;
 }
 
+#footer-tile-social-list {
+  padding-left: 0.2rem;
+}
+
+.footer-tile-social-icon {
+  display: inline-block;
+
+  position: relative;
+  top: -0.35rem;
+
+  font-size: $font-sm;
+}
+
+
+
 
 
 /* --------------------------- COPYRIGHT SECTION --------------------------- */
@@ -764,6 +791,15 @@ button {
 
   #feature-tile-sub-header {
     width: 316px;
+  }
+}
+
+
+
+/* -------------------------- MEDIA QUERY <= 900 -------------------------- */
+@media screen and (max-width: 900px) {
+  .footer-tile {
+    grid-column: span 2;
   }
 }
 
@@ -870,10 +906,6 @@ button {
   #register-email-container {
     grid-column: span 5;
   }
-
-  .footer-tile {
-    grid-column: span 3;
-  }
 }
 
 
@@ -920,6 +952,10 @@ button {
 
   #footer-section-container {
     padding: $margin-main;
+  }
+
+  .footer-tile {
+    grid-column: span 4;
   }
 }
 
