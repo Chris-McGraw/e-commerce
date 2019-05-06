@@ -254,7 +254,7 @@ i {
   cursor: pointer;
 }
 
-#home-banner-page-number-center {
+#banner-page-circle-center {
   margin: 0 0.2rem;
 }
 
@@ -262,7 +262,6 @@ i {
   width: 14px;
   height: 14px;
   border-radius: 100%;
-  background-color: white;
   cursor: pointer;
 }
 
