@@ -15,6 +15,7 @@ var $bannerPageCircleRight = $("#banner-page-circle-right");
 var $bannerPageCircleOuter = $(".banner-page-circle-outer");
 var $bannerPageCircleInner = $(".banner-page-circle-inner");
 
+var bannerChangeDelay = false;
 
 
 
@@ -83,7 +84,15 @@ $(document).ready(function() {
   $bannerPageCircleLeft.children().css("background-color", "white");
 
   $bannerPageCircleOuter.on("click", function() {
-    selectBannerPageCircle($(this));
+    if(bannerChangeDelay === false) {
+      bannerChangeDelay = true;
+
+      selectBannerPageCircle($(this));
+      
+      setTimeout(function() {
+        bannerChangeDelay = false;
+      }, 800);
+    }
   });
 
 
