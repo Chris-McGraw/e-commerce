@@ -62,7 +62,7 @@ i {
   justify-content: center;
   align-items: center;
 
-  z-index: 50;
+  z-index: 100;
   position: fixed;
   top: 0;
 
@@ -83,7 +83,7 @@ i {
 }
 
 #navbar-top {
-  z-index: 30;
+  z-index: 50;
   position: fixed;
   top: 0;
 
@@ -137,7 +137,7 @@ i {
 }
 
 #navbar-bottom {
-  z-index: 30;
+  z-index: 50;
   position: fixed;
   top: 1.25rem;
 
@@ -221,27 +221,51 @@ i {
 
 
 /* ---------------------------- BANNER SECTION ---------------------------- */
-#home-banner {
+#home-banner-section-container {
+  z-index: 20;
   position: relative;
 
   width: 100%;
   height: $section-height-lg;
 
   text-align: center;
+}
+
+.banner-page-img {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: $section-height-lg;
 
   background-color: lightGray;
-  background-image: url("../images/shoe-pennyboard.jpg");
   background-size: cover;
+
+  transition: opacity 800ms ease-in-out;
+}
+
+#banner-page-img-left {
+  background-image: url("../images/shoe-pennyboard.jpg");
   background-position: center 35%;
+}
 
-  /* background-image: url("../images/shoe-in-hand.jpg");
-  background-position: center;
-
+#banner-page-img-center {
   background-image: url("../images/shoe-track.jpg");
   background-position: center 85%;
+}
 
+#banner-page-img-right {
   background-image: url("../images/shoe-fog.jpg");
-  background-position: center 35%; */
+  background-position: center 35%;
+}
+
+.banner-fade-in {
+  opacity: 1;
+}
+
+.banner-fade-out {
+  opacity: 0;
 }
 
 #home-promotion-container {

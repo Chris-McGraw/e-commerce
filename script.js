@@ -1,5 +1,9 @@
 /* ------------------------- VARIABLE DECLARATIONS ------------------------- */
-var $homeBanner = $("#home-banner");
+var $bannerPageImg = $(".banner-page-img");
+var $bannerPageImgLeft = $("#banner-page-img-left");
+var $bannerPageImgCenter = $("#banner-page-img-center");
+var $bannerPageImgRight = $("#banner-page-img-right");
+
 var homeBannerImg1 = "images/shoe-pennyboard.jpg";
 var homeBannerImg2 = "images/shoe-track.jpg";
 var homeBannerImg3 = "images/shoe-fog.jpg";
@@ -24,25 +28,46 @@ function selectBannerPageCircle(currentBannerPageCircle) {
     currentBannerPageCircle.addClass("banner-page-circle-selected");
     currentBannerPageCircle.children().css("background-color", "white");
 
-    changeBannerImage(currentBannerPageCircle);
+    fadeBannerImage(currentBannerPageCircle);
   }
 }
 
 
-function changeBannerImage(currentBannerPageCircle) {
+function fadeBannerImage(currentBannerPageCircle) {
   if(currentBannerPageCircle.is($bannerPageCircleLeft)) {
-    $homeBanner.css("background-image", "url(" + homeBannerImg1 + ")");
-    $homeBanner.css("background-position", "center 35%");
+    if($bannerPageImgLeft.css("opacity") === "0") {
+      $bannerPageImg.removeClass("banner-fade-in");
+      $bannerPageImg.removeClass("banner-fade-out");
+
+      $bannerPageImgCenter.addClass("banner-fade-out");
+      $bannerPageImgRight.addClass("banner-fade-out");
+
+      $bannerPageImgLeft.addClass("banner-fade-in");
+    }
   }
 
   else if(currentBannerPageCircle.is($bannerPageCircleCenter)) {
-    $homeBanner.css("background-image", "url(" + homeBannerImg2 + ")");
-    $homeBanner.css("background-position", "center 85%");
+    if($bannerPageImgCenter.css("opacity") === "0") {
+      $bannerPageImg.removeClass("banner-fade-in");
+      $bannerPageImg.removeClass("banner-fade-out");
+
+      $bannerPageImgLeft.addClass("banner-fade-out");
+      $bannerPageImgRight.addClass("banner-fade-out");
+
+      $bannerPageImgCenter.addClass("banner-fade-in");
+    }
   }
 
   else if(currentBannerPageCircle.is($bannerPageCircleRight)) {
-    $homeBanner.css("background-image", "url(" + homeBannerImg3 + ")");
-    $homeBanner.css("background-position", "center 35%");
+    if($bannerPageImgRight.css("opacity") === "0") {
+      $bannerPageImg.removeClass("banner-fade-in");
+      $bannerPageImg.removeClass("banner-fade-out");
+
+      $bannerPageImgLeft.addClass("banner-fade-out");
+      $bannerPageImgCenter.addClass("banner-fade-out");
+
+      $bannerPageImgRight.addClass("banner-fade-in");
+    }
   }
 }
 
