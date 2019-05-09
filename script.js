@@ -1,4 +1,13 @@
 /* ------------------------- VARIABLE DECLARATIONS ------------------------- */
+var $hamburgerMenu = $("#hamburger-menu");
+
+var $navbarDropdown = $("#navbar-dropdown");
+
+var dropdownNavActive = false;
+
+
+
+
 var $bannerPageImg = $(".banner-page-img");
 var $bannerPageImgLeft = $("#banner-page-img-left");
 var $bannerPageImgCenter = $("#banner-page-img-center");
@@ -21,6 +30,23 @@ var bannerChangeDelay = false;
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
+function openDropdownNav() {
+  console.log("dropdown opened");
+
+  dropdownNavActive = true;
+
+  $navbarDropdown.slideToggle(600);
+}
+
+function closeDropdownNav() {
+  console.log("dropdown closed");
+
+  dropdownNavActive = false;
+
+  $navbarDropdown.slideToggle(600);
+}
+
+
 function selectBannerPageCircle(currentBannerPageCircle) {
   if(currentBannerPageCircle.hasClass("banner-page-circle-selected") === false) {
     $bannerPageCircleOuter.removeClass("banner-page-circle-selected");
@@ -83,12 +109,25 @@ $(document).ready(function() {
   $bannerPageCircleLeft.addClass("banner-page-circle-selected");
   $bannerPageCircleLeft.children().css("background-color", "white");
 
+
+
+  $hamburgerMenu.on("click", function() {
+    if(dropdownNavActive === false) {
+      openDropdownNav();
+    }
+    else if(dropdownNavActive === true) {
+      closeDropdownNav();
+    }
+  });
+
+
+
   $bannerPageCircleOuter.on("click", function() {
     if(bannerChangeDelay === false) {
       bannerChangeDelay = true;
 
       selectBannerPageCircle($(this));
-      
+
       setTimeout(function() {
         bannerChangeDelay = false;
       }, 800);

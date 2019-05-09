@@ -181,6 +181,35 @@ i {
   border-bottom: 1px solid white;
 }
 
+#navbar-dropdown {
+  display: none;
+  z-index: 50;
+  position: fixed;
+  width: 8rem;
+  height: 100%;
+  background-color: white;
+  border-right: 1px solid #d7d7d7;
+}
+
+#nav-link-list-dropdown {
+  position: absolute;
+  /* @extend %vertical-centered; */
+  top: 0.875rem;
+  left: 0.875rem;
+  width: auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: black;
+  /* border: 1px solid black; */
+}
+
+.nav-link-dropdown {
+  /* border: 1px solid red; */
+  margin-bottom: 0.4375rem;
+}
+
 /* ---------------------------- BANNER SECTION ---------------------------- */
 #home-banner-section-container {
   z-index: 20;
@@ -733,6 +762,12 @@ i {
     grid-column: span 2;
   }
 }
+/* -------------------------- MEDIA QUERY >= 801 -------------------------- */
+@media screen and (min-width: 801px) {
+  #navbar-dropdown {
+    display: none !important;
+  }
+}
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
   #navbar-logo {
@@ -755,7 +790,7 @@ i {
     transform: translateY(-50%);
     left: 0.875rem;
     width: 27px;
-    /* cursor: pointer; */
+    cursor: pointer;
   }
 
   .hamburger-bar {
@@ -768,8 +803,8 @@ i {
     color: black;
     border-radius: 10px;
     background-color: black;
-    /* cursor: pointer;
-    transition: transform 300ms ease-in-out, width 300ms ease-in-out, opacity 300ms ease-in-out; */
+    cursor: pointer;
+    /* transition: transform 300ms ease-in-out, width 300ms ease-in-out, opacity 300ms ease-in-out; */
   }
 
   #nav-link-list-top {
