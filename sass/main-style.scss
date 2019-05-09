@@ -218,6 +218,42 @@ i {
   border-bottom: 1px solid white;
 }
 
+#navbar-dropdown {
+  display: none;
+
+  z-index: 50;
+  position: fixed;
+
+  width: 8rem;
+  height: 100%;
+
+  background-color: white;
+  border-right: 1px solid $medium-gray;
+}
+
+#nav-link-list-dropdown {
+  position: absolute;
+  /* @extend %vertical-centered; */
+  top: $margin-sm;
+  left: $margin-sm;
+
+  width: auto;
+
+  font-family: $font-stack-main;
+  font-size: $font-sm;
+  font-weight: $font-main-normal;
+  text-transform: uppercase;
+  color: black;
+
+  /* border: 1px solid black; */
+}
+
+.nav-link-dropdown {
+  /* border: 1px solid red; */
+
+  margin-bottom: $margin-x-sm;
+}
+
 
 
 /* ---------------------------- BANNER SECTION ---------------------------- */
@@ -887,6 +923,14 @@ i {
 }
 
 
+/* -------------------------- MEDIA QUERY >= 801 -------------------------- */
+@media screen and (min-width: 801px) {
+  #navbar-dropdown {
+    display: none !important;
+  }
+}
+
+
 
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
@@ -915,7 +959,7 @@ i {
 
     width: 27px;
 
-    /* cursor: pointer; */
+    cursor: pointer;
   }
 
   .hamburger-bar {
@@ -932,8 +976,8 @@ i {
     border-radius: 10px;
     background-color: black;
 
-    /* cursor: pointer;
-    transition: transform 300ms ease-in-out, width 300ms ease-in-out, opacity 300ms ease-in-out; */
+    cursor: pointer;
+    /* transition: transform 300ms ease-in-out, width 300ms ease-in-out, opacity 300ms ease-in-out; */
   }
 
   #nav-link-list-top {
