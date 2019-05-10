@@ -6,6 +6,7 @@ var dropdownNavActive = false;
 
 
 var $searchIconDropdown = $("#search-icon-dropdown");
+var $searchDropdown = $("#search-dropdown");
 
 
 
@@ -124,7 +125,9 @@ $(document).ready(function() {
 
 
   $searchIconDropdown.on("click", function() {
-    console.log("search bar dropdown open");
+    console.log("search bar dropdown toggle");
+
+    $searchDropdown.slideToggle(200);
   });
 
 
