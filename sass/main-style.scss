@@ -114,12 +114,14 @@ i {
   font-weight: $font-secondary-light;
   text-transform: uppercase;
   color: black;
-
-  /* border: 1px dashed red; */
 }
 
 .nav-link-top-margin {
   margin-right: $margin-sm;
+}
+
+#search-icon-dropdown {
+  display: none;
 }
 
 #login-icon {
@@ -984,10 +986,14 @@ i {
     right: $margin-sm;
   }
 
-  #login-icon {
-    transform: translateY(0);
+  #search-icon-dropdown {
+    display: inline-block;
 
     font-size: 1rem;
+  }
+
+  #login-icon {
+    display: none;
   }
 
   #cart-icon {
