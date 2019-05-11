@@ -1,10 +1,12 @@
 /* ------------------------- VARIABLE DECLARATIONS ------------------------- */
 var $hamburgerMenu = $("#hamburger-menu");
-
 var $navbarDropdown = $("#navbar-dropdown");
-
 var dropdownNavActive = false;
 
+
+
+var $searchIconDropdown = $("#search-icon-dropdown");
+var $searchDropdown = $("#search-dropdown");
 
 
 
@@ -118,6 +120,14 @@ $(document).ready(function() {
     else if(dropdownNavActive === true) {
       closeDropdownNav();
     }
+  });
+
+
+
+  $searchIconDropdown.on("click", function() {
+    console.log("search bar dropdown toggle");
+
+    $searchDropdown.slideToggle(200);
   });
 
 

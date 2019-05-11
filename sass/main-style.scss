@@ -114,12 +114,14 @@ i {
   font-weight: $font-secondary-light;
   text-transform: uppercase;
   color: black;
-
-  /* border: 1px dashed red; */
 }
 
 .nav-link-top-margin {
   margin-right: $margin-sm;
+}
+
+#search-icon-dropdown {
+  display: none;
 }
 
 #login-icon {
@@ -252,6 +254,20 @@ i {
   /* border: 1px solid red; */
 
   margin-bottom: $margin-x-sm;
+}
+
+#search-dropdown {
+  display: none;
+
+  z-index: 50;
+  position: fixed;
+  top: 3.25rem;
+
+  width: 100%;
+  height: 2rem;
+
+  background-color: white;
+  border-bottom: 1px solid $medium-gray;
 }
 
 
@@ -928,6 +944,10 @@ i {
   #navbar-dropdown {
     display: none !important;
   }
+
+  #search-dropdown {
+    display: none !important;
+  }
 }
 
 
@@ -984,10 +1004,14 @@ i {
     right: $margin-sm;
   }
 
-  #login-icon {
-    transform: translateY(0);
+  #search-icon-dropdown {
+    display: inline-block;
 
     font-size: 1rem;
+  }
+
+  #login-icon {
+    display: none;
   }
 
   #cart-icon {
