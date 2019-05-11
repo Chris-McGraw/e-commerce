@@ -256,6 +256,33 @@ i {
   margin-bottom: $margin-x-sm;
 }
 
+#login-button-dropdown {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  top: 20rem;
+
+  width: 100%;
+  height: 2rem;
+  margin-top: -1px;
+  padding-left: $margin-sm;
+
+  font-family: $font-stack-main;
+  font-size: $font-sm;
+  font-weight: $font-main-normal;
+  text-transform: uppercase;
+
+  border-top: 1px solid $medium-gray;
+}
+
+#login-icon-dropdown {
+  position: absolute;
+  right: 0;
+
+  font-size: 1rem;
+}
+
 #search-dropdown {
   display: none;
 
@@ -268,6 +295,41 @@ i {
 
   background-color: white;
   border-bottom: 1px solid $medium-gray;
+}
+
+#search-bar-dropdown {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+
+  position: absolute;
+  @extend %vertical-centered;
+
+  width: 100%;
+  height: 100%;
+
+  padding-left: $margin-main + $margin-sm;
+  padding-right: $margin-sm;
+
+  font-family: $font-stack-main;
+  font-size: $font-sm;
+  font-weight: $font-main-normal;
+
+  border: none;
+  outline: none;
+
+  cursor: text;
+}
+
+#search-icon-dropdown-inner {
+  position: absolute;
+  @extend %vertical-centered;
+  left: $margin-sm;
+
+  width: 27px;
+
+  font-size: 1rem;
+  text-align: center;
+  color: black;
 }
 
 
