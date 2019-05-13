@@ -30,6 +30,12 @@ var bannerChangeDelay = false;
 
 
 
+var $arrowLeftIcon = $("#arrow-left-icon");
+var $popularItemCarouselInner = $("#popular-item-carousel-inner");
+
+
+
+
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
 function openDropdownNav() {
@@ -142,6 +148,14 @@ $(document).ready(function() {
         bannerChangeDelay = false;
       }, 800);
     }
+  });
+
+
+
+  $arrowLeftIcon.on("click", function() {
+    console.log("left arrow clicked");
+
+    $popularItemCarouselInner.addClass("move-this");
   });
 
 
