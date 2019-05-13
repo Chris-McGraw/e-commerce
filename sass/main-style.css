@@ -511,18 +511,20 @@ i {
 /* ------------------------- POPULAR ITEM SECTION ------------------------- */
 #popular-item-section-container {
   position: relative;
-  height: auto;
   width: 100%;
+  height: auto;
   padding: 1.75rem;
-  /* background-color: $light-gray; */
   background-color: white;
 }
 
 #popular-item-carousel {
   display: flex;
   align-items: center;
+  width: 100%;
   height: auto;
   padding: 0px 1.75rem;
+  /* width: 300%;
+  padding-right: $margin-main * 4; */
 }
 
 #popular-item-header {
@@ -538,11 +540,17 @@ i {
 
 #popular-item-carousel-inner {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 0.875rem;
   width: 100%;
   height: 11rem;
   /* border: 1px solid red; */
+  transition: transform 4000ms ease-in-out;
+  /* grid-template-columns: repeat(12, 1fr); */
+}
+
+.move-this {
+  transform: translateX(-41.125rem);
 }
 
 #arrow-left-icon {
@@ -570,6 +578,34 @@ i {
   background-color: #efefef;
 }
 
+/* .carousel-tile-blue {
+  grid-column: span 1;
+
+  height: 100%;
+
+  background-color: lightGray;
+  background-size: cover;
+  background-position: center bottom;
+  border: 1px solid black;
+
+  background-color: white;
+  background-color: blue;
+  background-color: $light-gray;
+}
+
+.carousel-tile-yellow {
+  grid-column: span 1;
+
+  height: 100%;
+
+  background-color: lightGray;
+  background-size: cover;
+  background-position: center bottom;
+  border: 1px solid black;
+
+  background-color: white;
+  background-color: yellow;
+} */
 #popular-item-page-select {
   margin-top: 0.875rem;
   font-family: "Roboto", sans-serif;
