@@ -541,17 +541,14 @@ i {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 0.875rem;
+  position: relative;
   width: 100%;
   height: 11rem;
   /* border: 1px solid red; */
-  transition: transform 4000ms ease-in-out;
-}
-
-.move-this {
-  transform: translateX(-41.125rem);
 }
 
 #arrow-left-icon {
+  z-index: 1000;
   position: absolute;
   left: 1.75rem;
   font-size: 1rem;
@@ -559,6 +556,7 @@ i {
 }
 
 #arrow-right-icon {
+  z-index: 1000;
   position: absolute;
   right: 1.75rem;
   font-size: 1rem;
@@ -574,6 +572,7 @@ i {
   border: 1px solid black;
   /* background-color: white; */
   background-color: #efefef;
+  /* transition: transform 4000ms ease-in-out; */
 }
 
 .carousel-tile-blue {

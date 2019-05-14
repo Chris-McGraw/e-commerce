@@ -651,19 +651,18 @@ i {
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: $margin-sm;
 
+  position: relative;
+
   width: 100%;
   height: 11rem;
 
   /* border: 1px solid red; */
-
-  transition: transform 4000ms ease-in-out;
-}
-
-.move-this {
-  transform: translateX(-$margin-main * 23.5);
 }
 
 #arrow-left-icon {
+  //change later
+    z-index: 1000;
+
   position: absolute;
   left: $margin-main;
 
@@ -673,6 +672,9 @@ i {
 }
 
 #arrow-right-icon {
+  //change later
+    z-index: 1000;
+
   position: absolute;
   right: $margin-main;
 
@@ -693,6 +695,8 @@ i {
 
   /* background-color: white; */
   background-color: $light-gray;
+
+  /* transition: transform 4000ms ease-in-out; */
 }
 
 .carousel-tile-blue {
