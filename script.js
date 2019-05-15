@@ -110,11 +110,26 @@ function fadeBannerImage(currentBannerPageCircle) {
 }
 
 
-function changeCarouselPosition() {
+function scrollCarousel() {
   if($(window).width() > 985) {
     var carouselPositionLg = ($carTile1.width() + 23) * 4;
 
-    $popularItemCarouselInner.css("left", -carouselPositionLg);
+    $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionLg + "px)"});
+  }
+
+  else if($(window).width() <= 985) {
+    var carouselPositionSm = ($carTile1.width() + 19.5) * 4;
+
+    $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionSm + "px)"});
+  }
+}
+
+
+/* function changeCarouselPosition() {
+  if($(window).width() > 985) {
+    var carouselPositionLg = -23;
+
+    $popularItemCarouselInner.css("left", carouselPositionLg);
   }
 
   else if($(window).width() <= 985) {
@@ -122,7 +137,7 @@ function changeCarouselPosition() {
 
     $popularItemCarouselInner.css("left", -carouselPositionSm);
   }
-}
+} */
 
 
 
@@ -173,13 +188,21 @@ $(document).ready(function() {
   $arrowLeftIcon.on("click", function() {
     carouselClicked = true;
 
-    changeCarouselPosition();
+    /* changeCarouselPosition(); */
+
+    $popularItemCarouselInner.addClass("carousel-animation");
+
+    scrollCarousel();
   });
 
 
   $(window).resize(function() {
     if(carouselClicked === true) {
-      changeCarouselPosition();
+      /* changeCarouselPosition(); */
+
+      $popularItemCarouselInner.removeClass("carousel-animation");
+
+      scrollCarousel();
     }
   });
 
