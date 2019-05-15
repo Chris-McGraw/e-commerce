@@ -547,6 +547,10 @@ i {
   /* border: 1px solid red; */
 }
 
+.carousel-animation {
+  transition: transform 2000ms ease-in-out;
+}
+
 .carousel-mask {
   z-index: 30;
   position: absolute;
@@ -588,7 +592,6 @@ i {
   border: 1px solid black;
   /* background-color: white; */
   background-color: #efefef;
-  /* transition: transform 4000ms ease-in-out; */
 }
 
 .carousel-tile-blue {
