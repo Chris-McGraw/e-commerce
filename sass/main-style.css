@@ -547,20 +547,36 @@ i {
   /* border: 1px solid red; */
 }
 
-#arrow-left-icon {
-  z-index: 1000;
+.carousel-mask {
+  z-index: 30;
   position: absolute;
-  left: 1.75rem;
+  top: 0;
+  width: 3rem;
+  height: 100%;
+  background-color: white;
+}
+
+#carousel-mask-left {
+  left: 0;
+}
+
+#carousel-mask-right {
+  right: 0;
+}
+
+.carousel-arrow {
+  z-index: 40;
+  position: absolute;
   font-size: 1rem;
   cursor: pointer;
 }
 
+#arrow-left-icon {
+  left: 1.75rem;
+}
+
 #arrow-right-icon {
-  z-index: 1000;
-  position: absolute;
   right: 1.75rem;
-  font-size: 1rem;
-  cursor: pointer;
 }
 
 .carousel-tile {
@@ -977,6 +993,10 @@ i {
     padding: 0px 0.875rem;
     width: 600%;
     padding-right: 5.25rem;
+  }
+
+  .carousel-mask {
+    width: 2rem;
   }
 
   #arrow-left-icon {

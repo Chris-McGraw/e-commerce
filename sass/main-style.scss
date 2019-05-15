@@ -659,28 +659,40 @@ i {
   /* border: 1px solid red; */
 }
 
-#arrow-left-icon {
-  //change later
-    z-index: 1000;
-
+.carousel-mask {
+  z-index: 30;
   position: absolute;
-  left: $margin-main;
+  top: 0;
+
+  width: 3rem;
+  height: 100%;
+
+  background-color: white;
+}
+
+#carousel-mask-left {
+  left: 0;
+}
+
+#carousel-mask-right {
+  right: 0;
+}
+
+.carousel-arrow {
+  z-index: 40;
+  position: absolute;
 
   font-size: 1rem;
 
   cursor: pointer;
 }
 
+#arrow-left-icon {
+  left: $margin-main;
+}
+
 #arrow-right-icon {
-  //change later
-    z-index: 1000;
-
-  position: absolute;
   right: $margin-main;
-
-  font-size: 1rem;
-
-  cursor: pointer;
 }
 
 .carousel-tile {
@@ -1182,6 +1194,10 @@ i {
 
     width: 600%;
     padding-right: $margin-sm * 6;
+  }
+
+  .carousel-mask {
+    width: 2rem;
   }
 
   #arrow-left-icon {
