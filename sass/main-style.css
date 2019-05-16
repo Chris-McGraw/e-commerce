@@ -584,14 +584,24 @@ i {
 }
 
 .carousel-tile {
+  display: flex;
   grid-column: span 1;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   background-color: lightGray;
   background-size: cover;
   background-position: center bottom;
   border: 1px solid black;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
   /* background-color: white; */
   background-color: #efefef;
+}
+
+.carousel-tile-red {
+  background-color: red;
 }
 
 .carousel-tile-blue {
