@@ -700,7 +700,10 @@ i {
 }
 
 .carousel-tile {
+  display: flex;
   grid-column: span 1;
+  justify-content: center;
+  align-items: center;
 
   height: 100%;
 
@@ -709,8 +712,16 @@ i {
   background-position: center bottom;
   border: 1px solid black;
 
+  font-family: $font-stack-secondary;
+  font-size: 2rem;
+  font-weight: $font-secondary-light;
+
   /* background-color: white; */
   background-color: $light-gray;
+}
+
+.carousel-tile-red {
+  background-color: red;
 }
 
 .carousel-tile-blue {

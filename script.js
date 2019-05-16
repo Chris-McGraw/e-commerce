@@ -35,6 +35,13 @@ var $popularItemCarouselInner = $("#popular-item-carousel-inner");
 var $carTile1 = $("#car-tile-1");
 var carouselClicked = false;
 
+var currentCarouselPage = 0;
+var carouselPageMultiplier = 0;
+
+var carouselPage1 = $("#carousel-page-1");
+var carouselPage2 = $("#carousel-page-2");
+var carouselPage3 = $("#carousel-page-3");
+
 
 
 
@@ -110,34 +117,89 @@ function fadeBannerImage(currentBannerPageCircle) {
 }
 
 
-function scrollCarousel() {
+/* function scrollCarousel() {
   if($(window).width() > 985) {
     var carouselPositionLg = ($carTile1.width() + 23) * 4;
 
     $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionLg + "px)"});
   }
 
-  else if($(window).width() <= 985) {
+  else if($(window).width() <= 985 && $(window).width() > 785) {
     var carouselPositionSm = ($carTile1.width() + 19.5) * 4;
 
     $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionSm + "px)"});
   }
+
+  else if($(window).width() <= 785 && $(window).width() > 585) {
+    var carouselPositionSm2 = ($carTile1.width() + 19.5) * 3;
+
+    $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionSm2 + "px)"});
+  }
+
+  else if($(window).width() <= 585 && $(window).width() > 386) {
+    var carouselPositionSm3 = ($carTile1.width() + 19.5) * 2;
+
+    $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionSm3 + "px)"});
+  }
+
+  else if($(window).width() <= 386) {
+    var carouselPositionSm4 = ($carTile1.width() + 19.5) * 1;
+
+    $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionSm4 + "px)"});
+  }
+} */
+
+
+function getCarouselMultiplier() {
+  if(currentCarouselPage === 1) {
+    carouselPageMultiplier = 1;
+
+    carouselPage1.removeClass("popular-item-page-selected");
+    carouselPage2.addClass("popular-item-page-selected");
+  }
+
+  else if(currentCarouselPage === 2) {
+    carouselPageMultiplier = 2;
+
+    carouselPage2.removeClass("popular-item-page-selected");
+    carouselPage3.addClass("popular-item-page-selected");
+  }
 }
 
 
-/* function changeCarouselPosition() {
-  if($(window).width() > 985) {
-    var carouselPositionLg = -23;
+function changeCarouselPosition() {
+  getCarouselMultiplier();
 
-    $popularItemCarouselInner.css("left", carouselPositionLg);
+  if($(window).width() > 985) {
+    var carouselPositionLg = ($carTile1.width() + 23) * (4 * carouselPageMultiplier);
+
+    $popularItemCarouselInner.css("left", -carouselPositionLg);
   }
 
-  else if($(window).width() <= 985) {
-    var carouselPositionSm = ($carTile1.width() + 19.5) * 4;
+  else if($(window).width() <= 985 && $(window).width() > 785) {
+    var carouselPositionSm = ($carTile1.width() + 19.5) * (4 * carouselPageMultiplier);
 
     $popularItemCarouselInner.css("left", -carouselPositionSm);
   }
-} */
+
+  else if($(window).width() <= 785 && $(window).width() > 585) {
+    var carouselPositionSm2 = ($carTile1.width() + 19.5) * (3 * carouselPageMultiplier);
+
+    $popularItemCarouselInner.css("left", -carouselPositionSm2);
+  }
+
+  else if($(window).width() <= 585 && $(window).width() > 386) {
+    var carouselPositionSm3 = ($carTile1.width() + 19.5) * (2 * carouselPageMultiplier);
+
+    $popularItemCarouselInner.css("left", -carouselPositionSm3);
+  }
+
+  else if($(window).width() <= 386) {
+    var carouselPositionSm4 = ($carTile1.width() + 19.5) * (1 * carouselPageMultiplier);
+
+    $popularItemCarouselInner.css("left", -carouselPositionSm4);
+  }
+}
 
 
 
@@ -188,21 +250,26 @@ $(document).ready(function() {
   $arrowLeftIcon.on("click", function() {
     carouselClicked = true;
 
-    /* changeCarouselPosition(); */
+    if(currentCarouselPage < 2) {
+      currentCarouselPage += 1;
+      console.log("page " + currentCarouselPage);
+    }
 
-    $popularItemCarouselInner.addClass("carousel-animation");
+    changeCarouselPosition();
 
-    scrollCarousel();
+    /* $popularItemCarouselInner.addClass("carousel-animation");
+
+    scrollCarousel(); */
   });
 
 
   $(window).resize(function() {
     if(carouselClicked === true) {
-      /* changeCarouselPosition(); */
+      changeCarouselPosition();
 
-      $popularItemCarouselInner.removeClass("carousel-animation");
+      /* $popularItemCarouselInner.removeClass("carousel-animation");
 
-      scrollCarousel();
+      scrollCarousel(); */
     }
   });
 
