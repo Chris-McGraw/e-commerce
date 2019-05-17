@@ -31,6 +31,8 @@ var bannerChangeDelay = false;
 
 
 var $arrowLeftIcon = $("#arrow-left-icon");
+var $arrowRightIcon = $("#arrow-right-icon");
+
 var $popularItemCarouselInner = $("#popular-item-carousel-inner");
 var $carTile1 = $("#car-tile-1");
 var carouselClicked = false;
@@ -164,6 +166,13 @@ function getCarouselMultiplier() {
     carouselPage2.removeClass("popular-item-page-selected");
     carouselPage3.addClass("popular-item-page-selected");
   }
+
+  else if(currentCarouselPage === 3) {
+    carouselPageMultiplier = 3;
+
+    // carouselPage2.removeClass("popular-item-page-selected");
+    // carouselPage3.addClass("popular-item-page-selected");
+  }
 }
 
 
@@ -171,21 +180,45 @@ function changeCarouselPosition() {
   getCarouselMultiplier();
 
   if($(window).width() > 985) {
-    var carouselPositionLg = ($carTile1.width() + 23) * (4 * carouselPageMultiplier);
+    if(currentCarouselPage <= 2) {
+      var carouselPositionLg = ($carTile1.width() + 23) * (4 * carouselPageMultiplier);
 
-    $popularItemCarouselInner.css("left", -carouselPositionLg);
+      $popularItemCarouselInner.css("left", -carouselPositionLg);
+    }
+
+    else if(currentCarouselPage > 2) {
+      var carouselPositionLg69 = ($carTile1.width() + 23) * (4 * 2);
+
+      $popularItemCarouselInner.css("left", -carouselPositionLg69);
+    }
   }
 
   else if($(window).width() <= 985 && $(window).width() > 785) {
-    var carouselPositionSm = ($carTile1.width() + 19.5) * (4 * carouselPageMultiplier);
+    if(currentCarouselPage <= 2) {
+      var carouselPositionSm = ($carTile1.width() + 19.5) * (4 * carouselPageMultiplier);
 
-    $popularItemCarouselInner.css("left", -carouselPositionSm);
+      $popularItemCarouselInner.css("left", -carouselPositionSm);
+    }
+
+    else if(currentCarouselPage > 2) {
+      var carouselPositionSm69 = ($carTile1.width() + 19.5) * (4 * 2);
+
+      $popularItemCarouselInner.css("left", -carouselPositionSm69);
+    }
   }
 
   else if($(window).width() <= 785 && $(window).width() > 585) {
-    var carouselPositionSm2 = ($carTile1.width() + 19.5) * (3 * carouselPageMultiplier);
+    if(currentCarouselPage <= 3) {
+      var carouselPositionSm2 = ($carTile1.width() + 19.5) * (3 * carouselPageMultiplier);
 
-    $popularItemCarouselInner.css("left", -carouselPositionSm2);
+      $popularItemCarouselInner.css("left", -carouselPositionSm2);
+    }
+
+    else if(currentCarouselPage > 3) {
+      var carouselPositionSm269 = ($carTile1.width() + 19.5) * (3 * 3);
+
+      $popularItemCarouselInner.css("left", -carouselPositionSm269);
+    }
   }
 
   else if($(window).width() <= 585 && $(window).width() > 386) {
@@ -247,13 +280,13 @@ $(document).ready(function() {
 
 
 
-  $arrowLeftIcon.on("click", function() {
+  $arrowRightIcon.on("click", function() {
     carouselClicked = true;
 
-    if(currentCarouselPage < 2) {
+    // if(currentCarouselPage < 2) {
       currentCarouselPage += 1;
       console.log("page " + currentCarouselPage);
-    }
+    // }
 
     changeCarouselPosition();
 
