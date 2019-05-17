@@ -636,6 +636,14 @@ i {
   display: none;
 }
 
+#caro-page-num-5 {
+  display: none;
+}
+
+#caro-page-num-6 {
+  display: none;
+}
+
 /* #car-tile-1 {
   background-image: url("../images/men-pants-dark.jpg");
 }
@@ -1034,6 +1042,14 @@ i {
 
   #arrow-right-icon {
     right: 0.875rem;
+  }
+
+  #caro-page-num-5 {
+    display: inline-block;
+  }
+
+  #caro-page-num-6 {
+    display: inline-block;
   }
 
   /* -------- FEATURE SECTION -------- */
