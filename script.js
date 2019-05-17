@@ -37,8 +37,11 @@ var $popularItemCarouselInner = $("#popular-item-carousel-inner");
 var $carTile1 = $("#car-tile-1");
 var carouselClicked = false;
 
-var currentCarouselPage = 0;
+var currentCarouselPage = 1;
 var carouselPageMultiplier = 0;
+
+var carouselPositionLg = 0;
+var carouselPositionSm = 0;
 
 var caroPageNum1 = $("#caro-page-num-1");
 var caroPageNum2 = $("#caro-page-num-2");
@@ -153,26 +156,94 @@ function fadeBannerImage(currentBannerPageCircle) {
 } */
 
 
+function carouselPageUp() {
+  if($(window).width() > 985 && currentCarouselPage <= 2) {
+    carouselClicked = true;
+
+    currentCarouselPage += 1;
+    console.log("page " + currentCarouselPage);
+  }
+
+  else if($(window).width() <= 985 && $(window).width() > 785 && currentCarouselPage <= 2) {
+    carouselClicked = true;
+
+    currentCarouselPage += 1;
+    console.log("page " + currentCarouselPage);
+  }
+
+  else if($(window).width() <= 785 && $(window).width() > 585 && currentCarouselPage <= 3) {
+    carouselClicked = true;
+
+    currentCarouselPage += 1;
+    console.log("page " + currentCarouselPage);
+  }
+
+  else if($(window).width() <= 585 && $(window).width() > 386 && currentCarouselPage <= 5) {
+    carouselClicked = true;
+
+    currentCarouselPage += 1;
+    console.log("page " + currentCarouselPage);
+  }
+
+  else if($(window).width() <= 386 && currentCarouselPage <= 11) {
+    carouselClicked = true;
+
+    currentCarouselPage += 1;
+    console.log("page " + currentCarouselPage);
+  }
+}
+
+
 function getCarouselMultiplier() {
   if(currentCarouselPage === 1) {
     carouselPageMultiplier = 1;
 
-    caroPageNum1.removeClass("popular-item-page-selected");
-    caroPageNum2.addClass("popular-item-page-selected");
+    /* caroPageNum1.removeClass("popular-item-page-selected");
+    caroPageNum2.addClass("popular-item-page-selected"); */
   }
 
   else if(currentCarouselPage === 2) {
-    carouselPageMultiplier = 2;
-
-    caroPageNum2.removeClass("popular-item-page-selected");
-    caroPageNum3.addClass("popular-item-page-selected");
+    carouselPageMultiplier = 1;
   }
 
   else if(currentCarouselPage === 3) {
-    carouselPageMultiplier = 3;
+    carouselPageMultiplier = 2;
+  }
 
-    caroPageNum3.removeClass("popular-item-page-selected");
-    caroPageNum4.addClass("popular-item-page-selected");
+  else if(currentCarouselPage === 4) {
+    carouselPageMultiplier = 3;
+  }
+
+  else if(currentCarouselPage === 5) {
+    carouselPageMultiplier = 4;
+  }
+
+  else if(currentCarouselPage === 6) {
+    carouselPageMultiplier = 5;
+  }
+
+  else if(currentCarouselPage === 7) {
+    carouselPageMultiplier = 6;
+  }
+
+  else if(currentCarouselPage === 8) {
+    carouselPageMultiplier = 7;
+  }
+
+  else if(currentCarouselPage === 9) {
+    carouselPageMultiplier = 8;
+  }
+
+  else if(currentCarouselPage === 10) {
+    carouselPageMultiplier = 9;
+  }
+
+  else if(currentCarouselPage === 11) {
+    carouselPageMultiplier = 10;
+  }
+
+  else if(currentCarouselPage === 12) {
+    carouselPageMultiplier = 11;
   }
 }
 
@@ -182,56 +253,64 @@ function changeCarouselPosition() {
 
   if($(window).width() > 985) {
     if(currentCarouselPage <= 2) {
-      var carouselPositionLg = ($carTile1.width() + 23) * (4 * carouselPageMultiplier);
+      carouselPositionLg = ($carTile1.width() + 23) * (4 * carouselPageMultiplier);
 
       $popularItemCarouselInner.css("left", -carouselPositionLg);
     }
 
     else if(currentCarouselPage > 2) {
-      var carouselPositionLg69 = ($carTile1.width() + 23) * (4 * 2);
+      carouselPositionLg = ($carTile1.width() + 23) * (4 * 2);
 
-      $popularItemCarouselInner.css("left", -carouselPositionLg69);
+      $popularItemCarouselInner.css("left", -carouselPositionLg);
     }
   }
 
   else if($(window).width() <= 985 && $(window).width() > 785) {
     if(currentCarouselPage <= 2) {
-      var carouselPositionSm = ($carTile1.width() + 19.5) * (4 * carouselPageMultiplier);
+      carouselPositionSm = ($carTile1.width() + 19.5) * (4 * carouselPageMultiplier);
 
       $popularItemCarouselInner.css("left", -carouselPositionSm);
     }
 
     else if(currentCarouselPage > 2) {
-      var carouselPositionSm69 = ($carTile1.width() + 19.5) * (4 * 2);
+      carouselPositionSm = ($carTile1.width() + 19.5) * (4 * 2);
 
-      $popularItemCarouselInner.css("left", -carouselPositionSm69);
+      $popularItemCarouselInner.css("left", -carouselPositionSm);
     }
   }
 
   else if($(window).width() <= 785 && $(window).width() > 585) {
     if(currentCarouselPage <= 3) {
-      var carouselPositionSm2 = ($carTile1.width() + 19.5) * (3 * carouselPageMultiplier);
+      carouselPositionSm = ($carTile1.width() + 19.5) * (3 * carouselPageMultiplier);
 
-      $popularItemCarouselInner.css("left", -carouselPositionSm2);
+      $popularItemCarouselInner.css("left", -carouselPositionSm);
     }
 
     else if(currentCarouselPage > 3) {
-      var carouselPositionSm269 = ($carTile1.width() + 19.5) * (3 * 3);
+      carouselPositionSm = ($carTile1.width() + 19.5) * (3 * 3);
 
-      $popularItemCarouselInner.css("left", -carouselPositionSm269);
+      $popularItemCarouselInner.css("left", -carouselPositionSm);
     }
   }
 
   else if($(window).width() <= 585 && $(window).width() > 386) {
-    var carouselPositionSm3 = ($carTile1.width() + 19.5) * (2 * carouselPageMultiplier);
+    if(currentCarouselPage <= 5) {
+      carouselPositionSm = ($carTile1.width() + 19.5) * (2 * carouselPageMultiplier);
 
-    $popularItemCarouselInner.css("left", -carouselPositionSm3);
+      $popularItemCarouselInner.css("left", -carouselPositionSm);
+    }
+
+    else if(currentCarouselPage > 5) {
+      carouselPositionSm = ($carTile1.width() + 19.5) * (2 * 5);
+
+      $popularItemCarouselInner.css("left", -carouselPositionSm);
+    }
   }
 
   else if($(window).width() <= 386) {
-    var carouselPositionSm4 = ($carTile1.width() + 19.5) * (1 * carouselPageMultiplier);
+    carouselPositionSm = ($carTile1.width() + 19.5) * (1 * carouselPageMultiplier);
 
-    $popularItemCarouselInner.css("left", -carouselPositionSm4);
+    $popularItemCarouselInner.css("left", -carouselPositionSm);
   }
 }
 
@@ -282,12 +361,7 @@ $(document).ready(function() {
 
 
   $arrowRightIcon.on("click", function() {
-    carouselClicked = true;
-
-    // if(currentCarouselPage < 2) {
-      currentCarouselPage += 1;
-      console.log("page " + currentCarouselPage);
-    // }
+    carouselPageUp();
 
     changeCarouselPosition();
 
