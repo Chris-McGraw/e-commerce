@@ -40,9 +40,10 @@ var carouselClicked = false;
 var currentCarouselPage = 0;
 var carouselPageMultiplier = 0;
 
-var carouselPage1 = $("#carousel-page-1");
-var carouselPage2 = $("#carousel-page-2");
-var carouselPage3 = $("#carousel-page-3");
+var caroPageNum1 = $("#caro-page-num-1");
+var caroPageNum2 = $("#caro-page-num-2");
+var caroPageNum3 = $("#caro-page-num-3");
+var caroPageNum4 = $("#caro-page-num-4");
 
 
 
@@ -156,22 +157,22 @@ function getCarouselMultiplier() {
   if(currentCarouselPage === 1) {
     carouselPageMultiplier = 1;
 
-    carouselPage1.removeClass("popular-item-page-selected");
-    carouselPage2.addClass("popular-item-page-selected");
+    caroPageNum1.removeClass("popular-item-page-selected");
+    caroPageNum2.addClass("popular-item-page-selected");
   }
 
   else if(currentCarouselPage === 2) {
     carouselPageMultiplier = 2;
 
-    carouselPage2.removeClass("popular-item-page-selected");
-    carouselPage3.addClass("popular-item-page-selected");
+    caroPageNum2.removeClass("popular-item-page-selected");
+    caroPageNum3.addClass("popular-item-page-selected");
   }
 
   else if(currentCarouselPage === 3) {
     carouselPageMultiplier = 3;
 
-    // carouselPage2.removeClass("popular-item-page-selected");
-    // carouselPage3.addClass("popular-item-page-selected");
+    caroPageNum3.removeClass("popular-item-page-selected");
+    caroPageNum4.addClass("popular-item-page-selected");
   }
 }
 
