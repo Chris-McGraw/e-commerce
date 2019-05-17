@@ -37,11 +37,8 @@ var $popularItemCarouselInner = $("#popular-item-carousel-inner");
 var $carTile1 = $("#car-tile-1");
 var carouselClicked = false;
 
-var currentCarouselPage = 1;
+var currentCarouselPage = 0;
 var carouselPageMultiplier = 0;
-
-var carouselPositionSm = 0;
-var carouselPositionLg = 0;
 
 var caroPageNum1 = $("#caro-page-num-1");
 var caroPageNum2 = $("#caro-page-num-2");
@@ -160,65 +157,22 @@ function getCarouselMultiplier() {
   if(currentCarouselPage === 1) {
     carouselPageMultiplier = 1;
 
-    /* caroPageNum1.removeClass("popular-item-page-selected");
-    caroPageNum2.addClass("popular-item-page-selected"); */
+    caroPageNum1.removeClass("popular-item-page-selected");
+    caroPageNum2.addClass("popular-item-page-selected");
   }
 
   else if(currentCarouselPage === 2) {
     carouselPageMultiplier = 2;
 
-    /* caroPageNum2.removeClass("popular-item-page-selected");
-    caroPageNum3.addClass("popular-item-page-selected"); */
+    caroPageNum2.removeClass("popular-item-page-selected");
+    caroPageNum3.addClass("popular-item-page-selected");
   }
 
   else if(currentCarouselPage === 3) {
     carouselPageMultiplier = 3;
 
-    /* caroPageNum3.removeClass("popular-item-page-selected");
-    caroPageNum4.addClass("popular-item-page-selected"); */
-  }
-
-  else if(currentCarouselPage === 4) {
-    carouselPageMultiplier = 4;
-
-    /* caroPageNum3.removeClass("popular-item-page-selected");
-    caroPageNum4.addClass("popular-item-page-selected"); */
-  }
-
-  else if(currentCarouselPage === 5) {
-    carouselPageMultiplier = 5;
-
-    /* caroPageNum3.removeClass("popular-item-page-selected");
-    caroPageNum4.addClass("popular-item-page-selected"); */
-  }
-
-  else if(currentCarouselPage === 6) {
-    carouselPageMultiplier = 6;
-
-    /* caroPageNum3.removeClass("popular-item-page-selected");
-    caroPageNum4.addClass("popular-item-page-selected"); */
-  }
-}
-
-
-function carouselPageForward() {
-  getCarouselMultiplier();
-
-  if($(window).width() > 985) {
-    if(currentCarouselPage <= 2) {
-      carouselPositionLg = ($carTile1.width() + 23) * (4 * carouselPageMultiplier);
-
-      $popularItemCarouselInner.css("left", -carouselPositionLg);
-
-      currentCarouselPage += 1;
-      console.log("page " + currentCarouselPage);
-    }
-
-    else if(currentCarouselPage > 2) {
-      carouselPositionLg = ($carTile1.width() + 23) * (4 * 2);
-
-      $popularItemCarouselInner.css("left", -carouselPositionLg);
-    }
+    caroPageNum3.removeClass("popular-item-page-selected");
+    caroPageNum4.addClass("popular-item-page-selected");
   }
 }
 
@@ -228,61 +182,50 @@ function changeCarouselPosition() {
 
   if($(window).width() > 985) {
     if(currentCarouselPage <= 2) {
-      carouselPositionLg = ($carTile1.width() + 23) * (4 * carouselPageMultiplier);
+      var carouselPositionLg = ($carTile1.width() + 23) * (4 * carouselPageMultiplier);
 
       $popularItemCarouselInner.css("left", -carouselPositionLg);
-
-      currentCarouselPage += 1;
-      console.log("page " + currentCarouselPage);
     }
 
     else if(currentCarouselPage > 2) {
-      carouselPositionLg = ($carTile1.width() + 23) * (4 * 2);
+      var carouselPositionLg69 = ($carTile1.width() + 23) * (4 * 2);
 
-      $popularItemCarouselInner.css("left", -carouselPositionLg);
+      $popularItemCarouselInner.css("left", -carouselPositionLg69);
     }
   }
 
   else if($(window).width() <= 985 && $(window).width() > 785) {
     if(currentCarouselPage <= 2) {
-      carouselPositionSm = ($carTile1.width() + 19.5) * (4 * carouselPageMultiplier);
+      var carouselPositionSm = ($carTile1.width() + 19.5) * (4 * carouselPageMultiplier);
 
       $popularItemCarouselInner.css("left", -carouselPositionSm);
     }
 
     else if(currentCarouselPage > 2) {
-      carouselPositionSm = ($carTile1.width() + 19.5) * (4 * 2);
+      var carouselPositionSm69 = ($carTile1.width() + 19.5) * (4 * 2);
 
-      $popularItemCarouselInner.css("left", -carouselPositionSm);
+      $popularItemCarouselInner.css("left", -carouselPositionSm69);
     }
   }
 
   else if($(window).width() <= 785 && $(window).width() > 585) {
     if(currentCarouselPage <= 3) {
-      carouselPositionSm = ($carTile1.width() + 19.5) * (3 * carouselPageMultiplier);
+      var carouselPositionSm2 = ($carTile1.width() + 19.5) * (3 * carouselPageMultiplier);
 
-      $popularItemCarouselInner.css("left", -carouselPositionSm);
+      $popularItemCarouselInner.css("left", -carouselPositionSm2);
     }
 
     else if(currentCarouselPage > 3) {
-      carouselPositionSm = ($carTile1.width() + 19.5) * (3 * 3);
+      var carouselPositionSm269 = ($carTile1.width() + 19.5) * (3 * 3);
 
-      $popularItemCarouselInner.css("left", -carouselPositionSm);
+      $popularItemCarouselInner.css("left", -carouselPositionSm269);
     }
   }
 
   else if($(window).width() <= 585 && $(window).width() > 386) {
-    if(currentCarouselPage <= 5) {
-      carouselPositionSm = ($carTile1.width() + 19.5) * (2 * carouselPageMultiplier);
+    var carouselPositionSm3 = ($carTile1.width() + 19.5) * (2 * carouselPageMultiplier);
 
-      $popularItemCarouselInner.css("left", -carouselPositionSm);
-    }
-
-    else if(currentCarouselPage > 5) {
-      carouselPositionSm = ($carTile1.width() + 19.5) * (2 * 5);
-
-      $popularItemCarouselInner.css("left", -carouselPositionSm);
-    }
+    $popularItemCarouselInner.css("left", -carouselPositionSm3);
   }
 
   else if($(window).width() <= 386) {
@@ -342,13 +285,11 @@ $(document).ready(function() {
     carouselClicked = true;
 
     // if(currentCarouselPage < 2) {
-      // currentCarouselPage += 1;
-      // console.log("page " + currentCarouselPage);
+      currentCarouselPage += 1;
+      console.log("page " + currentCarouselPage);
     // }
 
-    // changeCarouselPosition();
-
-    carouselPageForward();
+    changeCarouselPosition();
 
     /* $popularItemCarouselInner.addClass("carousel-animation");
 
