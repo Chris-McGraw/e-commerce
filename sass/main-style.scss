@@ -722,14 +722,20 @@ i {
 
 .carousel-tile-red {
   background-color: red;
+
+  background-color: $light-gray;
 }
 
 .carousel-tile-blue {
   background-color: lightBlue;
+
+  background-color: $light-gray;
 }
 
 .carousel-tile-yellow {
   background-color: lightYellow;
+
+  background-color: $light-gray;
 }
 
 #popular-item-page-select {
@@ -755,6 +761,18 @@ i {
 .popular-item-page-selected {
   font-weight: $font-secondary-normal;
   color: black;
+}
+
+#caro-page-num-4 {
+  display: none;
+}
+
+#caro-page-num-5 {
+  display: none;
+}
+
+#caro-page-num-6 {
+  display: none;
 }
 
 /* #car-tile-1 {
@@ -1060,6 +1078,8 @@ i {
 
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
+
+/* ------------ NAVBAR ------------ */
   #navbar-logo {
     left: 0;
     right: 0;
@@ -1134,6 +1154,7 @@ i {
     display: none;
   }
 
+/* ------- CATEGORY SECTION ------- */
   .category-tile-title {
     left: $margin-x-sm;
 
@@ -1148,6 +1169,7 @@ i {
     padding: $margin-main $margin-main;
   }
 
+/* ------- CAMPAIGN SECTION ------- */
   #campaign-section-container {
     height: 40rem;
   }
@@ -1156,11 +1178,17 @@ i {
     grid-column: span 2;
   }
 
+/* ------ POPULAR ITEM SECTION ------ */
   #popular-item-carousel {
     width: 400%;
     padding-right: $margin-sm * 11;
   }
 
+  #caro-page-num-4 {
+    display: inline-block;
+  }
+
+/* ------- REGISTER SECTION ------- */
   #register-text {
     grid-column: span 5;
   }
@@ -1174,6 +1202,8 @@ i {
 
 /* -------------------------- MEDIA QUERY <= 600 -------------------------- */
 @media screen and (max-width: 600px) {
+
+/* -------- BANNER SECTION -------- */
   #home-promotion-container {
     padding: $margin-sm;
   }
@@ -1196,12 +1226,14 @@ i {
     width: 10px;
   }
 
+/* ------- CATEGORY SECTION ------- */
   #category-section-container {
     grid-column-gap: 2px;
 
     padding: $margin-main $margin-sm;
   }
 
+/* ------ POPULAR ITEM SECTION ------ */
   #popular-item-carousel {
     padding: 0px $margin-sm;
 
@@ -1221,6 +1253,15 @@ i {
     right: $margin-sm;
   }
 
+  #caro-page-num-5 {
+    display: inline-block;
+  }
+
+  #caro-page-num-6 {
+    display: inline-block;
+  }
+
+/* -------- FEATURE SECTION -------- */
   #feature-section-container {
     padding: 0 $margin-main;
   }
@@ -1229,6 +1270,7 @@ i {
     padding: $margin-main $margin-sm;
   }
 
+/* -------- FOOTER SECTION -------- */
   #footer-section-container {
     padding: $margin-main;
   }
