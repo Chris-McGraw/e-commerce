@@ -194,9 +194,19 @@ function carouselPageUp() {
 }
 
 
+function carouselPageDown() {
+  if(currentCarouselPage > 1) {
+    carouselClicked = true;
+
+    currentCarouselPage -= 1;
+    console.log("page " + currentCarouselPage);
+  }
+}
+
+
 function getCarouselMultiplier() {
   if(currentCarouselPage === 1) {
-    carouselPageMultiplier = 1;
+    carouselPageMultiplier = 0;
 
     /* caroPageNum1.removeClass("popular-item-page-selected");
     caroPageNum2.addClass("popular-item-page-selected"); */
@@ -356,6 +366,16 @@ $(document).ready(function() {
         bannerChangeDelay = false;
       }, 800);
     }
+  });
+
+  $arrowLeftIcon.on("click", function() {
+    carouselPageDown();
+
+    changeCarouselPosition();
+
+    /* $popularItemCarouselInner.addClass("carousel-animation");
+
+    scrollCarousel(); */
   });
 
 
