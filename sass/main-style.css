@@ -602,14 +602,17 @@ i {
 
 .carousel-tile-red {
   background-color: red;
+  background-color: #efefef;
 }
 
 .carousel-tile-blue {
   background-color: lightBlue;
+  background-color: #efefef;
 }
 
 .carousel-tile-yellow {
   background-color: lightYellow;
+  background-color: #efefef;
 }
 
 #popular-item-page-select {
