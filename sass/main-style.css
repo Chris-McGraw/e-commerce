@@ -515,7 +515,7 @@ i {
   height: auto;
   padding: 1.75rem;
   background-color: white;
-  background-color: #efefef;
+  overflow-x: hidden;
 }
 
 #popular-item-carousel {
@@ -525,6 +525,7 @@ i {
   height: auto;
   padding: 0px 1.75rem;
   padding-right: 7rem;
+  overflow-x: hidden;
 }
 
 #popular-item-header {
