@@ -621,6 +621,7 @@ i {
   padding: $margin-main;
 
   background-color: white;
+  background-color: $light-gray;
 }
 
 #popular-item-carousel {
@@ -657,6 +658,8 @@ i {
   height: 11rem;
 
   /* border: 1px solid red; */
+
+  overflow-x: hidden;
 }
 
 .carousel-animation {
