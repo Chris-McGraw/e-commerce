@@ -43,13 +43,22 @@ var carouselPageMultiplier = 0;
 var carouselPositionLg = 0;
 var carouselPositionSm = 0;
 
+var $popularItemPageSelect = $("#popular-item-page-select");
 var popularItemPageNumber = $(".popular-item-page-number");
+var $caroPageEllipsisLeft = $("#caro-page-ellipsis-left");
 var caroPageNum1 = $("#caro-page-num-1");
 var caroPageNum2 = $("#caro-page-num-2");
 var caroPageNum3 = $("#caro-page-num-3");
 var caroPageNum4 = $("#caro-page-num-4");
 var caroPageNum5 = $("#caro-page-num-5");
 var caroPageNum6 = $("#caro-page-num-6");
+var caroPageNum7 = $("#caro-page-num-7");
+var caroPageNum8 = $("#caro-page-num-8");
+var caroPageNum9 = $("#caro-page-num-9");
+var caroPageNum10= $("#caro-page-num-10");
+var caroPageNum11 = $("#caro-page-num-11");
+var caroPageNum12 = $("#caro-page-num-12");
+var $caroPageEllipsisRight = $("#caro-page-ellipsis-right");
 
 
 
@@ -207,7 +216,136 @@ function carouselPageDown() {
 }
 
 
+function showCaroPageNum1_3() {
+  caroPageNum1.css("display", "inline-block");
+  caroPageNum2.css("display", "inline-block");
+  caroPageNum3.css("display", "inline-block");
+}
+
+
+function hideCaroPageNum1_3() {
+  caroPageNum1.css("display", "none");
+  caroPageNum2.css("display", "none");
+  caroPageNum3.css("display", "none");
+}
+
+
+function showCaroPageNum5_6() {
+  caroPageNum5.css("display", "inline-block");
+  caroPageNum6.css("display", "inline-block");
+}
+
+
+function hideCaroPageNum5_6() {
+  caroPageNum5.css("display", "none");
+  caroPageNum6.css("display", "none");
+}
+
+function showCaroPageNum7_9() {
+  caroPageNum7.css("display", "inline-block");
+  caroPageNum8.css("display", "inline-block");
+  caroPageNum9.css("display", "inline-block");
+}
+
+function hideCaroPageNum7_9() {
+  caroPageNum7.css("display", "none");
+  caroPageNum8.css("display", "none");
+  caroPageNum9.css("display", "none");
+}
+
+function showCaroPageNum10_12() {
+  caroPageNum10.css("display", "inline-block");
+  caroPageNum11.css("display", "inline-block");
+  caroPageNum12.css("display", "inline-block");
+
+  $popularItemPageSelect.css("letter-spacing", "normal");
+}
+
+function hideCaroPageNum10_12() {
+  caroPageNum10.css("display", "none");
+  caroPageNum11.css("display", "none");
+  caroPageNum12.css("display", "none");
+
+  $popularItemPageSelect.css("letter-spacing", "2px");
+}
+
+
 function getCarouselMultiplier() {
+  if(currentCarouselPage <= 3) {
+    showCaroPageNum1_3();
+
+    $caroPageEllipsisLeft.css("display", "none");
+
+    hideCaroPageNum5_6();
+
+    hideCaroPageNum7_9();
+
+    hideCaroPageNum10_12();
+
+    if($(window).width() <= 785 && $(window).width() > 585) {
+      caroPageNum4.css("display", "inline-block");
+    }
+    else {
+      caroPageNum4.css("display", "none");
+    }
+
+    if($(window).width() <= 585) {
+      $caroPageEllipsisRight.css("display", "block");
+    }
+    else {
+      $caroPageEllipsisRight.css("display", "none");
+    }
+  }
+
+  else if(currentCarouselPage >= 4 && currentCarouselPage <= 6) {
+    hideCaroPageNum1_3();
+
+    hideCaroPageNum7_9();
+
+    hideCaroPageNum10_12();
+
+    caroPageNum4.css("display", "inline-block");
+
+    showCaroPageNum5_6();
+
+    if($(window).width() > 386) {
+      $caroPageEllipsisRight.css("display", "none");
+    }
+    else if($(window).width() <= 386) {
+      $caroPageEllipsisRight.css("display", "block");
+    }
+  }
+
+  else if(currentCarouselPage >= 7 && currentCarouselPage <= 9) {
+    hideCaroPageNum1_3();
+
+    caroPageNum4.css("display", "none");
+
+    hideCaroPageNum5_6();
+
+    hideCaroPageNum10_12();
+
+    showCaroPageNum7_9();
+
+    $caroPageEllipsisRight.css("display", "block");
+  }
+
+  else if(currentCarouselPage >= 9 && currentCarouselPage <= 12) {
+    hideCaroPageNum1_3();
+
+    caroPageNum4.css("display", "none");
+
+    hideCaroPageNum5_6();
+
+    hideCaroPageNum7_9();
+
+    showCaroPageNum10_12();
+
+    $caroPageEllipsisRight.css("display", "none");
+  }
+
+
+
   if(currentCarouselPage === 1) {
     carouselPageMultiplier = 0;
 
@@ -232,8 +370,25 @@ function getCarouselMultiplier() {
   else if(currentCarouselPage === 4) {
     carouselPageMultiplier = 3;
 
+    caroPageNum4.css("display", "inline-block");
+
     popularItemPageNumber.removeClass("popular-item-page-selected");
     caroPageNum4.addClass("popular-item-page-selected");
+
+    if($(window).width() <= 785 && $(window).width() > 585) {
+      showCaroPageNum1_3();
+
+      hideCaroPageNum5_6();
+
+      $caroPageEllipsisLeft.css("display", "none");
+    }
+    else {
+      hideCaroPageNum1_3();
+
+      showCaroPageNum5_6();
+
+      $caroPageEllipsisLeft.css("display", "block");
+    }
   }
 
   else if(currentCarouselPage === 5) {
@@ -252,26 +407,44 @@ function getCarouselMultiplier() {
 
   else if(currentCarouselPage === 7) {
     carouselPageMultiplier = 6;
+
+    popularItemPageNumber.removeClass("popular-item-page-selected");
+    caroPageNum7.addClass("popular-item-page-selected");
   }
 
   else if(currentCarouselPage === 8) {
     carouselPageMultiplier = 7;
+
+    popularItemPageNumber.removeClass("popular-item-page-selected");
+    caroPageNum8.addClass("popular-item-page-selected");
   }
 
   else if(currentCarouselPage === 9) {
     carouselPageMultiplier = 8;
+
+    popularItemPageNumber.removeClass("popular-item-page-selected");
+    caroPageNum9.addClass("popular-item-page-selected");
   }
 
   else if(currentCarouselPage === 10) {
     carouselPageMultiplier = 9;
+
+    popularItemPageNumber.removeClass("popular-item-page-selected");
+    caroPageNum10.addClass("popular-item-page-selected");
   }
 
   else if(currentCarouselPage === 11) {
     carouselPageMultiplier = 10;
+
+    popularItemPageNumber.removeClass("popular-item-page-selected");
+    caroPageNum11.addClass("popular-item-page-selected");
   }
 
   else if(currentCarouselPage === 12) {
     carouselPageMultiplier = 11;
+
+    popularItemPageNumber.removeClass("popular-item-page-selected");
+    caroPageNum12.addClass("popular-item-page-selected");
   }
 }
 
