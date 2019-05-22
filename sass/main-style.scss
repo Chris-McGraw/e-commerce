@@ -744,15 +744,51 @@ i {
   background-color: $light-gray;
 }
 
+.caro-page-ellipsis {
+  position: absolute;
+  bottom: $margin-main;
+
+  width: 1rem;
+  margin: auto;
+
+  font-family: $font-stack-secondary;
+  font-size: $font-icon;
+  font-weight: $font-secondary-light;
+  text-align: center;
+  color: $medium-gray;
+
+  user-select: none;
+}
+
+#caro-page-ellipsis-left {
+  display: none;
+
+  left: 0;
+  right: 4rem;
+}
+
+#caro-page-ellipsis-right {
+  display: none;
+
+  left: 4rem;
+  right: 0;
+}
+
 #popular-item-page-select {
+  position: relative;
+  left: 0;
+  right: 0;
+
+  width: 5rem;
+  margin: auto;
   margin-top: $margin-sm;
 
   font-family: $font-stack-secondary;
   font-size: $font-icon;
   text-align: center;
+  letter-spacing: 2px;
 
-
-  /* border: 1px solid red; */
+  // border: 1px solid red;
 }
 
 .popular-item-page-number {
@@ -778,6 +814,30 @@ i {
 }
 
 #caro-page-num-6 {
+  display: none;
+}
+
+#caro-page-num-7 {
+  display: none;
+}
+
+#caro-page-num-8 {
+  display: none;
+}
+
+#caro-page-num-9 {
+  display: none;
+}
+
+#caro-page-num-10 {
+  display: none;
+}
+
+#caro-page-num-11 {
+  display: none;
+}
+
+#caro-page-num-12 {
   display: none;
 }
 
@@ -1259,12 +1319,12 @@ i {
     right: $margin-sm;
   }
 
-  #caro-page-num-5 {
-    display: inline-block;
+  #caro-page-num-4 {
+    display: none;
   }
 
-  #caro-page-num-6 {
-    display: inline-block;
+  #caro-page-ellipsis-right {
+    display: block;
   }
 
 /* -------- FEATURE SECTION -------- */

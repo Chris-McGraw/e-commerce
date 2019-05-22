@@ -618,12 +618,42 @@ i {
   background-color: #efefef;
 }
 
+.caro-page-ellipsis {
+  position: absolute;
+  bottom: 1.75rem;
+  width: 1rem;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-align: center;
+  color: #d7d7d7;
+  user-select: none;
+}
+
+#caro-page-ellipsis-left {
+  display: none;
+  left: 0;
+  right: 4rem;
+}
+
+#caro-page-ellipsis-right {
+  display: none;
+  left: 4rem;
+  right: 0;
+}
+
 #popular-item-page-select {
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 5rem;
+  margin: auto;
   margin-top: 0.875rem;
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   text-align: center;
-  /* border: 1px solid red; */
+  letter-spacing: 2px;
 }
 
 .popular-item-page-number {
@@ -647,6 +677,30 @@ i {
 }
 
 #caro-page-num-6 {
+  display: none;
+}
+
+#caro-page-num-7 {
+  display: none;
+}
+
+#caro-page-num-8 {
+  display: none;
+}
+
+#caro-page-num-9 {
+  display: none;
+}
+
+#caro-page-num-10 {
+  display: none;
+}
+
+#caro-page-num-11 {
+  display: none;
+}
+
+#caro-page-num-12 {
   display: none;
 }
 
@@ -1050,12 +1104,12 @@ i {
     right: 0.875rem;
   }
 
-  #caro-page-num-5 {
-    display: inline-block;
+  #caro-page-num-4 {
+    display: none;
   }
 
-  #caro-page-num-6 {
-    display: inline-block;
+  #caro-page-ellipsis-right {
+    display: block;
   }
 
   /* -------- FEATURE SECTION -------- */
