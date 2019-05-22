@@ -270,7 +270,7 @@ function hideCaroPageNum10_12() {
 }
 
 
-function getCarouselMultiplier() {
+function getCarouselPageList() {
   if(currentCarouselPage <= 3) {
     showCaroPageNum1_3();
 
@@ -343,9 +343,10 @@ function getCarouselMultiplier() {
 
     $caroPageEllipsisRight.css("display", "none");
   }
+}
 
 
-
+function getCarouselMultiplier() {
   if(currentCarouselPage === 1) {
     carouselPageMultiplier = 0;
 
@@ -450,6 +451,8 @@ function getCarouselMultiplier() {
 
 
 function changeCarouselPosition() {
+  getCarouselPageList();
+
   getCarouselMultiplier();
 
   if($(window).width() > 985) {
