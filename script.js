@@ -216,6 +216,50 @@ function carouselPageDown() {
 }
 
 
+function carouselPageSelect(clickedCarouselPage) {
+  carouselClicked = true;
+
+  if(clickedCarouselPage.attr("id") === "caro-page-num-1") {
+    currentCarouselPage = 1;
+  }
+  else if(clickedCarouselPage.attr("id") === "caro-page-num-2") {
+    currentCarouselPage = 2;
+  }
+  else if(clickedCarouselPage.attr("id") === "caro-page-num-3") {
+    currentCarouselPage = 3;
+  }
+  else if(clickedCarouselPage.attr("id") === "caro-page-num-4") {
+    currentCarouselPage = 4;
+  }
+  else if(clickedCarouselPage.attr("id") === "caro-page-num-5") {
+    currentCarouselPage = 5;
+  }
+  else if(clickedCarouselPage.attr("id") === "caro-page-num-6") {
+    currentCarouselPage = 6;
+  }
+  else if(clickedCarouselPage.attr("id") === "caro-page-num-7") {
+    currentCarouselPage = 7;
+  }
+  else if(clickedCarouselPage.attr("id") === "caro-page-num-8") {
+    currentCarouselPage = 8;
+  }
+  else if(clickedCarouselPage.attr("id") === "caro-page-num-9") {
+    currentCarouselPage = 9;
+  }
+  else if(clickedCarouselPage.attr("id") === "caro-page-num-10") {
+    currentCarouselPage = 10;
+  }
+  else if(clickedCarouselPage.attr("id") === "caro-page-num-11") {
+    currentCarouselPage = 11;
+  }
+  else if(clickedCarouselPage.attr("id") === "caro-page-num-12") {
+    currentCarouselPage = 12;
+  }
+
+  changeCarouselPosition();
+}
+
+
 function showCaroPageNum1_3() {
   $caroPageNum1.css("display", "inline-block");
   $caroPageNum2.css("display", "inline-block");
@@ -570,6 +614,8 @@ $(document).ready(function() {
     }
   });
 
+
+
   $arrowLeftIcon.on("click", function() {
     carouselPageDown();
 
@@ -591,6 +637,13 @@ $(document).ready(function() {
 
     scrollCarousel(); */
   });
+
+
+
+  $popularItemPageNumber.on("click", function() {
+    carouselPageSelect($(this));
+  });
+
 
 
   $(window).resize(function() {

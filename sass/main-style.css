@@ -654,6 +654,7 @@ i {
   font-size: 0.8rem;
   text-align: center;
   letter-spacing: 2px;
+  user-select: none;
 }
 
 .popular-item-page-number {
