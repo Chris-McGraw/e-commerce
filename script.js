@@ -1,15 +1,16 @@
 /* ------------------------- VARIABLE DECLARATIONS ------------------------- */
+
+/* ~~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~~ */
 var $hamburgerMenu = $("#hamburger-menu");
 var $navbarDropdown = $("#navbar-dropdown");
 var dropdownNavActive = false;
-
-
 
 var $searchIconDropdown = $("#search-icon-dropdown");
 var $searchDropdown = $("#search-dropdown");
 
 
 
+/* ~~~~~~~~ BANNER SECTION ~~~~~~~~ */
 var $bannerPageImg = $(".banner-page-img");
 var $bannerPageImgLeft = $("#banner-page-img-left");
 var $bannerPageImgCenter = $("#banner-page-img-center");
@@ -30,6 +31,7 @@ var bannerChangeDelay = false;
 
 
 
+/* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
 var $arrowLeftIcon = $("#arrow-left-icon");
 var $arrowRightIcon = $("#arrow-right-icon");
 

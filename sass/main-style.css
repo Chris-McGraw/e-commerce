@@ -914,14 +914,12 @@ i {
 
 /* -------------------------- MEDIA QUERY <= 1000 -------------------------- */
 @media screen and (max-width: 1000px) {
+  /* ~~~~~~~~~~~~~ ROOT ~~~~~~~~~~~~~ */
   :root {
     font-size: 20px;
   }
 
-  #feature-tile-sub-header {
-    width: 316px;
-  }
-
+  /* ~~~~~~~~ BANNER SECTION ~~~~~~~~ */
   .banner-page-circle-outer {
     height: 18px;
     width: 18px;
@@ -931,15 +929,22 @@ i {
     height: 12px;
     width: 12px;
   }
+
+  /* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
+  #feature-tile-sub-header {
+    width: 316px;
+  }
 }
 /* -------------------------- MEDIA QUERY <= 900 -------------------------- */
 @media screen and (max-width: 900px) {
+  /* ~~~~~~~~ FOOTER SECTION ~~~~~~~~ */
   .footer-tile {
     grid-column: span 2;
   }
 }
 /* -------------------------- MEDIA QUERY >= 801 -------------------------- */
 @media screen and (min-width: 801px) {
+  /* ~~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~~ */
   #navbar-dropdown {
     display: none !important;
   }
@@ -950,7 +955,7 @@ i {
 }
 /* -------------------------- MEDIA QUERY <= 800 -------------------------- */
 @media screen and (max-width: 800px) {
-  /* ------------ NAVBAR ------------ */
+  /* ~~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~~ */
   #navbar-logo {
     left: 0;
     right: 0;
@@ -1014,7 +1019,7 @@ i {
     display: none;
   }
 
-  /* ------- CATEGORY SECTION ------- */
+  /* ~~~~~~~ CATEGORY SECTION ~~~~~~~ */
   .category-tile-title {
     left: 0.4375rem;
     writing-mode: tb-rl;
@@ -1027,7 +1032,7 @@ i {
     padding: 1.75rem 1.75rem;
   }
 
-  /* ------- CAMPAIGN SECTION ------- */
+  /* ~~~~~~~ CAMPAIGN SECTION ~~~~~~~ */
   #campaign-section-container {
     height: 40rem;
   }
@@ -1036,7 +1041,7 @@ i {
     grid-column: span 2;
   }
 
-  /* ------ POPULAR ITEM SECTION ------ */
+  /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
   #popular-item-carousel {
     width: 400%;
     padding-right: 9.625rem;
@@ -1046,7 +1051,7 @@ i {
     display: inline-block;
   }
 
-  /* ------- REGISTER SECTION ------- */
+  /* ~~~~~~~ REGISTER SECTION ~~~~~~~ */
   #register-text {
     grid-column: span 5;
   }
@@ -1057,7 +1062,7 @@ i {
 }
 /* -------------------------- MEDIA QUERY <= 600 -------------------------- */
 @media screen and (max-width: 600px) {
-  /* -------- BANNER SECTION -------- */
+  /* ~~~~~~~~ BANNER SECTION ~~~~~~~~ */
   #home-promotion-container {
     padding: 0.875rem;
   }
@@ -1080,13 +1085,13 @@ i {
     width: 10px;
   }
 
-  /* ------- CATEGORY SECTION ------- */
+  /* ~~~~~~~ CATEGORY SECTION ~~~~~~~ */
   #category-section-container {
     grid-column-gap: 2px;
     padding: 1.75rem 0.875rem;
   }
 
-  /* ------ POPULAR ITEM SECTION ------ */
+  /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
   #popular-item-carousel {
     padding: 0px 0.875rem;
     width: 600%;
@@ -1113,7 +1118,7 @@ i {
     display: block;
   }
 
-  /* -------- FEATURE SECTION -------- */
+  /* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
   #feature-section-container {
     padding: 0 1.75rem;
   }
@@ -1122,7 +1127,7 @@ i {
     padding: 1.75rem 0.875rem;
   }
 
-  /* -------- FOOTER SECTION -------- */
+  /* ~~~~~~~~ FOOTER SECTION ~~~~~~~~ */
   #footer-section-container {
     padding: 1.75rem;
   }
@@ -1133,6 +1138,7 @@ i {
 }
 /* -------------------------- MEDIA QUERY <= 418 -------------------------- */
 @media screen and (max-width: 418px) {
+  /* ~~~~~~~ REGISTER SECTION ~~~~~~~ */
   #register-text {
     white-space: normal;
   }
@@ -1143,10 +1149,12 @@ i {
 }
 /* -------------------------- MEDIA QUERY <= 401 -------------------------- */
 @media screen and (max-width: 401px) {
+  /* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
   #feature-tile-sub-header {
     width: 188px;
   }
 
+  /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
   #popular-item-carousel {
     width: 1200%;
     padding-right: 10.5rem;
@@ -1154,6 +1162,7 @@ i {
 }
 /* -------------------------- MEDIA QUERY <= 350 -------------------------- */
 @media screen and (max-width: 350px) {
+  /* ~~~~~~~~ BANNER SECTION ~~~~~~~~ */
   #promotion-text-grouped {
     white-space: normal;
   }
