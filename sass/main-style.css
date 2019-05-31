@@ -394,15 +394,17 @@ i {
 .category-tile {
   grid-column: span 1;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-color: lightGray;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .category-tile-title {
+  z-index: 1000;
   display: inline-block;
+  /* position: relative;
+  top: $margin-sm; */
   position: relative;
-  top: 0.875rem;
+  top: -15.6rem;
   left: 0.875rem;
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
@@ -413,19 +415,34 @@ i {
   color: white;
   -webkit-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 
-#category-tile-men {
+.category-tile-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: lightGray;
+  cursor: pointer;
+  transition: transform 500ms ease-in-out;
+}
+
+#category-tile-img-men {
   background-image: url("../images/male-model-crop-top.png");
 }
 
-#category-tile-women {
-  background-image: url("../images/female-model-crop-top.png");
+#category-tile-img-women {
   background-position: 25% center;
+  background-image: url("../images/female-model-crop-top.png");
 }
 
-#category-tile-children {
+#category-tile-img-children {
   background-image: url("../images/child-model.jpg");
+}
+
+.category-tile-zoom {
+  transform: scale(1.4) translateY(-2.3rem);
 }
 
 /* --------------------------- CAMPAIGN SECTION --------------------------- */
