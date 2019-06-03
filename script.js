@@ -2,6 +2,8 @@
 
 /* ~~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~~ */
 var $hamburgerMenu = $("#hamburger-menu");
+var $hamburgerBar = $(".hamburger-bar");
+
 var $navbarDropdown = $("#navbar-dropdown");
 var dropdownNavActive = false;
 
@@ -619,6 +621,7 @@ $(document).ready(function() {
 
 
   $("body *").on("touchstart", function() {
+    $hamburgerMenu.off("mouseenter");
     $categoryTileMask.off("mouseenter");
   });
 
@@ -628,6 +631,14 @@ $(document).ready(function() {
   $bannerPageCircleLeft.children().css("background-color", "white");
 
 
+
+  $hamburgerMenu.on("mouseenter", function() {
+    $hamburgerBar.css("background-color", "#efefef");
+  });
+
+  $hamburgerMenu.on("mouseleave", function() {
+    $hamburgerBar.css("background-color", "black");
+  });
 
   $hamburgerMenu.on("click", function() {
     if(dropdownNavActive === false) {
