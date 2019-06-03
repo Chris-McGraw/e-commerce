@@ -32,10 +32,7 @@ var bannerChangeDelay = false;
 
 
 /* ~~~~~~~ CATEGORY SECTION ~~~~~~~ */
-var $categoryTileMen = $("#category-tile-men");
-
 var $categoryTileMask = $(".category-tile-mask");
-
 var $categoryTileMenMask = $("#category-tile-men-mask");
 var $categoryTileWomenMask = $("#category-tile-women-mask");
 var $categoryTileChildrenMask = $("#category-tile-children-mask");
@@ -619,6 +616,12 @@ function changeCarouselPosition() {
 
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
+
+
+  $("body *").on("touchstart", function() {
+    $categoryTileMask.off("mouseenter");
+  });
+
 
 
   $bannerPageCircleLeft.addClass("banner-page-circle-selected");
