@@ -488,7 +488,7 @@ i {
   display: inline-block;
 
   position: relative;
-  top: $margin-sm;
+  top: -15.6rem;
   left: $margin-sm;
 
   font-family: $font-stack-main;
@@ -514,6 +514,25 @@ i {
 
 #category-tile-children {
   background-image: url("../images/child-model.jpg");
+}
+
+.category-tile-mask {
+  z-index: 10;
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: white;
+  opacity: 0.0;
+
+  cursor: pointer;
+
+  transition: opacity 300ms ease-in-out;
+}
+
+.category-tile-mask-fade {
+  opacity: 0.5;
 }
 
 

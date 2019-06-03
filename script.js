@@ -31,6 +31,17 @@ var bannerChangeDelay = false;
 
 
 
+/* ~~~~~~~ CATEGORY SECTION ~~~~~~~ */
+var $categoryTileMen = $("#category-tile-men");
+
+var $categoryTileMask = $(".category-tile-mask");
+
+var $categoryTileMenMask = $("#category-tile-men-mask");
+var $categoryTileWomenMask = $("#category-tile-women-mask");
+var $categoryTileChildrenMask = $("#category-tile-children-mask");
+
+
+
 /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
 var $arrowLeftIcon = $("#arrow-left-icon");
 var $arrowRightIcon = $("#arrow-right-icon");
@@ -133,6 +144,36 @@ function fadeBannerImage(currentBannerPageCircle) {
 
       $bannerPageImgRight.addClass("banner-fade-in");
     }
+  }
+}
+
+
+function categoryTileMaskFadeIn(hoveredCategoryTile) {
+  if(hoveredCategoryTile.attr("id") === "category-tile-men-mask") {
+    $categoryTileMenMask.addClass("category-tile-mask-fade");
+  }
+
+  else if(hoveredCategoryTile.attr("id") === "category-tile-women-mask") {
+    $categoryTileWomenMask.addClass("category-tile-mask-fade");
+  }
+
+  else if(hoveredCategoryTile.attr("id") === "category-tile-children-mask") {
+    $categoryTileChildrenMask.addClass("category-tile-mask-fade");
+  }
+}
+
+
+function categoryTileMaskFadeOut(hoveredCategoryTile) {
+  if(hoveredCategoryTile.attr("id") === "category-tile-men-mask") {
+    $categoryTileMenMask.removeClass("category-tile-mask-fade");
+  }
+
+  else if(hoveredCategoryTile.attr("id") === "category-tile-women-mask") {
+    $categoryTileWomenMask.removeClass("category-tile-mask-fade");
+  }
+
+  else if(hoveredCategoryTile.attr("id") === "category-tile-children-mask") {
+    $categoryTileChildrenMask.removeClass("category-tile-mask-fade");
   }
 }
 
@@ -614,6 +655,16 @@ $(document).ready(function() {
         bannerChangeDelay = false;
       }, 800);
     }
+  });
+
+
+
+  $categoryTileMask.on("mouseenter", function() {
+    categoryTileMaskFadeIn($(this));
+  });
+
+  $categoryTileMask.on("mouseleave", function() {
+    categoryTileMaskFadeOut($(this));
   });
 
 
