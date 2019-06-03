@@ -10,14 +10,6 @@ var $searchDropdown = $("#search-dropdown");
 
 
 
-/* ~~~~~~~ CATEGORY SECTION ~~~~~~~ */
-// var $categoryTileMen = $("#category-tile-men");
-var $categoryTileImgMen = $("#category-tile-img-men");
-var $categoryTileImgWomen = $("#category-tile-img-women");
-var $categoryTileImgChildren = $("#category-tile-img-children");
-
-
-
 /* ~~~~~~~~ BANNER SECTION ~~~~~~~~ */
 var $bannerPageImg = $(".banner-page-img");
 var $bannerPageImgLeft = $("#banner-page-img-left");
@@ -664,36 +656,6 @@ $(document).ready(function() {
 
       scrollCarousel(); */
     }
-  });
-
-
-
-  $categoryTileImgMen.on("mouseenter", function() {
-    $categoryTileImgMen.addClass("category-tile-zoom");
-  });
-
-  $categoryTileImgMen.on("mouseleave", function() {
-    $categoryTileImgMen.removeClass("category-tile-zoom");
-  });
-
-
-
-  $categoryTileImgWomen.on("mouseenter", function() {
-    $categoryTileImgWomen.addClass("category-tile-zoom");
-  });
-
-  $categoryTileImgWomen.on("mouseleave", function() {
-    $categoryTileImgWomen.removeClass("category-tile-zoom");
-  });
-
-
-
-  $categoryTileImgChildren.on("mouseenter", function() {
-    $categoryTileImgChildren.addClass("category-tile-zoom");
-  });
-
-  $categoryTileImgChildren.on("mouseleave", function() {
-    $categoryTileImgChildren.removeClass("category-tile-zoom");
   });
 
 
