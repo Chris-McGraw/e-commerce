@@ -222,8 +222,10 @@ i {
 }
 
 .nav-link-dropdown {
-  /* border: 1px solid red; */
   margin-bottom: 0.4375rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #login-button-dropdown {
@@ -656,6 +658,7 @@ i {
   font-weight: 300;
   text-align: center;
   color: #d7d7d7;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -682,6 +685,7 @@ i {
   font-size: 0.8rem;
   text-align: center;
   letter-spacing: 2px;
+  -webkit-user-select: none;
   user-select: none;
 }
 

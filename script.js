@@ -6,6 +6,7 @@ var $hamburgerBar = $(".hamburger-bar");
 
 var $navbarDropdown = $("#navbar-dropdown");
 var dropdownNavActive = false;
+var $navLinkDropdown = $(".nav-link-dropdown");
 
 var $searchIconDropdown = $("#search-icon-dropdown");
 var $searchDropdown = $("#search-dropdown");
@@ -622,6 +623,7 @@ $(document).ready(function() {
 
   $("body *").on("touchstart", function() {
     $hamburgerMenu.off("mouseenter");
+    $navLinkDropdown.off("mouseenter");
     $categoryTileMask.off("mouseenter");
   });
 
@@ -647,6 +649,16 @@ $(document).ready(function() {
     else if(dropdownNavActive === true) {
       closeDropdownNav();
     }
+  });
+
+
+
+  $navLinkDropdown.on("mouseenter", function() {
+    $(this).css("color", "#efefef");
+  });
+
+  $navLinkDropdown.on("mouseleave", function() {
+    $(this).css("color", "black");
   });
 
 
