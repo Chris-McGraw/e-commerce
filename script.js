@@ -1,6 +1,9 @@
 /* ------------------------- VARIABLE DECLARATIONS ------------------------- */
 
 /* ~~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~~ */
+var $navLink = $(".nav-link");
+var $navLinkButton = $(".nav-link-button");
+
 var $hamburgerMenu = $("#hamburger-menu");
 var $hamburgerBar = $(".hamburger-bar");
 
@@ -622,8 +625,11 @@ $(document).ready(function() {
 
 
   $("body *").on("touchstart", function() {
+    $navLink.off("mouseenter");
+    $navLinkButton.off("mouseenter");
     $hamburgerMenu.off("mouseenter");
     $navLinkDropdown.off("mouseenter");
+    $searchIconDropdown.off("mouseenter");
     $categoryTileMask.off("mouseenter");
   });
 
@@ -631,6 +637,24 @@ $(document).ready(function() {
 
   $bannerPageCircleLeft.addClass("banner-page-circle-selected");
   $bannerPageCircleLeft.children().css("background-color", "white");
+
+
+
+  $navLink.on("mouseenter", function() {
+    $(this).css("color", "#efefef");
+  });
+
+  $navLink.on("mouseleave", function() {
+    $(this).css("color", "black");
+  });
+
+  $navLinkButton.on("mouseenter", function() {
+    $(this).css("color", "#efefef");
+  });
+
+  $navLinkButton.on("mouseleave", function() {
+    $(this).css("color", "black");
+  });
 
 
 
@@ -662,6 +686,14 @@ $(document).ready(function() {
   });
 
 
+
+  $searchIconDropdown.on("mouseenter", function() {
+    $searchIconDropdown.css("color", "#efefef");
+  });
+
+  $searchIconDropdown.on("mouseleave", function() {
+    $searchIconDropdown.css("color", "black");
+  });
 
   $searchIconDropdown.on("click", function() {
     console.log("search bar dropdown toggle");

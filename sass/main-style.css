@@ -50,17 +50,14 @@ i {
   cursor: pointer;
 }
 
-.nav-link:hover {
-  color: #efefef;
-}
-
 .nav-link-button {
   display: inline-block;
   cursor: pointer;
 }
 
-.nav-link-button:hover {
-  color: #efefef;
+.nav-link-button-text {
+  display: inline-block;
+  cursor: pointer;
 }
 
 #navbar-logo {
@@ -1033,10 +1030,6 @@ i {
     font-size: 1rem;
   }
 
-  #search-icon-dropdown:hover {
-    color: #d7d7d7;
-  }
-
   #login-icon {
     display: none;
   }
@@ -1047,6 +1040,10 @@ i {
   }
 
   .nav-link {
+    display: none;
+  }
+
+  .nav-link-button-text {
     display: none;
   }
 
