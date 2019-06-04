@@ -57,18 +57,16 @@ i {
   cursor: pointer;
 }
 
-.nav-link:hover {
-  color: $light-gray;
-}
-
 .nav-link-button {
   display: inline-block;
 
   cursor: pointer;
 }
 
-.nav-link-button:hover {
-  color: $light-gray;
+.nav-link-button-text {
+  display: inline-block;
+
+  cursor: pointer;
 }
 
 #navbar-logo {
@@ -265,9 +263,11 @@ i {
 }
 
 .nav-link-dropdown {
-  /* border: 1px solid red; */
-
   margin-bottom: $margin-x-sm;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #login-button-dropdown {
@@ -790,6 +790,7 @@ i {
   text-align: center;
   color: $medium-gray;
 
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -823,6 +824,7 @@ i {
 
   // border: 1px solid red;
 
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -1244,10 +1246,6 @@ i {
     font-size: 1rem;
   }
 
-  #search-icon-dropdown:hover {
-    color: $medium-gray;
-  }
-
   #login-icon {
     display: none;
   }
@@ -1259,6 +1257,10 @@ i {
   }
 
   .nav-link {
+    display: none;
+  }
+
+  .nav-link-button-text {
     display: none;
   }
 
