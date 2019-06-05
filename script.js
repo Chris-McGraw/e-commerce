@@ -45,6 +45,11 @@ var $categoryTileChildrenMask = $("#category-tile-children-mask");
 
 
 
+/* ~~~~~~~ CAMPAIGN SECTION ~~~~~~~ */
+var $campaignButton = $(".campaign-button");
+
+
+
 /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
 var $arrowLeftIcon = $("#arrow-left-icon");
 var $arrowRightIcon = $("#arrow-right-icon");
@@ -723,6 +728,20 @@ $(document).ready(function() {
 
   $categoryTileMask.on("mouseleave", function() {
     categoryTileMaskFadeOut($(this));
+  });
+
+
+
+  $campaignButton.on("mousedown", function() {
+    $(this).addClass("campaign-button-pressed");
+  });
+
+  $campaignButton.on("mouseup", function() {
+    $(this).removeClass("campaign-button-pressed");
+  });
+
+  $campaignButton.on("mouseleave", function() {
+    $(this).removeClass("campaign-button-pressed");
   });
 
 
