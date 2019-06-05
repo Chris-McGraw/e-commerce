@@ -214,7 +214,7 @@ i {
   font-weight: $font-main-normal;
 
   border: none;
-  border: 1px solid black;
+  border: 1px solid $medium-gray;
   outline: none;
 
   cursor: text;
@@ -1141,6 +1141,12 @@ i {
 /* ~~~~~~~~~~~~~ ROOT ~~~~~~~~~~~~~ */
   :root {
     font-size: 20px;
+  }
+
+  #search-bar {
+    position: absolute;
+
+    height: 26px;
   }
 
 /* ~~~~~~~~ BANNER SECTION ~~~~~~~~ */
