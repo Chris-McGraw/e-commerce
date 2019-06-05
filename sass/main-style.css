@@ -179,7 +179,7 @@ i {
   font-size: 0.6rem;
   font-weight: 400;
   border: none;
-  border: 1px solid black;
+  border: 1px solid #d7d7d7;
   outline: none;
   cursor: text;
 }
@@ -946,6 +946,11 @@ i {
   /* ~~~~~~~~~~~~~ ROOT ~~~~~~~~~~~~~ */
   :root {
     font-size: 20px;
+  }
+
+  #search-bar {
+    position: absolute;
+    height: 26px;
   }
 
   /* ~~~~~~~~ BANNER SECTION ~~~~~~~~ */
