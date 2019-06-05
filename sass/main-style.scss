@@ -626,12 +626,14 @@ i {
   justify-content: center;
   align-items: center;
 
+  z-index: 10;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
 
   width: 6.5rem;
   height: 2rem;
+  margin: auto;
 
   font-family: $font-stack-secondary;
   font-size: 0.7rem;
@@ -640,6 +642,29 @@ i {
   color: white;
 
   background-color: black;
+  border: 1px solid white;
+
+  -webkit-user-select: none;
+  user-select: none;
+
+  transition: transform 150ms ease-in-out;
+}
+
+.campaign-button-pressed {
+  transform: translate(5px, 5px);
+}
+
+.campaign-button-shadow {
+  position: absolute;
+  top: auto;
+  bottom: -5px;
+  left: 10px;
+  right: 0;
+
+  width: 6.5rem;
+  height: 2rem;
+  margin: auto;
+
   border: 1px solid white;
 }
 
