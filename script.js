@@ -640,11 +640,7 @@ $(document).ready(function() {
 
 
 
-  $bannerPageCircleLeft.addClass("banner-page-circle-selected");
-  $bannerPageCircleLeft.children().css("background-color", "white");
-
-
-
+/* ~~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~~ */
   $navLink.on("mouseenter", function() {
     $(this).css("color", "#efefef");
   });
@@ -652,6 +648,8 @@ $(document).ready(function() {
   $navLink.on("mouseleave", function() {
     $(this).css("color", "black");
   });
+
+
 
   $navLinkButton.on("mouseenter", function() {
     $(this).css("color", "#efefef");
@@ -708,6 +706,12 @@ $(document).ready(function() {
 
 
 
+/* ~~~~~~~~ BANNER SECTION ~~~~~~~~ */
+  $bannerPageCircleLeft.addClass("banner-page-circle-selected");
+  $bannerPageCircleLeft.children().css("background-color", "white");
+
+
+
   $bannerPageCircleOuter.on("click", function() {
     if(bannerChangeDelay === false) {
       bannerChangeDelay = true;
@@ -722,6 +726,7 @@ $(document).ready(function() {
 
 
 
+/* ~~~~~~~ CATEGORY SECTION ~~~~~~~ */
   $categoryTileMask.on("mouseenter", function() {
     categoryTileMaskFadeIn($(this));
   });
@@ -732,6 +737,7 @@ $(document).ready(function() {
 
 
 
+/* ~~~~~~~ CAMPAIGN SECTION ~~~~~~~ */
   $campaignButton.on("mousedown", function() {
     $(this).addClass("campaign-button-pressed");
   });
@@ -746,6 +752,7 @@ $(document).ready(function() {
 
 
 
+/* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
   $arrowLeftIcon.on("click", function() {
     carouselPageDown();
 
