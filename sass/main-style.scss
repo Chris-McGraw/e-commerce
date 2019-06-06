@@ -927,6 +927,7 @@ i {
 
 /* ---------------------------- FEATURE SECTION ---------------------------- */
 #feature-section-container {
+  z-index: -1;
   position: relative;
 
   height: $section-height-lg;
@@ -967,7 +968,7 @@ i {
 }
 
 #feature-button-top {
-  margin-bottom: $margin-x-sm;
+  margin-bottom: $margin-sm;
 }
 
 .feature-button {
@@ -987,6 +988,18 @@ i {
   color: white;
 
   background-color: black;
+  border: 1px solid white;
+}
+
+.feature-button-shadow {
+  z-index: -1;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  width: 6.5rem;
+  height: 2rem;
+
   border: 1px solid white;
 }
 

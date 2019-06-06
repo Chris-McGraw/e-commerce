@@ -776,6 +776,7 @@ i {
 } */
 /* ---------------------------- FEATURE SECTION ---------------------------- */
 #feature-section-container {
+  z-index: -1;
   position: relative;
   height: 20rem;
   width: 100%;
@@ -812,7 +813,7 @@ i {
 }
 
 #feature-button-top {
-  margin-bottom: 0.4375rem;
+  margin-bottom: 0.875rem;
 }
 
 .feature-button {
@@ -828,6 +829,16 @@ i {
   text-transform: uppercase;
   color: white;
   background-color: black;
+  border: 1px solid white;
+}
+
+.feature-button-shadow {
+  z-index: -1;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 6.5rem;
+  height: 2rem;
   border: 1px solid white;
 }
 
