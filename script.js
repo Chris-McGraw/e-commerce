@@ -83,6 +83,11 @@ var $caroPageEllipsisRight = $("#caro-page-ellipsis-right");
 
 
 
+/* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
+var $featureButton = $(".feature-button");
+
+
+
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
@@ -640,11 +645,7 @@ $(document).ready(function() {
 
 
 
-  $bannerPageCircleLeft.addClass("banner-page-circle-selected");
-  $bannerPageCircleLeft.children().css("background-color", "white");
-
-
-
+/* ~~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~~ */
   $navLink.on("mouseenter", function() {
     $(this).css("color", "#efefef");
   });
@@ -652,6 +653,8 @@ $(document).ready(function() {
   $navLink.on("mouseleave", function() {
     $(this).css("color", "black");
   });
+
+
 
   $navLinkButton.on("mouseenter", function() {
     $(this).css("color", "#efefef");
@@ -708,6 +711,12 @@ $(document).ready(function() {
 
 
 
+/* ~~~~~~~~ BANNER SECTION ~~~~~~~~ */
+  $bannerPageCircleLeft.addClass("banner-page-circle-selected");
+  $bannerPageCircleLeft.children().css("background-color", "white");
+
+
+
   $bannerPageCircleOuter.on("click", function() {
     if(bannerChangeDelay === false) {
       bannerChangeDelay = true;
@@ -722,6 +731,7 @@ $(document).ready(function() {
 
 
 
+/* ~~~~~~~ CATEGORY SECTION ~~~~~~~ */
   $categoryTileMask.on("mouseenter", function() {
     categoryTileMaskFadeIn($(this));
   });
@@ -732,20 +742,22 @@ $(document).ready(function() {
 
 
 
+/* ~~~~~~~ CAMPAIGN SECTION ~~~~~~~ */
   $campaignButton.on("mousedown", function() {
-    $(this).addClass("campaign-button-pressed");
+    $(this).addClass("button-pressed");
   });
 
   $campaignButton.on("mouseup", function() {
-    $(this).removeClass("campaign-button-pressed");
+    $(this).removeClass("button-pressed");
   });
 
   $campaignButton.on("mouseleave", function() {
-    $(this).removeClass("campaign-button-pressed");
+    $(this).removeClass("button-pressed");
   });
 
 
 
+/* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
   $arrowLeftIcon.on("click", function() {
     carouselPageDown();
 
@@ -772,6 +784,21 @@ $(document).ready(function() {
 
   $popularItemPageNumber.on("click", function() {
     carouselPageSelect($(this));
+  });
+
+
+
+/* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
+  $featureButton.on("mousedown", function() {
+    $(this).addClass("button-pressed");
+  });
+
+  $featureButton.on("mouseup", function() {
+    $(this).removeClass("button-pressed");
+  });
+
+  $featureButton.on("mouseleave", function() {
+    $(this).removeClass("button-pressed");
   });
 
 
