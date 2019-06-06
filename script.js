@@ -789,7 +789,7 @@ $(document).ready(function() {
 
 
 /* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
-  $featureButton.on("mousedown", function() {
+  /* $featureButton.on("mousedown", function() {
     $(this).addClass("button-pressed");
   });
 
@@ -799,7 +799,7 @@ $(document).ready(function() {
 
   $featureButton.on("mouseleave", function() {
     $(this).removeClass("button-pressed");
-  });
+  }); */
 
 
 
