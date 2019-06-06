@@ -83,6 +83,11 @@ var $caroPageEllipsisRight = $("#caro-page-ellipsis-right");
 
 
 
+/* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
+var $featureButton = $(".feature-button");
+
+
+
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
@@ -739,15 +744,15 @@ $(document).ready(function() {
 
 /* ~~~~~~~ CAMPAIGN SECTION ~~~~~~~ */
   $campaignButton.on("mousedown", function() {
-    $(this).addClass("campaign-button-pressed");
+    $(this).addClass("button-pressed");
   });
 
   $campaignButton.on("mouseup", function() {
-    $(this).removeClass("campaign-button-pressed");
+    $(this).removeClass("button-pressed");
   });
 
   $campaignButton.on("mouseleave", function() {
-    $(this).removeClass("campaign-button-pressed");
+    $(this).removeClass("button-pressed");
   });
 
 
@@ -779,6 +784,21 @@ $(document).ready(function() {
 
   $popularItemPageNumber.on("click", function() {
     carouselPageSelect($(this));
+  });
+
+
+
+/* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
+  $featureButton.on("mousedown", function() {
+    $(this).addClass("button-pressed");
+  });
+
+  $featureButton.on("mouseup", function() {
+    $(this).removeClass("button-pressed");
+  });
+
+  $featureButton.on("mouseleave", function() {
+    $(this).removeClass("button-pressed");
   });
 
 

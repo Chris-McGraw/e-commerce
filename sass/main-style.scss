@@ -36,6 +36,15 @@ button {
   cursor: pointer;
 }
 
+.button-arrow {
+  margin-left: 0.4rem;
+  font-size: $font-icon;
+}
+
+.button-pressed {
+  transform: translate(5px, 5px);
+}
+
 a {
   text-decoration: none;
 }
@@ -650,10 +659,6 @@ i {
   transition: transform 150ms ease-in-out;
 }
 
-.campaign-button-pressed {
-  transform: translate(5px, 5px);
-}
-
 .campaign-button-shadow {
   position: absolute;
   top: auto;
@@ -967,10 +972,6 @@ i {
   color: white;
 }
 
-#feature-button-top {
-  margin-bottom: $margin-sm;
-}
-
 .feature-button {
   display: flex;
   justify-content: center;
@@ -980,6 +981,7 @@ i {
 
   width: 6.5rem;
   height: 2rem;
+  margin-bottom: -2rem;
 
   font-family: $font-stack-secondary;
   font-size: 0.7rem;
@@ -989,11 +991,20 @@ i {
 
   background-color: black;
   border: 1px solid white;
+
+  -webkit-user-select: none;
+  user-select: none;
+
+  transition: transform 150ms ease-in-out;
+}
+
+#feature-button-bottom {
+  margin-top: $margin-sm;
 }
 
 .feature-button-shadow {
   z-index: -1;
-  position: absolute;
+  position: relative;
   top: 5px;
   left: 5px;
 
@@ -1003,10 +1014,7 @@ i {
   border: 1px solid white;
 }
 
-.button-arrow {
-  margin-left: 0.4rem;
-  font-size: $font-icon;
-}
+
 
 
 
