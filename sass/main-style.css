@@ -837,6 +837,10 @@ i {
   transition: transform 150ms ease-in-out;
 }
 
+.feature-button:active {
+  transform: translate(5px, 5px);
+}
+
 #feature-button-bottom {
   margin-top: 0.875rem;
 }
