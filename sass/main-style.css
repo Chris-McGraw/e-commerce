@@ -37,10 +37,6 @@ button {
   font-size: 0.8rem;
 }
 
-.button-pressed {
-  transform: translate(5px, 5px);
-}
-
 a {
   text-decoration: none;
 }
@@ -546,7 +542,13 @@ i {
   border: 1px solid white;
   -webkit-user-select: none;
   user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   transition: transform 150ms ease-in-out;
+}
+
+.campaign-button:active {
+  transform: translate(5px, 5px);
 }
 
 .campaign-button-shadow {
@@ -834,6 +836,8 @@ i {
   border: 1px solid white;
   -webkit-user-select: none;
   user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   transition: transform 150ms ease-in-out;
 }
 
