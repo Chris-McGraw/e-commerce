@@ -642,35 +642,49 @@ i {
 }
 
 .carousel-tile {
-  display: flex;
   grid-column: span 1;
-  justify-content: center;
-  align-items: center;
   height: 100%;
-  background-color: lightGray;
-  background-size: cover;
-  background-position: center bottom;
-  border: 1px solid black;
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
   font-weight: 300;
-  /* background-color: white; */
+  background-size: cover;
+  background-position: center bottom;
+  border: 1px solid #d7d7d7;
+}
+
+.carousel-tile-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 65%;
   background-color: #efefef;
 }
 
-.carousel-tile-red {
-  background-color: red;
-  background-color: #efefef;
+.carousel-tile-bottom {
+  width: 100%;
+  height: 35%;
+  background-color: white;
 }
 
-.carousel-tile-blue {
-  background-color: lightBlue;
-  background-color: #efefef;
+.carousel-item-type {
+  padding-top: 0.4375rem;
+  padding-left: 0.4375rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #d7d7d7;
 }
 
-.carousel-tile-yellow {
-  background-color: lightYellow;
-  background-color: #efefef;
+.carousel-item-name {
+  padding-left: 0.4375rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.carousel-item-price {
+  padding-left: 0.4375rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .caro-page-ellipsis {
