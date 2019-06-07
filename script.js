@@ -743,7 +743,7 @@ $(document).ready(function() {
 
 
 /* ~~~~~~~ CAMPAIGN SECTION ~~~~~~~ */
-  $campaignButton.on("mousedown", function() {
+  /* $campaignButton.on("mousedown", function() {
     $(this).addClass("button-pressed");
   });
 
@@ -753,7 +753,7 @@ $(document).ready(function() {
 
   $campaignButton.on("mouseleave", function() {
     $(this).removeClass("button-pressed");
-  });
+  }); */
 
 
 
