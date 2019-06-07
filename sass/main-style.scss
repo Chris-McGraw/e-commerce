@@ -771,42 +771,58 @@ i {
 }
 
 .carousel-tile {
-  display: flex;
   grid-column: span 1;
-  justify-content: center;
-  align-items: center;
 
   height: 100%;
-
-  background-color: lightGray;
-  background-size: cover;
-  background-position: center bottom;
-  border: 1px solid black;
 
   font-family: $font-stack-secondary;
   font-size: 2rem;
   font-weight: $font-secondary-light;
 
-  /* background-color: white; */
+  background-size: cover;
+  background-position: center bottom;
+  border: 1px solid $medium-gray;
+}
+
+.carousel-tile-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 65%;
+
   background-color: $light-gray;
 }
 
-.carousel-tile-red {
-  background-color: red;
+.carousel-tile-bottom {
+  width: 100%;
+  height: 35%;
 
-  background-color: $light-gray;
+  background-color: white;
 }
 
-.carousel-tile-blue {
-  background-color: lightBlue;
+.carousel-item-type {
+  padding-top: $margin-x-sm;
+  padding-left: $margin-x-sm;
 
-  background-color: $light-gray;
+  font-size: $font-icon;
+  font-weight: $font-secondary-light;
+  color: $medium-gray;
 }
 
-.carousel-tile-yellow {
-  background-color: lightYellow;
+.carousel-item-name {
+  padding-left: $margin-x-sm;
 
-  background-color: $light-gray;
+  font-size: $font-icon;
+  font-weight: $font-secondary-light;
+}
+
+.carousel-item-price {
+  padding-left: $margin-x-sm;
+
+  font-size: 1rem;
+  font-weight: $font-secondary-normal;
 }
 
 .caro-page-ellipsis {
