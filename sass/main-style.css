@@ -969,6 +969,8 @@ i {
   font-family: "Roboto", sans-serif;
   font-size: 0.6rem;
   font-weight: 300;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 #footer-tile-social-list {

@@ -1162,6 +1162,10 @@ i {
   font-family: $font-stack-secondary;
   font-size: $font-sm;
   font-weight: $font-secondary-light;
+
+  border: 1px solid black;
+
+  cursor: pointer;
 }
 
 #footer-tile-social-list {
