@@ -88,6 +88,11 @@ var $featureButton = $(".feature-button");
 
 
 
+/* ~~~~~~~~ FOOTER SECTION ~~~~~~~~ */
+var $footerTileListItem = $(".footer-tile-list-item");
+
+
+
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
@@ -800,6 +805,17 @@ $(document).ready(function() {
   $featureButton.on("mouseleave", function() {
     $(this).removeClass("button-pressed");
   }); */
+
+
+
+/* ~~~~~~~~ FOOTER SECTION ~~~~~~~~ */
+  $footerTileListItem.on("mouseenter", function() {
+    $(this).css("color", "#efefef");
+  });
+
+  $footerTileListItem.on("mouseleave", function() {
+    $(this).css("color", "black");
+  });
 
 
 

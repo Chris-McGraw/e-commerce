@@ -963,12 +963,18 @@ i {
   color: black;
 }
 
-.footer-tile-list-item {
+.footer-tile-list > li {
   margin-bottom: 0.4375rem;
   padding-left: 0.2rem;
   font-family: "Roboto", sans-serif;
   font-size: 0.6rem;
   font-weight: 300;
+}
+
+.footer-tile-list-item {
+  display: inline-block;
+  color: black;
+  cursor: pointer;
 }
 
 #footer-tile-social-list {
