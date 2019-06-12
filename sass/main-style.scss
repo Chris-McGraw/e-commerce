@@ -1155,15 +1155,19 @@ i {
   color: black;
 }
 
-.footer-tile-list-item {
+.footer-tile-list > li {
   margin-bottom: $margin-x-sm;
   padding-left: 0.2rem;
 
   font-family: $font-stack-secondary;
   font-size: $font-sm;
   font-weight: $font-secondary-light;
+}
 
-  border: 1px solid black;
+.footer-tile-list-item {
+  display: inline-block;
+
+  color: black;
 
   cursor: pointer;
 }
