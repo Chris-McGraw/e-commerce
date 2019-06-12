@@ -645,7 +645,10 @@ $(document).ready(function() {
     $hamburgerMenu.off("mouseenter");
     $navLinkDropdown.off("mouseenter");
     $searchIconDropdown.off("mouseenter");
+
     $categoryTileMask.off("mouseenter");
+
+    $footerTileListItem.off("mouseenter");
   });
 
 
