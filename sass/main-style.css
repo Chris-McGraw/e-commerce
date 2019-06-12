@@ -211,20 +211,22 @@ i {
 
 #nav-link-list-dropdown {
   position: absolute;
-  /* @extend %vertical-centered; */
   top: 0.875rem;
-  left: 0.875rem;
-  width: auto;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
   font-size: 0.6rem;
   font-weight: 400;
   text-transform: uppercase;
   color: black;
-  /* border: 1px solid black; */
+}
+
+#nav-link-list-dropdown > li {
+  margin-bottom: 0.4375rem;
 }
 
 .nav-link-dropdown {
-  margin-bottom: 0.4375rem;
+  display: inline-block;
+  margin-left: 0.875rem;
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;

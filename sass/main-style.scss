@@ -252,23 +252,25 @@ i {
 
 #nav-link-list-dropdown {
   position: absolute;
-  /* @extend %vertical-centered; */
   top: $margin-sm;
-  left: $margin-sm;
 
-  width: auto;
+  width: 100%;
 
   font-family: $font-stack-main;
   font-size: $font-sm;
   font-weight: $font-main-normal;
   text-transform: uppercase;
   color: black;
+}
 
-  /* border: 1px solid black; */
+#nav-link-list-dropdown > li {
+  margin-bottom: $margin-x-sm;
 }
 
 .nav-link-dropdown {
-  margin-bottom: $margin-x-sm;
+  display: inline-block;
+
+  margin-left: $margin-sm;
 
   cursor: pointer;
   -webkit-user-select: none;
