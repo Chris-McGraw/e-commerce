@@ -796,24 +796,19 @@ i {
   background-color: $light-gray;
 }
 
-#car-tile-top-1 {
+.carousel-tile-top-men {
+  background-position: 58% top;
+  background-image: url("../images/carousel-shoe-men.jpg");
+}
+
+.carousel-tile-top-women {
   background-position: 55% top;
   background-image: url("../images/carousel-shoe-women.jpg");
 }
 
-#car-tile-top-2 {
-  background-position: 58% top;
-  background-image: url("../images/carousel-shoe-men.jpg");
-}
-
-#car-tile-top-3 {
+.carousel-tile-top-children {
   background-position: 49% top;
   background-image: url("../images/carousel-shoe-children.jpg");
-}
-
-#car-tile-top-4 {
-  background-position: 58% top;
-  background-image: url("../images/carousel-shoe-men.jpg");
 }
 
 .carousel-tile-bottom {
