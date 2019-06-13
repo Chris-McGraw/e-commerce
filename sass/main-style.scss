@@ -793,23 +793,26 @@ i {
   height: 65%;
 
   background-size: cover;
-  background-position: center top;
   background-color: $light-gray;
 }
 
 #car-tile-top-1 {
+  background-position: 55% top;
   background-image: url("../images/carousel-shoe-women.jpg");
 }
 
 #car-tile-top-2 {
+  background-position: 58% top;
   background-image: url("../images/carousel-shoe-men.jpg");
 }
 
 #car-tile-top-3 {
+  background-position: 49% top;
   background-image: url("../images/carousel-shoe-children.jpg");
 }
 
 #car-tile-top-4 {
+  background-position: 58% top;
   background-image: url("../images/carousel-shoe-men.jpg");
 }
 
