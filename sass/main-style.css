@@ -649,8 +649,6 @@ i {
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
   font-weight: 300;
-  background-size: cover;
-  background-position: center bottom;
   border: 1px solid #d7d7d7;
 }
 
@@ -660,7 +658,23 @@ i {
   align-items: center;
   width: 100%;
   height: 65%;
+  background-size: cover;
   background-color: #efefef;
+}
+
+.carousel-tile-top-men {
+  background-position: 58% top;
+  background-image: url("../images/carousel-shoe-men.jpg");
+}
+
+.carousel-tile-top-women {
+  background-position: 55% top;
+  background-image: url("../images/carousel-shoe-women.jpg");
+}
+
+.carousel-tile-top-children {
+  background-position: 49% top;
+  background-image: url("../images/carousel-shoe-children.jpg");
 }
 
 .carousel-tile-bottom {
@@ -778,25 +792,6 @@ i {
   display: none;
 }
 
-/* #car-tile-1 {
-  background-image: url("../images/men-pants-dark.jpg");
-}
-
-#car-tile-2 {
-  background-image: url("../images/women-pants-tan.jpg");
-}
-
-#car-tile-3 {
-  background-image: url("../images/men-pants-blue.jpg");
-}
-
-#car-tile-4 {
-  background-image: url("../images/women-pants-dark.jpg");
-}
-
-#car-tile-5 {
-  background-image: url("../images/men-pants-gray.jpg");
-} */
 /* ---------------------------- FEATURE SECTION ---------------------------- */
 #feature-section-container {
   z-index: -1;
