@@ -52,12 +52,24 @@ i {
 /* -------------------------------- NAVBAR -------------------------------- */
 .nav-link {
   display: inline-block;
+  color: black;
   cursor: pointer;
+  transition: color 150ms ease-in-out;
+}
+
+.nav-link-hovered {
+  color: #efefef;
 }
 
 .nav-link-button {
   display: inline-block;
+  color: black;
   cursor: pointer;
+  transition: color 150ms ease-in-out;
+}
+
+.nav-link-button-hovered {
+  color: #efefef;
 }
 
 .nav-link-button-text {

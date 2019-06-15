@@ -658,21 +658,21 @@ $(document).ready(function() {
 
 /* ~~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~~ */
   $navLink.on("mouseenter", function() {
-    $(this).css("color", "#efefef");
+    $(this).addClass("nav-link-hovered");
   });
 
   $navLink.on("mouseleave", function() {
-    $(this).css("color", "black");
+    $(this).removeClass("nav-link-hovered");
   });
 
 
 
   $navLinkButton.on("mouseenter", function() {
-    $(this).css("color", "#efefef");
+    $(this).addClass("nav-link-button-hovered");
   });
 
   $navLinkButton.on("mouseleave", function() {
-    $(this).css("color", "black");
+    $(this).removeClass("nav-link-button-hovered")
   });
 
 
