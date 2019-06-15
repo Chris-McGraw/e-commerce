@@ -59,13 +59,29 @@ i {
 .nav-link {
   display: inline-block;
 
+  color: black;
+
   cursor: pointer;
+
+  transition: color 150ms ease-in-out;
+}
+
+.nav-link-hovered {
+  color: $light-gray !important;
+}
+
+.nav-link-icon-hovered {
+  background-color: $light-gray !important;
 }
 
 .nav-link-button {
   display: inline-block;
 
+  color: black;
+
   cursor: pointer;
+
+  transition: color 150ms ease-in-out;
 }
 
 .nav-link-button-text {
@@ -272,9 +288,13 @@ i {
 
   margin-left: $margin-sm;
 
+  color: black;
+
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
+
+  transition: color 150ms ease-in-out;
 }
 
 #login-button-dropdown {
@@ -784,6 +804,12 @@ i {
   border: 1px solid $medium-gray;
 
   cursor: pointer;
+
+  transition: border-color 300ms ease-in-out;
+}
+
+.carousel-tile-hovered {
+  border-color: black;
 }
 
 .carousel-tile-top {
@@ -1325,7 +1351,8 @@ i {
     background-color: black;
 
     cursor: pointer;
-    /* transition: transform 300ms ease-in-out, width 300ms ease-in-out, opacity 300ms ease-in-out; */
+
+    transition: background-color 150ms ease-in-out;
   }
 
   #nav-link-list-top {
@@ -1336,6 +1363,8 @@ i {
     display: inline-block;
 
     font-size: 1rem;
+
+    transition: color 150ms ease-in-out;
   }
 
   #login-icon {
