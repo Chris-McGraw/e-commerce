@@ -58,7 +58,11 @@ i {
 }
 
 .nav-link-hovered {
-  color: #efefef;
+  color: #efefef !important;
+}
+
+.nav-link-icon-hovered {
+  background-color: #efefef !important;
 }
 
 .nav-link-button {
@@ -66,10 +70,6 @@ i {
   color: black;
   cursor: pointer;
   transition: color 150ms ease-in-out;
-}
-
-.nav-link-button-hovered {
-  color: #efefef;
 }
 
 .nav-link-button-text {
@@ -239,9 +239,11 @@ i {
 .nav-link-dropdown {
   display: inline-block;
   margin-left: 0.875rem;
+  color: black;
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
+  transition: color 150ms ease-in-out;
 }
 
 #login-button-dropdown {
@@ -1107,7 +1109,7 @@ i {
     border-radius: 10px;
     background-color: black;
     cursor: pointer;
-    /* transition: transform 300ms ease-in-out, width 300ms ease-in-out, opacity 300ms ease-in-out; */
+    transition: background-color 150ms ease-in-out;
   }
 
   #nav-link-list-top {
@@ -1117,6 +1119,7 @@ i {
   #search-icon-dropdown {
     display: inline-block;
     font-size: 1rem;
+    transition: color 150ms ease-in-out;
   }
 
   #login-icon {

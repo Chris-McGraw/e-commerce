@@ -668,21 +668,21 @@ $(document).ready(function() {
 
 
   $navLinkButton.on("mouseenter", function() {
-    $(this).addClass("nav-link-button-hovered");
+    $(this).addClass("nav-link-hovered");
   });
 
   $navLinkButton.on("mouseleave", function() {
-    $(this).removeClass("nav-link-button-hovered")
+    $(this).removeClass("nav-link-hovered");
   });
 
 
 
   $hamburgerMenu.on("mouseenter", function() {
-    $hamburgerBar.css("background-color", "#efefef");
+    $hamburgerBar.addClass("nav-link-icon-hovered");
   });
 
   $hamburgerMenu.on("mouseleave", function() {
-    $hamburgerBar.css("background-color", "black");
+    $hamburgerBar.removeClass("nav-link-icon-hovered");
   });
 
   $hamburgerMenu.on("click", function() {
@@ -697,21 +697,21 @@ $(document).ready(function() {
 
 
   $navLinkDropdown.on("mouseenter", function() {
-    $(this).css("color", "#efefef");
+    $(this).addClass("nav-link-hovered");
   });
 
   $navLinkDropdown.on("mouseleave", function() {
-    $(this).css("color", "black");
+    $(this).removeClass("nav-link-hovered");
   });
 
 
 
   $searchIconDropdown.on("mouseenter", function() {
-    $searchIconDropdown.css("color", "#efefef");
+    $(this).addClass("nav-link-hovered");
   });
 
   $searchIconDropdown.on("mouseleave", function() {
-    $searchIconDropdown.css("color", "black");
+    $(this).removeClass("nav-link-hovered");
   });
 
   $searchIconDropdown.on("click", function() {
