@@ -770,11 +770,11 @@ $(document).ready(function() {
 
 /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
   $carouselTile.on("mouseenter", function() {
-    $(this).css("border-color", "black");
+    $(this).addClass("carousel-tile-hovered");
   });
 
   $carouselTile.on("mouseleave", function() {
-    $(this).css("border-color", "#d7d7d7");
+    $(this).removeClass("carousel-tile-hovered");
   });
 
 
