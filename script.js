@@ -54,6 +54,7 @@ var $campaignButton = $(".campaign-button");
 var $arrowLeftIcon = $("#arrow-left-icon");
 var $arrowRightIcon = $("#arrow-right-icon");
 
+var $carouselTile = $(".carousel-tile");
 var $popularItemCarouselInner = $("#popular-item-carousel-inner");
 var $carTile1 = $("#car-tile-1");
 var carouselClicked = false;
@@ -648,6 +649,8 @@ $(document).ready(function() {
 
     $categoryTileMask.off("mouseenter");
 
+    $carouselTile.off("mouseenter");
+
     $footerTileListItem.off("mouseenter");
   });
 
@@ -766,6 +769,16 @@ $(document).ready(function() {
 
 
 /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
+  $carouselTile.on("mouseenter", function() {
+    $(this).css("border-color", "black");
+  });
+
+  $carouselTile.on("mouseleave", function() {
+    $(this).css("border-color", "#d7d7d7");
+  });
+
+
+
   $arrowLeftIcon.on("click", function() {
     carouselPageDown();
 

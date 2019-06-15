@@ -782,6 +782,8 @@ i {
   font-weight: $font-secondary-light;
 
   border: 1px solid $medium-gray;
+
+  cursor: pointer;
 }
 
 .carousel-tile-top {
@@ -794,6 +796,8 @@ i {
 
   background-size: cover;
   background-color: $light-gray;
+
+  cursor: pointer;
 }
 
 .carousel-tile-top-men {
@@ -816,6 +820,8 @@ i {
   height: 35%;
 
   background-color: white;
+
+  cursor: pointer;
 }
 
 .carousel-item-type {
@@ -825,6 +831,8 @@ i {
   font-size: $font-icon;
   font-weight: $font-secondary-light;
   color: $medium-gray;
+
+  cursor: pointer;
 }
 
 .carousel-item-name {
@@ -832,6 +840,8 @@ i {
 
   font-size: $font-icon;
   font-weight: $font-secondary-light;
+
+  cursor: pointer;
 }
 
 .carousel-item-price {
@@ -839,6 +849,8 @@ i {
 
   font-size: 1rem;
   font-weight: $font-secondary-normal;
+
+  cursor: pointer;
 }
 
 .caro-page-ellipsis {
