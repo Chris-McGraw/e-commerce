@@ -826,11 +826,11 @@ $(document).ready(function() {
 
 /* ~~~~~~~~ FOOTER SECTION ~~~~~~~~ */
   $footerTileListItem.on("mouseenter", function() {
-    $(this).css("color", "#efefef");
+    $(this).addClass("nav-link-hovered");
   });
 
   $footerTileListItem.on("mouseleave", function() {
-    $(this).css("color", "black");
+    $(this).removeClass("nav-link-hovered");
   });
 
 
