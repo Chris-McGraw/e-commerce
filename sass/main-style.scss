@@ -753,7 +753,7 @@ i {
 }
 
 .carousel-animation {
-  transition: transform 2000ms ease-in-out;
+  transition: transform 900ms ease-out;
 }
 
 .carousel-mask {
@@ -1478,6 +1478,10 @@ i {
     padding-right: $margin-sm * 6;
   }
 
+  .carousel-animation {
+    transition: transform 750ms ease-out;
+  }
+
   .carousel-mask {
     width: 2rem;
   }
@@ -1546,6 +1550,10 @@ i {
   #popular-item-carousel {
     width: 1200%;
     padding-right: $margin-sm * 12;
+  }
+
+  .carousel-animation {
+    transition: transform 600ms ease-out;
   }
 }
 
