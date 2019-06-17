@@ -285,7 +285,11 @@ function carouselPageSelect(clickedCarouselPage) {
     currentCarouselPage = 12;
   }
 
-  changeCarouselPosition();
+  // changeCarouselPosition();
+
+  $popularItemCarouselInner.addClass("carousel-animation");
+
+  scrollCarousel();
 }
 
 
