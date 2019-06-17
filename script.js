@@ -784,7 +784,7 @@ $(document).ready(function() {
 
       setTimeout(function() {
         bannerChangeDelay = false;
-      }, 800);
+      }, 750);
     }
   });
 
