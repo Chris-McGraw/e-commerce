@@ -285,7 +285,11 @@ function carouselPageSelect(clickedCarouselPage) {
     currentCarouselPage = 12;
   }
 
-  changeCarouselPosition();
+  // changeCarouselPosition();
+
+  $popularItemCarouselInner.addClass("carousel-animation");
+
+  scrollCarousel();
 }
 
 
@@ -780,7 +784,7 @@ $(document).ready(function() {
 
       setTimeout(function() {
         bannerChangeDelay = false;
-      }, 800);
+      }, 750);
     }
   });
 
