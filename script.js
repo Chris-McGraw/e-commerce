@@ -817,6 +817,41 @@ $(document).ready(function() {
 
 
 /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
+  $popularItemCarouselInner.draggable({
+    axis: "x",
+    revert: true,
+
+    drag: function(event, ui) {
+      var leftPosition = ui.position.left;
+
+      if(currentCarouselPage === 1 && leftPosition > 0) {
+        ui.position.left = 0;
+      }
+
+      /* if(leftPosition > 0) {
+        ui.position.left = 0;
+      } */
+
+      if(leftPosition > ($popularItemCarouselInner.width() / 4.5)) {
+        ui.position.left = ($popularItemCarouselInner.width() / 4.5);
+      }
+
+      if(leftPosition < -($popularItemCarouselInner.width() / 4.5)) {
+        ui.position.left = -($popularItemCarouselInner.width() / 4.5);
+      }
+    },
+
+    start: function(event, ui) {
+      // console.log($popularItemCarouselInner.width());
+    },
+
+    stop: function(event, ui ) {
+      // console.log(ui.position.left);
+    }
+  });
+
+
+
   $carouselTile.on("mouseenter", function() {
     $(this).addClass("carousel-tile-hovered");
   });
