@@ -681,6 +681,75 @@ function scrollCarousel() {
 } */
 
 
+function containCarouselDrag(ui) {
+  var leftPosition = ui.position.left;
+
+  if(leftPosition > 0 && currentCarouselPage === 1) {
+    ui.position.left = 0;
+  }
+
+
+  else if($(window).width() > 785) {
+    if(leftPosition > ($popularItemCarouselInner.width() / 3.5)) {
+      ui.position.left = ($popularItemCarouselInner.width() / 3.5);
+    }
+
+    if(leftPosition < 0 && currentCarouselPage === 3) {
+      ui.position.left = 0;
+    }
+
+    else if(leftPosition < -($popularItemCarouselInner.width() / 3.5)) {
+      ui.position.left = -($popularItemCarouselInner.width() / 3.5);
+    }
+  }
+
+
+  else if($(window).width() <= 785 && $(window).width() > 585) {
+    if(leftPosition > ($popularItemCarouselInner.width() / 4.5)) {
+      ui.position.left = ($popularItemCarouselInner.width() / 4.5);
+    }
+
+    if(leftPosition < 0 && currentCarouselPage === 4) {
+      ui.position.left = 0;
+    }
+
+    else if(leftPosition < -($popularItemCarouselInner.width() / 4.5)) {
+      ui.position.left = -($popularItemCarouselInner.width() / 4.5);
+    }
+  }
+
+
+  else if($(window).width() <= 585 && $(window).width() > 386) {
+    if(leftPosition > ($popularItemCarouselInner.width() / 7.5)) {
+      ui.position.left = ($popularItemCarouselInner.width() / 7.5);
+    }
+
+    if(leftPosition < 0 && currentCarouselPage === 6) {
+      ui.position.left = 0;
+    }
+
+    else if(leftPosition < -($popularItemCarouselInner.width() / 7.5)) {
+      ui.position.left = -($popularItemCarouselInner.width() / 7.5);
+    }
+  }
+
+
+  else if($(window).width() <= 386) {
+    if(leftPosition > ($popularItemCarouselInner.width() / 20.5)) {
+      ui.position.left = ($popularItemCarouselInner.width() / 20.5);
+    }
+
+    if(leftPosition < 0 && currentCarouselPage === 12) {
+      ui.position.left = 0;
+    }
+
+    else if(leftPosition < -($popularItemCarouselInner.width() / 20.5)) {
+      ui.position.left = -($popularItemCarouselInner.width() / 20.5);
+    }
+  }
+}
+
+
 
 
 
@@ -822,23 +891,7 @@ $(document).ready(function() {
     revert: true,
 
     drag: function(event, ui) {
-      var leftPosition = ui.position.left;
-
-      if(currentCarouselPage === 1 && leftPosition > 0) {
-        ui.position.left = 0;
-      }
-
-      /* if(leftPosition > 0) {
-        ui.position.left = 0;
-      } */
-
-      if(leftPosition > ($popularItemCarouselInner.width() / 4.5)) {
-        ui.position.left = ($popularItemCarouselInner.width() / 4.5);
-      }
-
-      if(leftPosition < -($popularItemCarouselInner.width() / 4.5)) {
-        ui.position.left = -($popularItemCarouselInner.width() / 4.5);
-      }
+      containCarouselDrag(ui);
     },
 
     start: function(event, ui) {
