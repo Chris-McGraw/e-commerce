@@ -682,11 +682,6 @@ function scrollCarousel() {
 
 
 function containCarouselDrag(ui) {
-  getCarouselMultiplier();
-
-  carouselPageMultiplierTest = carouselPageMultiplier + 1;
-
-
   var leftPosition = ui.position.left;
 
   if(leftPosition > 0 && currentCarouselPage === 1) {
@@ -710,16 +705,16 @@ function containCarouselDrag(ui) {
 
 
   else if($(window).width() <= 785 && $(window).width() > 585) {
-    if(leftPosition > ($popularItemCarouselInner.width() / 4.5) * carouselPageMultiplierTest) {
-      ui.position.left = ($popularItemCarouselInner.width() / 4.5) * carouselPageMultiplierTest;
+    if(leftPosition > ($popularItemCarouselInner.width() / 4.5)) {
+      ui.position.left = ($popularItemCarouselInner.width() / 4.5);
     }
 
     if(leftPosition < 0 && currentCarouselPage === 4) {
       ui.position.left = 0;
     }
 
-    else if(leftPosition < -($popularItemCarouselInner.width() / 4.5) * carouselPageMultiplierTest) {
-      ui.position.left = -($popularItemCarouselInner.width() / 4.5) * carouselPageMultiplierTest;
+    else if(leftPosition < -($popularItemCarouselInner.width() / 4.5)) {
+      ui.position.left = -($popularItemCarouselInner.width() / 4.5);
     }
   }
 
@@ -893,7 +888,7 @@ $(document).ready(function() {
 /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
   $popularItemCarouselInner.draggable({
     axis: "x",
-    // revert: true,
+    revert: true,
 
     drag: function(event, ui) {
       containCarouselDrag(ui);
@@ -901,31 +896,10 @@ $(document).ready(function() {
 
     start: function(event, ui) {
       // console.log($popularItemCarouselInner.width());
-      // console.log($popularItemCarouselInner.position().left);
     },
 
     stop: function(event, ui ) {
       // console.log(ui.position.left);
-      // console.log($popularItemCarouselInner.position().left);
-
-
-
-      carouselPageUp();
-      getCarouselPageList();
-      getCarouselMultiplier();
-
-      carouselPositionTest = ($carTile1.width() + 19.5) * (3 * carouselPageMultiplier);
-      console.log(carouselPositionTest);
-
-
-
-
-
-
-      otherTestShit = ui.position.left + carouselPositionTest;
-
-      $popularItemCarouselInner.addClass("carousel-animation");
-      $popularItemCarouselInner.css({"transform": "translateX(-" + otherTestShit + "px)"});
     }
   });
 
