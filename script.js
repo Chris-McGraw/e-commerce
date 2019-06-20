@@ -51,9 +51,6 @@ var $campaignButton = $(".campaign-button");
 
 
 /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
-var $popularItemSectionContainer = $("#popular-item-section-container");
-var $popularItemCarousel = $("#popular-item-carousel");
-
 var $arrowLeftIcon = $("#arrow-left-icon");
 var $arrowRightIcon = $("#arrow-right-icon");
 
@@ -84,8 +81,6 @@ var $caroPageNum10 = $("#caro-page-num-10");
 var $caroPageNum11 = $("#caro-page-num-11");
 var $caroPageNum12 = $("#caro-page-num-12");
 var $caroPageEllipsisRight = $("#caro-page-ellipsis-right");
-
-var allowRevert = true;
 
 
 
@@ -893,65 +888,18 @@ $(document).ready(function() {
 /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
   $popularItemCarouselInner.draggable({
     axis: "x",
-    revert: "invalid",
+    revert: true,
 
     drag: function(event, ui) {
       containCarouselDrag(ui);
-
-
-      posStart = ui.position.left;
-      console.log("start: " + posStart)
-
-      if(posStart <= -70) {
-        // console.log("start: " + posStart);
-
-        $popularItemCarouselInner.removeClass("thing");
-      }
     },
 
     start: function(event, ui) {
-      console.log($popularItemCarouselInner.position().left);
-
-      /* posStart = $popularItemCarouselInner.position().left; */
-      //posStart = ui.position.left;
-      //console.log("start: " + posStart);
+      // console.log($popularItemCarouselInner.width());
     },
 
     stop: function(event, ui ) {
       // console.log(ui.position.left);
-
-      /* posEnd = $popularItemCarouselInner.position().left;
-      console.log("end: " + posEnd);
-
-      posDifference = (posStart - posEnd);
-      console.log("difference: " + posDifference);
-
-      $popularItemCarouselInner.css({"transform": "translateX(" + posDifference + "px)"}); */
-
-
-      if(posStart <= -70) {
-        console.log("Dragged to next page!");
-      }
-    }
-  });
-
-  $popularItemCarousel.droppable({
-    /* accept: function($popularItemCarouselInner) {
-      if(allowRevert === true) {
-        return false;
-      }
-      else if(allowRevert === false) {
-        return true;
-      }
-    } */
-
-    accept: function($popularItemCarouselInner) {
-      if($popularItemCarouselInner.hasClass("thing") === true) {
-        return false;
-      }
-      else if($popularItemCarouselInner.hasClass("thing") === false) {
-        return true;
-      }
     }
   });
 
