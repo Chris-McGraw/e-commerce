@@ -82,6 +82,8 @@ var $caroPageNum11 = $("#caro-page-num-11");
 var $caroPageNum12 = $("#caro-page-num-12");
 var $caroPageEllipsisRight = $("#caro-page-ellipsis-right");
 
+var currentCarouselPosition = 0;
+
 
 
 /* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
@@ -892,14 +894,31 @@ $(document).ready(function() {
 
     drag: function(event, ui) {
       containCarouselDrag(ui);
+
+      $popularItemCarouselInner.draggable({ revert: false });
+
+      currentCarouselPosition = ui.position.left;
+
+      if(currentCarouselPosition > -80) {
+        $popularItemCarouselInner.draggable({ revert: true });
+      }
     },
 
     start: function(event, ui) {
-      // console.log($popularItemCarouselInner.width());
+      currentCarouselPosition = ui.position.left;
+      console.log("start: " + currentCarouselPosition);
     },
 
     stop: function(event, ui ) {
-      // console.log(ui.position.left);
+      console.log("end: " + currentCarouselPosition);
+
+      if(currentCarouselPosition > -80) {
+        console.log("");
+      }
+      else {
+        console.log("Drag Page Up!");
+        console.log("");
+      }
     }
   });
 
