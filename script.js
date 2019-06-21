@@ -83,6 +83,8 @@ var $caroPageNum12 = $("#caro-page-num-12");
 var $caroPageEllipsisRight = $("#caro-page-ellipsis-right");
 
 var currentCarouselPosition = 0;
+var carouselDragLeftLimit = -80;
+var carouselDragged = false;
 
 
 
@@ -567,19 +569,49 @@ function scrollCarousel() {
   }
 
   else if($(window).width() <= 785 && $(window).width() > 585) {
-    if(currentCarouselPage <= 3) {
-      carouselPositionSm = ($carTile1.width() + 19.5) * (3 * carouselPageMultiplier);
+    if(carouselDragged === false) {
+      if(currentCarouselPage <= 3) {
+        carouselPositionSm = ($carTile1.width() + 19.5) * (3 * carouselPageMultiplier);
 
-      $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionSm + "px)"});
+        $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionSm + "px)"});
+      }
+
+      else if(currentCarouselPage > 3) {
+        carouselPositionSm = ($carTile1.width() + 19.5) * (3 * 3);
+
+        $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionSm + "px)"});
+
+        currentCarouselPage = 4;
+      }
     }
 
-    else if(currentCarouselPage > 3) {
-      carouselPositionSm = ($carTile1.width() + 19.5) * (3 * 3);
 
-      $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionSm + "px)"});
+    else if(carouselDragged === true) {
+      if(currentCarouselPage <= 3) {
+        carouselPositionSm = ($carTile1.width() + 19.5) * (3 * carouselPageMultiplier);
 
-      currentCarouselPage = 4;
+        otherTestShit = endCarouselPosition + carouselPositionSm;
+
+        console.log("LOOK ===== " + otherTestShit);
+
+        $popularItemCarouselInner.css({"transform": "translateX(-" + otherTestShit + "px)"});
+      }
+
+      else if(currentCarouselPage > 3) {
+        carouselPositionSm = ($carTile1.width() + 19.5) * (3 * 3);
+
+        otherTestShit = endCarouselPosition + carouselPositionSm;
+
+        console.log("LOOK ===== " + otherTestShit);
+
+        $popularItemCarouselInner.css({"transform": "translateX(-" + otherTestShit + "px)"});
+
+         // console.log("what");
+
+        currentCarouselPage = 4;
+      }
     }
+
   }
 
   else if($(window).width() <= 585 && $(window).width() > 386) {
@@ -599,9 +631,20 @@ function scrollCarousel() {
   }
 
   else if($(window).width() <= 386) {
-    carouselPositionSm = ($carTile1.width() + 19.5) * (1 * carouselPageMultiplier);
+    if(carouselDragged === false) {
+      carouselPositionSm = ($carTile1.width() + 19.5) * (1 * carouselPageMultiplier);
 
-    $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionSm + "px)"});
+      $popularItemCarouselInner.css({"transform": "translateX(-" + carouselPositionSm + "px)"});
+    }
+
+    else if(carouselDragged === true) {
+      carouselPositionSm = ($carTile1.width() + 19.5) * (1 * carouselPageMultiplier);
+
+      otherTestShit = endCarouselPosition + carouselPositionSm;
+
+      $popularItemCarouselInner.css({"transform": "translateX(-" + otherTestShit + "px)"});
+    }
+
   }
 }
 
@@ -683,7 +726,7 @@ function scrollCarousel() {
 } */
 
 
-function containCarouselDrag(ui) {
+/* function containCarouselDrag(ui) {
   var leftPosition = ui.position.left;
 
   if(leftPosition > 0 && currentCarouselPage === 1) {
@@ -749,7 +792,7 @@ function containCarouselDrag(ui) {
       ui.position.left = -($popularItemCarouselInner.width() / 20.5);
     }
   }
-}
+} */
 
 
 
@@ -893,31 +936,44 @@ $(document).ready(function() {
     revert: true,
 
     drag: function(event, ui) {
-      containCarouselDrag(ui);
+      // containCarouselDrag(ui);
 
       $popularItemCarouselInner.draggable({ revert: false });
 
-      currentCarouselPosition = ui.position.left;
+      currentCarouselPosition = $popularItemCarouselInner.position().left;
 
-      if(currentCarouselPosition > -80) {
+      if(currentCarouselPosition > carouselDragLeftLimit) {
         $popularItemCarouselInner.draggable({ revert: true });
       }
     },
 
     start: function(event, ui) {
-      currentCarouselPosition = ui.position.left;
+      currentCarouselPosition = $popularItemCarouselInner.position().left;
       console.log("start: " + currentCarouselPosition);
     },
 
     stop: function(event, ui ) {
       console.log("end: " + currentCarouselPosition);
 
-      if(currentCarouselPosition > -80) {
+      if(currentCarouselPosition > carouselDragLeftLimit) {
         console.log("");
       }
       else {
+        endCarouselPosition = $popularItemCarouselInner.position().left;
+
         console.log("Drag Page Up!");
         console.log("");
+
+        carouselDragged = true;
+
+        carouselDragLeftLimit = (currentCarouselPosition + -80);
+        console.log("new limit:" + carouselDragLeftLimit);
+
+        carouselPageUp();
+
+        $popularItemCarouselInner.addClass("carousel-animation");
+
+        scrollCarousel();
       }
     }
   });
