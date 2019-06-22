@@ -895,29 +895,57 @@ $(document).ready(function() {
     drag: function(event, ui) {
       containCarouselDrag(ui);
 
-      $popularItemCarouselInner.draggable({ revert: false });
+      //$popularItemCarouselInner.draggable({ revert: false });
+      $popularItemCarouselInner.draggable({ revertDuration: 0 });
 
       currentCarouselPosition = ui.position.left;
+      console.log(currentCarouselPosition);
 
-      if(currentCarouselPosition > -80) {
-        $popularItemCarouselInner.draggable({ revert: true });
+      if(currentCarouselPosition > -80 && currentCarouselPosition < 80) {
+        // $popularItemCarouselInner.draggable({ revert: true });
+        $popularItemCarouselInner.draggable({ revertDuration: 300 });
       }
     },
 
     start: function(event, ui) {
       currentCarouselPosition = ui.position.left;
       console.log("start: " + currentCarouselPosition);
+
+      console.log("start other: " + $popularItemCarouselInner.position().left);
     },
 
     stop: function(event, ui ) {
       console.log("end: " + currentCarouselPosition);
 
-      if(currentCarouselPosition > -80) {
+      if(currentCarouselPosition > -80 && currentCarouselPosition < 80) {
+        console.log("REVERT");
         console.log("");
       }
-      else {
-        console.log("Drag Page Up!");
+
+      else if(currentCarouselPosition < -80) {
+        console.log("PAGE UP");
         console.log("");
+
+        carouselPageUp();
+
+        /* changeCarouselPosition(); */
+
+        $popularItemCarouselInner.addClass("carousel-animation");
+
+        scrollCarousel();
+      }
+
+      else if(currentCarouselPosition > 80) {
+        console.log("PAGE DOWN");
+        console.log("");
+
+        carouselPageDown();
+
+        /* changeCarouselPosition(); */
+
+        $popularItemCarouselInner.addClass("carousel-animation");
+
+        scrollCarousel();
       }
     }
   });
