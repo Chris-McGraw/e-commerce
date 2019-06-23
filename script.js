@@ -82,6 +82,8 @@ var $caroPageNum11 = $("#caro-page-num-11");
 var $caroPageNum12 = $("#caro-page-num-12");
 var $caroPageEllipsisRight = $("#caro-page-ellipsis-right");
 
+var currentCarouselPosition = 0;
+
 
 
 /* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
@@ -690,61 +692,61 @@ function containCarouselDrag(ui) {
 
 
   else if($(window).width() > 785) {
-    if(leftPosition > ($popularItemCarouselInner.width() / 3.5)) {
-      ui.position.left = ($popularItemCarouselInner.width() / 3.5);
+    if(leftPosition > 30) {
+      ui.position.left = 30;
     }
 
     if(leftPosition < 0 && currentCarouselPage === 3) {
       ui.position.left = 0;
     }
 
-    else if(leftPosition < -($popularItemCarouselInner.width() / 3.5)) {
-      ui.position.left = -($popularItemCarouselInner.width() / 3.5);
+    else if(leftPosition < -30) {
+      ui.position.left = -30;
     }
   }
 
 
   else if($(window).width() <= 785 && $(window).width() > 585) {
-    if(leftPosition > ($popularItemCarouselInner.width() / 4.5)) {
-      ui.position.left = ($popularItemCarouselInner.width() / 4.5);
+    if(leftPosition > 30) {
+      ui.position.left = 30;
     }
 
     if(leftPosition < 0 && currentCarouselPage === 4) {
       ui.position.left = 0;
     }
 
-    else if(leftPosition < -($popularItemCarouselInner.width() / 4.5)) {
-      ui.position.left = -($popularItemCarouselInner.width() / 4.5);
+    else if(leftPosition < -30) {
+      ui.position.left = -30;
     }
   }
 
 
   else if($(window).width() <= 585 && $(window).width() > 386) {
-    if(leftPosition > ($popularItemCarouselInner.width() / 7.5)) {
-      ui.position.left = ($popularItemCarouselInner.width() / 7.5);
+    if(leftPosition > 30) {
+      ui.position.left = 30;
     }
 
     if(leftPosition < 0 && currentCarouselPage === 6) {
       ui.position.left = 0;
     }
 
-    else if(leftPosition < -($popularItemCarouselInner.width() / 7.5)) {
-      ui.position.left = -($popularItemCarouselInner.width() / 7.5);
+    else if(leftPosition < -30) {
+      ui.position.left = -30;
     }
   }
 
 
   else if($(window).width() <= 386) {
-    if(leftPosition > ($popularItemCarouselInner.width() / 20.5)) {
-      ui.position.left = ($popularItemCarouselInner.width() / 20.5);
+    if(leftPosition > 30) {
+      ui.position.left = 30;
     }
 
     if(leftPosition < 0 && currentCarouselPage === 12) {
       ui.position.left = 0;
     }
 
-    else if(leftPosition < -($popularItemCarouselInner.width() / 20.5)) {
-      ui.position.left = -($popularItemCarouselInner.width() / 20.5);
+    else if(leftPosition < -30) {
+      ui.position.left = -30;
     }
   }
 }
@@ -892,14 +894,59 @@ $(document).ready(function() {
 
     drag: function(event, ui) {
       containCarouselDrag(ui);
+
+      //$popularItemCarouselInner.draggable({ revert: false });
+      $popularItemCarouselInner.draggable({ revertDuration: 0 });
+
+      currentCarouselPosition = ui.position.left;
+      // console.log(currentCarouselPosition);
+
+      if(currentCarouselPosition >= -10 && currentCarouselPosition <= 10) {
+        // $popularItemCarouselInner.draggable({ revert: true });
+        $popularItemCarouselInner.draggable({ revertDuration: 300 });
+      }
     },
 
     start: function(event, ui) {
-      // console.log($popularItemCarouselInner.width());
+      currentCarouselPosition = ui.position.left;
+      console.log("start: " + currentCarouselPosition);
+
+      console.log("start other: " + $popularItemCarouselInner.position().left);
     },
 
     stop: function(event, ui ) {
-      // console.log(ui.position.left);
+      console.log("end: " + currentCarouselPosition);
+
+      if(currentCarouselPosition >= -10 && currentCarouselPosition <= 10) {
+        console.log("REVERT");
+        console.log("");
+      }
+
+      else if(currentCarouselPosition < -10) {
+        console.log("PAGE UP");
+        console.log("");
+
+        carouselPageUp();
+
+        /* changeCarouselPosition(); */
+
+        $popularItemCarouselInner.addClass("carousel-animation");
+
+        scrollCarousel();
+      }
+
+      else if(currentCarouselPosition > 10) {
+        console.log("PAGE DOWN");
+        console.log("");
+
+        carouselPageDown();
+
+        /* changeCarouselPosition(); */
+
+        $popularItemCarouselInner.addClass("carousel-animation");
+
+        scrollCarousel();
+      }
     }
   });
 
