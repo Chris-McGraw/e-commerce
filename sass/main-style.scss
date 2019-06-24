@@ -599,7 +599,7 @@ i {
   justify-content: flex-start;
 
   height: auto;
-  padding: 0 $margin-main;
+  padding: 0 $margin-sm;
 
   background-color: lightGray;
 }
@@ -1408,11 +1408,19 @@ i {
 
 /* ~~~~~~~ CAMPAIGN SECTION ~~~~~~~ */
   #campaign-section-container {
-    height: 40rem;
+    height: 28rem;
   }
 
   .campaign-tile {
     grid-column: span 2;
+  }
+
+  #campaign-tile-one {
+    background-position: center 85%;
+  }
+
+  #campaign-tile-two {
+    background-position: center 90%;
   }
 
 /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
@@ -1476,6 +1484,14 @@ i {
 
     width: 600%;
     padding-right: $margin-sm * 6;
+  }
+
+  #campaign-tile-one {
+    background-position: center bottom;
+  }
+
+  #campaign-tile-two {
+    background-position: center bottom;
   }
 
   .carousel-animation {
