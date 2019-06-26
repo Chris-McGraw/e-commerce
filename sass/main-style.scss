@@ -373,6 +373,100 @@ i {
   color: black;
 }
 
+#login-dropdown {
+  z-index: 30;
+  position: fixed;
+  top: 3.25rem + $margin-main + 0.22rem;
+  left: 0;
+  right: 0;
+
+  width: 14rem;
+  height: 16rem;
+  padding: $margin-main;
+  padding-bottom: none;
+  margin: auto;
+
+  background-color: rgba(255, 255, 255, 1.0);
+  border: 1px solid $medium-gray;
+}
+
+.login-header {
+  margin-left: -$margin-sm;
+  margin-bottom: $margin-x-sm;
+
+  font-family: $font-stack-main;
+  font-size: $font-icon;
+  font-weight: $font-main-normal;
+  text-transform: uppercase;
+}
+
+.login-input {
+  width: 100%;
+  height: 1.25rem;
+  padding-left: 0.2rem;
+  margin-bottom: $margin-sm;
+
+  font-family: $font-stack-main;
+  font-size: $font-sm;
+  font-weight: $font-main-light;
+}
+
+#forgot-password-link {
+  margin-top: -$margin-x-sm;
+  margin-right: -$margin-sm;
+
+  text-align: right;
+  font-family: $font-stack-secondary;
+  font-size: $font-sm;
+  font-weight: $font-secondary-light;
+  color: black;
+}
+
+#login-user-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: $margin-main;
+  left: 0;
+  right: 0;
+
+  width: 6.5rem;
+  height: 2rem;
+  margin: auto;
+
+  font-family: $font-stack-secondary;
+  font-size: 0.7rem;
+  font-weight: $font-secondary-light;
+  text-transform: uppercase;
+  color: white;
+
+  background-color: black;
+}
+
+#register-new-user-text {
+  position: absolute;
+  bottom: $margin-x-sm;
+  left: 0;
+  right: 0;
+
+  width: auto;
+  margin: auto;
+
+  text-align: center;
+  font-family: $font-stack-secondary;
+  font-size: $font-sm;
+  font-weight: $font-secondary-light;
+  color: black;
+}
+
+.login-link {
+  cursor: pointer;
+
+  color: #0000EE !important;
+}
+
 
 
 /* ---------------------------- BANNER SECTION ---------------------------- */
