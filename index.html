@@ -21,6 +21,7 @@
 </head>
 
 <body>
+  <div id="body-mask"></div>
 
 <!-- =============================== NAVBAR =============================== -->
   <div id="navbar-logo">LOGO</div>
@@ -35,7 +36,7 @@
     <ul id="nav-link-list-top">
       <i id="search-icon-dropdown" class="fa fa-search fa-lg" aria-hidden="true"></i>
 
-      <div class="nav-link-button nav-link-top-margin">
+      <div id="login-button-top" class="nav-link-button nav-link-top-margin">
         <li class="nav-link-button-text">Login</li>
         <i id="login-icon" class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>
       </div>
@@ -82,6 +83,26 @@
     <form action="javascript:void(0);">
       <input id="search-bar-dropdown" type="text" placeholder="search" />
       <i id="search-icon-dropdown-inner" class="fa fa-search fa-lg" aria-hidden="true"></i>
+    </form>
+  </div>
+
+  <div id="login-dropdown">
+    <div id="login-exit-button">X</div>
+
+    <form action="javascript:void(0);">
+      <p class="login-header">Username</p>
+      <input type="text" class="login-input" placeholder="Enter your username" />
+      <p class="login-header">Password</p>
+      <input type="text" class="login-input" placeholder="Enter your password" />
+      <p id="forgot-password-link">
+        <a class="login-link" href="#" target="_blank">Forgot Password?</a>
+      </p>
+      <button id="login-user-submit" type="button">Login
+        <i class="button-arrow fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+      </button>
+      <p id="register-new-user-text">Not a member yet?
+        <a class="login-link" href="#" target="_blank"> Register Now</a>
+      </p>
     </form>
   </div>
 

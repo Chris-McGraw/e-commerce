@@ -1,8 +1,13 @@
 /* ------------------------- VARIABLE DECLARATIONS ------------------------- */
 
+var $bodyMask = $("#body-mask");
+
 /* ~~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~~ */
 var $navLink = $(".nav-link");
 var $navLinkButton = $(".nav-link-button");
+var $loginButtonTop = $("#login-button-top");
+var $loginDropdown = $("#login-dropdown");
+var $loginExitButton = $("#login-exit-button");
 
 var $hamburgerMenu = $("#hamburger-menu");
 var $hamburgerBar = $(".hamburger-bar");
@@ -792,6 +797,48 @@ $(document).ready(function() {
 
   $navLinkButton.on("mouseleave", function() {
     $(this).removeClass("nav-link-hovered");
+  });
+
+
+
+  $loginButtonTop.on("click", function() {
+    $loginDropdown.toggleClass("body-mask-fade");
+
+    if($loginDropdown.hasClass("body-mask-fade")) {
+      $loginDropdown.css("z-index", "150");
+    }
+    else {
+      setTimeout(function() {
+        $loginDropdown.css("z-index", "0");
+      }, 300);
+    }
+
+    $bodyMask.toggleClass("body-mask-fade");
+
+    if($bodyMask.hasClass("body-mask-fade")) {
+      $bodyMask.css("z-index", "100");
+    }
+    else {
+      setTimeout(function() {
+        $bodyMask.css("z-index", "0");
+      }, 300);
+    }
+  });
+
+
+
+  $loginExitButton.on("click", function() {
+     $loginDropdown.removeClass("body-mask-fade");
+
+     setTimeout(function() {
+       $loginDropdown.css("z-index", "0");
+     }, 300);
+
+     $bodyMask.removeClass("body-mask-fade");
+
+     setTimeout(function() {
+       $bodyMask.css("z-index", "0");
+     }, 300);
   });
 
 
