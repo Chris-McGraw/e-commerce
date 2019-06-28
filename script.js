@@ -8,6 +8,7 @@ var $navLinkButton = $(".nav-link-button");
 var $loginButtonTop = $("#login-button-top");
 var $loginDropdown = $("#login-dropdown");
 var $loginExitButton = $("#login-exit-button");
+var loginDropdownActive = false;
 
 var $hamburgerMenu = $("#hamburger-menu");
 var $hamburgerBar = $(".hamburger-bar");
@@ -104,6 +105,38 @@ var $footerTileListItem = $(".footer-tile-list-item");
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
+function toggleBodyMask() {
+  $bodyMask.toggleClass("body-mask-fade");
+
+  if($bodyMask.hasClass("body-mask-fade")) {
+    $bodyMask.css("z-index", "100");
+  }
+  else {
+    setTimeout(function() {
+      $bodyMask.css("z-index", "0");
+    }, 300);
+  }
+}
+
+
+function toggleLoginDropdown() {
+  $loginDropdown.toggleClass("body-mask-fade");
+
+  if($loginDropdown.hasClass("body-mask-fade")) {
+    $loginDropdown.css("z-index", "150");
+
+    loginDropdownActive = true;
+  }
+  else {
+    setTimeout(function() {
+      $loginDropdown.css("z-index", "0");
+
+      loginDropdownActive = false;
+    }, 300);
+  }
+}
+
+
 function openDropdownNav() {
   console.log("dropdown opened");
 
@@ -802,27 +835,8 @@ $(document).ready(function() {
 
 
   $loginButtonTop.on("click", function() {
-    $loginDropdown.toggleClass("body-mask-fade");
-
-    if($loginDropdown.hasClass("body-mask-fade")) {
-      $loginDropdown.css("z-index", "150");
-    }
-    else {
-      setTimeout(function() {
-        $loginDropdown.css("z-index", "0");
-      }, 300);
-    }
-
-    $bodyMask.toggleClass("body-mask-fade");
-
-    if($bodyMask.hasClass("body-mask-fade")) {
-      $bodyMask.css("z-index", "100");
-    }
-    else {
-      setTimeout(function() {
-        $bodyMask.css("z-index", "0");
-      }, 300);
-    }
+    toggleBodyMask();
+    toggleLoginDropdown();
   });
 
 

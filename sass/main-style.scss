@@ -433,6 +433,8 @@ i {
   border: 1px solid $medium-gray;
 
   cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .login-header {
