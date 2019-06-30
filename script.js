@@ -1153,6 +1153,11 @@ $(document).ready(function() {
 
       scrollCarousel();
     }
+
+    if(dropdownNavActive === true && $(window).width() > 785) {
+      toggleBodyMask();
+      toggleDropdownNav();
+    }
   });
 
 
