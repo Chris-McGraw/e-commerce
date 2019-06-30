@@ -275,6 +275,9 @@ i {
   font-weight: 400;
   text-transform: uppercase;
   border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  cursor: pointer;
+  transition: color 150ms ease-in-out;
 }
 
 #login-icon-dropdown {

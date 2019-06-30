@@ -333,6 +333,11 @@ i {
   text-transform: uppercase;
 
   border-top: 1px solid $medium-gray;
+  border-bottom: 1px solid $medium-gray;
+
+  cursor: pointer;
+
+  transition: color 150ms ease-in-out;
 }
 
 #login-icon-dropdown {
