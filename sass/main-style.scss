@@ -547,7 +547,7 @@ i {
   background-color: lightGray;
   background-size: cover;
 
-  transition: opacity 750ms ease-in-out;
+  transition: opacity 750ms ease-in-out, filter 150ms ease-in-out;
 }
 
 #banner-page-img-left {
@@ -555,7 +555,7 @@ i {
   background-image: url("../images/shoe-pennyboard-tiny.jpg");
   background-position: center 35%;
 
-  //filter: blur(0.5rem);
+  filter: blur(0.5rem);
 }
 
 #banner-page-img-center {
@@ -668,6 +668,10 @@ i {
   background-color: white;
 }
 
+.category-tile-container {
+  overflow: hidden;
+}
+
 .category-tile {
   grid-column: span 1;
 
@@ -676,6 +680,8 @@ i {
   background-size: cover;
   background-position: center;
   background-color: lightGray;
+
+  transition: filter 150ms ease-in-out;
 }
 
 .category-tile-title {
@@ -701,7 +707,7 @@ i {
   //background-image: url("../images/male-model-crop-top.png");
   background-image: url("../images/male-model-crop-top-tiny.png");
 
-  // filter: blur(0.5rem);
+  filter: blur(0.5rem);
 }
 
 #category-tile-women {
@@ -709,14 +715,14 @@ i {
   background-image: url("../images/female-model-crop-top-tiny.png");
   background-position: 25% center;
 
-  // filter: blur(0.5rem);
+  filter: blur(0.5rem);
 }
 
 #category-tile-children {
   //background-image: url("../images/child-model.jpg");
   background-image: url("../images/child-model-tiny.jpg");
 
-  // filter: blur(0.5rem);
+  filter: blur(0.5rem);
 }
 
 .category-tile-mask {
