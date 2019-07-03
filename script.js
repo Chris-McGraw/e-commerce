@@ -984,22 +984,29 @@ $(document).ready(function() {
   $('<img/>').attr('src', 'images/shoe-pennyboard.jpg').on('load', function() {
     $(this).remove();
     $bannerPageImgLeft.css('background-image', 'url(images/shoe-pennyboard.jpg)');
-    //$bannerPageImgLeft.css('filter', 'blur(0)');
+
+    $bannerPageImgLeft.css('filter', 'blur(0)');
   });
 
   $('<img/>').attr('src', 'images/male-model-crop-top.png').on('load', function() {
     $(this).remove();
     $categoryTileMen.css('background-image', 'url(images/male-model-crop-top.png)');
+
+    $categoryTileMen.css('filter', 'blur(0)');
   });
 
   $('<img/>').attr('src', 'images/female-model-crop-top.png').on('load', function() {
     $(this).remove();
     $categoryTileWomen.css('background-image', 'url(images/female-model-crop-top.png)');
+
+    $categoryTileWomen.css('filter', 'blur(0)');
   });
 
   $('<img/>').attr('src', 'images/child-model.jpg').on('load', function() {
     $(this).remove();
     $categoryTileChildren.css('background-image', 'url(images/child-model.jpg)');
+
+    $categoryTileChildren.css('filter', 'blur(0)');
   });
 
 
