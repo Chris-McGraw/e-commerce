@@ -532,6 +532,8 @@ i {
   height: $section-height-lg;
 
   text-align: center;
+
+  overflow: hidden;
 }
 
 .banner-page-img {
@@ -549,8 +551,11 @@ i {
 }
 
 #banner-page-img-left {
-  background-image: url("../images/shoe-pennyboard.jpg");
+  // background-image: url("../images/shoe-pennyboard.jpg");
+  background-image: url("../images/shoe-pennyboard-tiny.jpg");
   background-position: center 35%;
+
+  //filter: blur(0.5rem);
 }
 
 #banner-page-img-center {
@@ -693,16 +698,25 @@ i {
 }
 
 #category-tile-men {
-  background-image: url("../images/male-model-crop-top.png");
+  //background-image: url("../images/male-model-crop-top.png");
+  background-image: url("../images/male-model-crop-top-tiny.png");
+
+  // filter: blur(0.5rem);
 }
 
 #category-tile-women {
-  background-image: url("../images/female-model-crop-top.png");
+  //background-image: url("../images/female-model-crop-top.png");
+  background-image: url("../images/female-model-crop-top-tiny.png");
   background-position: 25% center;
+
+  // filter: blur(0.5rem);
 }
 
 #category-tile-children {
-  background-image: url("../images/child-model.jpg");
+  //background-image: url("../images/child-model.jpg");
+  background-image: url("../images/child-model-tiny.jpg");
+
+  // filter: blur(0.5rem);
 }
 
 .category-tile-mask {

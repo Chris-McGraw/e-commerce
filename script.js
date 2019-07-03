@@ -32,6 +32,7 @@ var $bannerPageImgCenter = $("#banner-page-img-center");
 var $bannerPageImgRight = $("#banner-page-img-right");
 
 var homeBannerImg1 = "images/shoe-pennyboard.jpg";
+//var homeBannerImg1 = "images/shoe-pennyboard-tiny.jpg";
 var homeBannerImg2 = "images/shoe-track.jpg";
 var homeBannerImg3 = "images/shoe-fog.jpg";
 
@@ -47,6 +48,10 @@ var bannerChangeDelay = false;
 
 
 /* ~~~~~~~ CATEGORY SECTION ~~~~~~~ */
+var $categoryTileMen = $("#category-tile-men");
+var $categoryTileWomen = $("#category-tile-women");
+var $categoryTileChildren = $("#category-tile-children");
+
 var $categoryTileMask = $(".category-tile-mask");
 var $categoryTileMenMask = $("#category-tile-men-mask");
 var $categoryTileWomenMask = $("#category-tile-women-mask");
@@ -971,6 +976,33 @@ $(document).ready(function() {
 /* ~~~~~~~~ BANNER SECTION ~~~~~~~~ */
   $bannerPageCircleLeft.addClass("banner-page-circle-selected");
   $bannerPageCircleLeft.children().css("background-color", "white");
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!! TEMPORARY IMAGE PRELOAD !!!!!!!!!!!!!!!!!!!!!!!! */
+  $('<img/>').attr('src', 'images/shoe-pennyboard.jpg').on('load', function() {
+    $(this).remove();
+    $bannerPageImgLeft.css('background-image', 'url(images/shoe-pennyboard.jpg)');
+    //$bannerPageImgLeft.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/male-model-crop-top.png').on('load', function() {
+    $(this).remove();
+    $categoryTileMen.css('background-image', 'url(images/male-model-crop-top.png)');
+  });
+
+  $('<img/>').attr('src', 'images/female-model-crop-top.png').on('load', function() {
+    $(this).remove();
+    $categoryTileWomen.css('background-image', 'url(images/female-model-crop-top.png)');
+  });
+
+  $('<img/>').attr('src', 'images/child-model.jpg').on('load', function() {
+    $(this).remove();
+    $categoryTileChildren.css('background-image', 'url(images/child-model.jpg)');
+  });
+
+
 
 
 
