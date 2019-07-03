@@ -559,13 +559,19 @@ i {
 }
 
 #banner-page-img-center {
-  background-image: url("../images/shoe-track.jpg");
+  //background-image: url("../images/shoe-track.jpg");
+  background-image: url("../images/shoe-track-tiny.jpg");
   background-position: center 85%;
+
+  filter: blur(0.5rem);
 }
 
 #banner-page-img-right {
-  background-image: url("../images/shoe-fog.jpg");
+  //background-image: url("../images/shoe-fog.jpg");
+  background-image: url("../images/shoe-fog-tiny.jpg");
   background-position: center 35%;
+
+  filter: blur(0.5rem);
 }
 
 .banner-fade-in {

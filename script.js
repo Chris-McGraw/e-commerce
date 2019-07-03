@@ -988,6 +988,20 @@ $(document).ready(function() {
     $bannerPageImgLeft.css('filter', 'blur(0)');
   });
 
+  $('<img/>').attr('src', 'images/shoe-track-tiny.jpg').on('load', function() {
+    $(this).remove();
+    $bannerPageImgCenter.css('background-image', 'url(images/shoe-track.jpg)');
+
+    $bannerPageImgCenter.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/shoe-fog.jpg').on('load', function() {
+    $(this).remove();
+    $bannerPageImgRight.css('background-image', 'url(images/shoe-fog.jpg)');
+
+    $bannerPageImgRight.css('filter', 'blur(0)');
+  });
+
   $('<img/>').attr('src', 'images/male-model-crop-top.png').on('load', function() {
     $(this).remove();
     $categoryTileMen.css('background-image', 'url(images/male-model-crop-top.png)');
