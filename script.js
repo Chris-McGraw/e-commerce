@@ -988,7 +988,7 @@ $(document).ready(function() {
     $bannerPageImgLeft.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/shoe-track-tiny.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/shoe-track.jpg').on('load', function() {
     $(this).remove();
     $bannerPageImgCenter.css('background-image', 'url(images/shoe-track.jpg)');
 
