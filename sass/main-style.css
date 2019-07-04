@@ -553,7 +553,13 @@ i {
 }
 
 .category-tile-container {
+  opacity: 1;
   overflow: hidden;
+  transition: opacity 300ms ease-in-out;
+}
+
+.category-tile-container-fade {
+  opacity: 0.5;
 }
 
 .category-tile {
@@ -562,23 +568,8 @@ i {
   background-size: cover;
   background-position: center;
   background-color: lightGray;
+  cursor: pointer;
   transition: filter 150ms ease-in-out;
-}
-
-.category-tile-title {
-  display: inline-block;
-  position: relative;
-  top: -15.6rem;
-  left: 0.875rem;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-shadow: 0 0 0.1rem black;
-  letter-spacing: 0.2rem;
-  color: white;
-  -webkit-user-select: none;
-  user-select: none;
 }
 
 #category-tile-men {
@@ -597,19 +588,21 @@ i {
   filter: blur(0.5rem);
 }
 
-.category-tile-mask {
-  z-index: 10;
+.category-tile-title {
+  display: inline-block;
   position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  opacity: 0;
+  top: -15.6rem;
+  left: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.1rem black;
+  letter-spacing: 0.2rem;
+  color: white;
   cursor: pointer;
-  transition: opacity 300ms ease-in-out;
-}
-
-.category-tile-mask-fade {
-  opacity: 0.5;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* --------------------------- CAMPAIGN SECTION --------------------------- */
