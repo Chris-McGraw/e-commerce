@@ -759,40 +759,50 @@ i {
   background-color: white;
 }
 
+.campaign-tile-container {
+  grid-column: span 1;
+
+  overflow: hidden;
+}
+
 .campaign-tile {
   display: flex;
-  grid-column: span 1;
   justify-content: flex-start;
 
-  height: auto;
-  padding: 0 $margin-sm;
+  height: 100%;
 
   background-color: lightGray;
+
+  transition: filter 150ms ease-in-out;
+}
+
+#campaign-tile-one {
+  //background-image: url("../images/shoe-graffiti-close.jpg");
+  background-image: url("../images/shoe-graffiti-close-tiny.jpg");
+  background-size: cover;
+  background-position: center bottom;
+
+  filter: blur(0.5rem);
+}
+
+#campaign-tile-two {
+  //background-image: url("../images/shoe-blur-close.jpg");
+  background-image: url("../images/shoe-blur-close-tiny.jpg");
+  background-size: cover;
+  background-position: center bottom;
+
+  filter: blur(0.5rem);
 }
 
 .campaign-tile-inner {
   position: relative;
-  top: auto;
-  bottom: 0;
+  top: -8.8rem;
 
   width: 100%;
   height: auto;
-  margin-top: auto;
-  margin-bottom: $margin-lg;
+  padding: 0 $margin-sm;
 
   text-align: center;
-}
-
-#campaign-tile-one {
-  background-image: url("../images/shoe-graffiti-close.jpg");
-  background-size: cover;
-  background-position: center bottom;
-}
-
-#campaign-tile-two {
-  background-image: url("../images/shoe-blur-close.jpg");
-  background-size: cover;
-  background-position: center bottom;
 }
 
 .campaign-tile-header {
@@ -1577,7 +1587,7 @@ i {
     height: 28rem;
   }
 
-  .campaign-tile {
+  .campaign-tile-container {
     grid-column: span 2;
   }
 

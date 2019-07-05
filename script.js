@@ -57,6 +57,8 @@ var $categoryTileChildren = $("#category-tile-children");
 
 
 /* ~~~~~~~ CAMPAIGN SECTION ~~~~~~~ */
+var $campaignTileOne = $("#campaign-tile-one");
+var $campaignTileTwo = $("#campaign-tile-two");
 var $campaignButton = $(".campaign-button");
 
 
@@ -831,6 +833,8 @@ function containCarouselDrag(ui) {
     $bannerPageImgRight.css('filter', 'blur(0)');
   });
 
+
+
   $('<img/>').attr('src', 'images/male-model-crop-top.png').on('load', function() {
     $(this).remove();
     $categoryTileMen.css('background-image', 'url(images/male-model-crop-top.png)');
@@ -850,6 +854,22 @@ function containCarouselDrag(ui) {
     $categoryTileChildren.css('background-image', 'url(images/child-model.jpg)');
 
     $categoryTileChildren.css('filter', 'blur(0)');
+  });
+
+
+
+  $('<img/>').attr('src', 'images/shoe-graffiti-close.jpg').on('load', function() {
+    $(this).remove();
+    $campaignTileOne.css('background-image', 'url(images/shoe-graffiti-close.jpg)');
+
+    $campaignTileOne.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/shoe-blur-close.jpg').on('load', function() {
+    $(this).remove();
+    $campaignTileTwo.css('background-image', 'url(images/shoe-blur-close.jpg)');
+
+    $campaignTileTwo.css('filter', 'blur(0)');
   });
 
 
