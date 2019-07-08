@@ -446,7 +446,7 @@ i {
   height: 20rem;
   background-color: lightGray;
   background-size: cover;
-  transition: opacity 750ms ease-in-out, filter 150ms ease-in-out;
+  transition: opacity 750ms ease-in-out, filter 500ms ease-in-out;
 }
 
 #banner-page-img-left {
@@ -569,7 +569,7 @@ i {
   background-position: center;
   background-color: lightGray;
   cursor: pointer;
-  transition: filter 150ms ease-in-out;
+  transition: filter 500ms ease-in-out;
 }
 
 #category-tile-men {
@@ -627,7 +627,7 @@ i {
   justify-content: flex-start;
   height: 100%;
   background-color: lightGray;
-  transition: filter 150ms ease-in-out;
+  transition: filter 500ms ease-in-out;
 }
 
 #campaign-tile-one {
@@ -823,7 +823,7 @@ i {
   background-size: cover;
   background-color: #efefef;
   cursor: pointer;
-  transition: filter 750ms ease-in-out;
+  transition: filter 500ms ease-in-out;
 }
 
 .carousel-tile-top-men {
