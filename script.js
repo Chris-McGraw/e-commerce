@@ -70,6 +70,11 @@ var $arrowRightIcon = $("#arrow-right-icon");
 var $carouselTile = $(".carousel-tile");
 var $popularItemCarouselInner = $("#popular-item-carousel-inner");
 var $carTile1 = $("#car-tile-1");
+
+var $carouselTileTopMen = $(".carousel-tile-top-men");
+var $carouselTileTopWomen = $(".carousel-tile-top-women");
+var $carouselTileTopChildren = $(".carousel-tile-top-children");
+
 var carouselClicked = false;
 
 var currentCarouselPage = 1;
@@ -870,6 +875,29 @@ function containCarouselDrag(ui) {
     $campaignTileTwo.css('background-image', 'url(images/shoe-blur-close.jpg)');
 
     $campaignTileTwo.css('filter', 'blur(0)');
+  });
+
+
+
+  $('<img/>').attr('src', 'images/carousel-shoe-men.jpg').on('load', function() {
+    $(this).remove();
+    $carouselTileTopMen.css('background-image', 'url(images/carousel-shoe-men.jpg)');
+
+    $carouselTileTopMen.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/carousel-shoe-women.jpg').on('load', function() {
+    $(this).remove();
+    $carouselTileTopWomen.css('background-image', 'url(images/carousel-shoe-women.jpg)');
+
+    $carouselTileTopWomen.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/carousel-shoe-children.jpg').on('load', function() {
+    $(this).remove();
+    $carouselTileTopChildren.css('background-image', 'url(images/carousel-shoe-children.jpg)');
+
+    $carouselTileTopChildren.css('filter', 'blur(0)');
   });
 
 

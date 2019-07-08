@@ -988,7 +988,7 @@ i {
   border-color: black;
 }
 
-.carousel-tile-top {
+.carousel-tile-top-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -996,25 +996,47 @@ i {
   width: 100%;
   height: 65%;
 
+  overflow: hidden;
+}
+
+.carousel-tile-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
   background-size: cover;
   background-color: $light-gray;
 
   cursor: pointer;
+
+  transition: filter 750ms ease-in-out;
 }
 
 .carousel-tile-top-men {
   background-position: 58% top;
-  background-image: url("../images/carousel-shoe-men.jpg");
+  //background-image: url("../images/carousel-shoe-men.jpg");
+  background-image: url("../images/carousel-shoe-men-tiny.jpg");
+
+  filter: blur(0.5rem);
 }
 
 .carousel-tile-top-women {
   background-position: 55% top;
-  background-image: url("../images/carousel-shoe-women.jpg");
+  //background-image: url("../images/carousel-shoe-women.jpg");
+  background-image: url("../images/carousel-shoe-women-tiny.jpg");
+
+  filter: blur(0.5rem);
 }
 
 .carousel-tile-top-children {
   background-position: 49% top;
-  background-image: url("../images/carousel-shoe-children.jpg");
+  //background-image: url("../images/carousel-shoe-children.jpg");
+  background-image: url("../images/carousel-shoe-children-tiny.jpg");
+
+  filter: blur(0.5rem);
 }
 
 .carousel-tile-bottom {
