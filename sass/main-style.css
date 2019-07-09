@@ -435,6 +435,7 @@ i {
   width: 100%;
   height: 20rem;
   text-align: center;
+  background-color: white;
   overflow: hidden;
 }
 
@@ -444,7 +445,7 @@ i {
   top: 0;
   width: 100%;
   height: 20rem;
-  background-color: lightGray;
+  background-color: #efefef;
   background-size: cover;
   transition: opacity 750ms ease-in-out, filter 500ms ease-in-out;
 }
@@ -567,7 +568,7 @@ i {
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-color: lightGray;
+  background-color: #efefef;
   cursor: pointer;
   transition: filter 500ms ease-in-out;
 }
@@ -626,7 +627,7 @@ i {
   display: flex;
   justify-content: flex-start;
   height: 100%;
-  background-color: lightGray;
+  background-color: #efefef;
   transition: filter 500ms ease-in-out;
 }
 
@@ -740,7 +741,6 @@ i {
   text-align: center;
   text-transform: uppercase;
   color: black;
-  /* border: 1px solid red; */
 }
 
 #popular-item-carousel-inner {
@@ -750,7 +750,6 @@ i {
   position: relative;
   width: 100%;
   height: 11rem;
-  /* border: 1px solid red; */
   overflow-x: hidden;
 }
 
@@ -827,20 +826,20 @@ i {
 }
 
 .carousel-tile-top-men {
-  background-position: 58% top;
   background-image: url("../images/carousel-shoe-men-tiny.jpg");
+  background-position: 58% top;
   filter: blur(0.5rem);
 }
 
 .carousel-tile-top-women {
-  background-position: 55% top;
   background-image: url("../images/carousel-shoe-women-tiny.jpg");
+  background-position: 55% top;
   filter: blur(0.5rem);
 }
 
 .carousel-tile-top-children {
-  background-position: 49% top;
   background-image: url("../images/carousel-shoe-children-tiny.jpg");
+  background-position: 49% top;
   filter: blur(0.5rem);
 }
 
@@ -970,6 +969,7 @@ i {
   position: relative;
   height: 20rem;
   width: 100%;
+  background-color: white;
   overflow: hidden;
 }
 
