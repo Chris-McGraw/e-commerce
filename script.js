@@ -105,6 +105,7 @@ var currentCarouselPosition = 0;
 
 
 /* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
+var $featureTile = $("#feature-tile");
 var $featureButton = $(".feature-button");
 
 
@@ -898,6 +899,15 @@ function containCarouselDrag(ui) {
     $carouselTileTopChildren.css('background-image', 'url(images/carousel-shoe-children.jpg)');
 
     $carouselTileTopChildren.css('filter', 'blur(0)');
+  });
+
+
+
+  $('<img/>').attr('src', 'images/shoe-urban.jpg').on('load', function() {
+    $(this).remove();
+    $featureTile.css('background-image', 'url(images/shoe-urban.jpg)');
+
+    $featureTile.css('filter', 'blur(0)');
   });
 
 
