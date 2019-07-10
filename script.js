@@ -818,94 +818,94 @@ function containCarouselDrag(ui) {
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!! TEMPORARY IMAGE PRELOAD !!!!!!!!!!!!!!!!!!!!!!!! */
-  $('<img/>').attr('src', 'images/shoe-pennyboard.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/banner-board.jpg').on('load', function() {
     $(this).remove();
-    $bannerPageImgLeft.css('background-image', 'url(images/shoe-pennyboard.jpg)');
+    $bannerPageImgLeft.css('background-image', 'url(images/banner-board.jpg)');
 
     $bannerPageImgLeft.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/shoe-track.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/banner-track.jpg').on('load', function() {
     $(this).remove();
-    $bannerPageImgCenter.css('background-image', 'url(images/shoe-track.jpg)');
+    $bannerPageImgCenter.css('background-image', 'url(images/banner-track.jpg)');
 
     $bannerPageImgCenter.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/shoe-fog.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/banner-fog.jpg').on('load', function() {
     $(this).remove();
-    $bannerPageImgRight.css('background-image', 'url(images/shoe-fog.jpg)');
+    $bannerPageImgRight.css('background-image', 'url(images/banner-fog.jpg)');
 
     $bannerPageImgRight.css('filter', 'blur(0)');
   });
 
 
 
-  $('<img/>').attr('src', 'images/male-model-crop-top.png').on('load', function() {
+  $('<img/>').attr('src', 'images/category-men.jpg').on('load', function() {
     $(this).remove();
-    $categoryTileMen.css('background-image', 'url(images/male-model-crop-top.png)');
+    $categoryTileMen.css('background-image', 'url(images/category-men.jpg)');
 
     $categoryTileMen.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/female-model-crop-top.png').on('load', function() {
+  $('<img/>').attr('src', 'images/category-women.jpg').on('load', function() {
     $(this).remove();
-    $categoryTileWomen.css('background-image', 'url(images/female-model-crop-top.png)');
+    $categoryTileWomen.css('background-image', 'url(images/category-women.jpg)');
 
     $categoryTileWomen.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/child-model.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/category-children.jpg').on('load', function() {
     $(this).remove();
-    $categoryTileChildren.css('background-image', 'url(images/child-model.jpg)');
+    $categoryTileChildren.css('background-image', 'url(images/category-children.jpg)');
 
     $categoryTileChildren.css('filter', 'blur(0)');
   });
 
 
 
-  $('<img/>').attr('src', 'images/shoe-graffiti-close.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/campaign-one.jpg').on('load', function() {
     $(this).remove();
-    $campaignTileOne.css('background-image', 'url(images/shoe-graffiti-close.jpg)');
+    $campaignTileOne.css('background-image', 'url(images/campaign-one.jpg)');
 
     $campaignTileOne.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/shoe-blur-close.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/campaign-two.jpg').on('load', function() {
     $(this).remove();
-    $campaignTileTwo.css('background-image', 'url(images/shoe-blur-close.jpg)');
+    $campaignTileTwo.css('background-image', 'url(images/campaign-two.jpg)');
 
     $campaignTileTwo.css('filter', 'blur(0)');
   });
 
 
 
-  $('<img/>').attr('src', 'images/carousel-shoe-men.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/popular-item-men.jpg').on('load', function() {
     $(this).remove();
-    $carouselTileTopMen.css('background-image', 'url(images/carousel-shoe-men.jpg)');
+    $carouselTileTopMen.css('background-image', 'url(images/popular-item-men.jpg)');
 
     $carouselTileTopMen.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/carousel-shoe-women.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/popular-item-women.jpg').on('load', function() {
     $(this).remove();
-    $carouselTileTopWomen.css('background-image', 'url(images/carousel-shoe-women.jpg)');
+    $carouselTileTopWomen.css('background-image', 'url(images/popular-item-women.jpg)');
 
     $carouselTileTopWomen.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/carousel-shoe-children.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/popular-item-children.jpg').on('load', function() {
     $(this).remove();
-    $carouselTileTopChildren.css('background-image', 'url(images/carousel-shoe-children.jpg)');
+    $carouselTileTopChildren.css('background-image', 'url(images/popular-item-children.jpg)');
 
     $carouselTileTopChildren.css('filter', 'blur(0)');
   });
 
 
 
-  $('<img/>').attr('src', 'images/shoe-urban.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/feature-stairs.jpg').on('load', function() {
     $(this).remove();
-    $featureTile.css('background-image', 'url(images/shoe-urban.jpg)');
+    $featureTile.css('background-image', 'url(images/feature-stairs.jpg)');
 
     $featureTile.css('filter', 'blur(0)');
   });
