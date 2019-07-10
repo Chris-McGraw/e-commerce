@@ -574,18 +574,18 @@ i {
 }
 
 #category-tile-men {
-  background-image: url("../images/male-model-crop-top-tiny.png");
+  background-image: url("../images/category-men-tiny.jpg");
   filter: blur(0.5rem);
 }
 
 #category-tile-women {
-  background-image: url("../images/female-model-crop-top-tiny.png");
+  background-image: url("../images/category-women-tiny.jpg");
   background-position: 25% center;
   filter: blur(0.5rem);
 }
 
 #category-tile-children {
-  background-image: url("../images/child-model-tiny.jpg");
+  background-image: url("../images/category-children-tiny.jpg");
   filter: blur(0.5rem);
 }
 

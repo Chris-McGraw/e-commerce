@@ -841,23 +841,23 @@ function containCarouselDrag(ui) {
 
 
 
-  $('<img/>').attr('src', 'images/male-model-crop-top.png').on('load', function() {
+  $('<img/>').attr('src', 'images/category-men.jpg').on('load', function() {
     $(this).remove();
-    $categoryTileMen.css('background-image', 'url(images/male-model-crop-top.png)');
+    $categoryTileMen.css('background-image', 'url(images/category-men.jpg)');
 
     $categoryTileMen.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/female-model-crop-top.png').on('load', function() {
+  $('<img/>').attr('src', 'images/category-women.jpg').on('load', function() {
     $(this).remove();
-    $categoryTileWomen.css('background-image', 'url(images/female-model-crop-top.png)');
+    $categoryTileWomen.css('background-image', 'url(images/category-women.jpg)');
 
     $categoryTileWomen.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/child-model.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/category-children.jpg').on('load', function() {
     $(this).remove();
-    $categoryTileChildren.css('background-image', 'url(images/child-model.jpg)');
+    $categoryTileChildren.css('background-image', 'url(images/category-children.jpg)');
 
     $categoryTileChildren.css('filter', 'blur(0)');
   });
