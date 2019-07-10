@@ -880,23 +880,23 @@ function containCarouselDrag(ui) {
 
 
 
-  $('<img/>').attr('src', 'images/carousel-shoe-men.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/popular-item-men.jpg').on('load', function() {
     $(this).remove();
-    $carouselTileTopMen.css('background-image', 'url(images/carousel-shoe-men.jpg)');
+    $carouselTileTopMen.css('background-image', 'url(images/popular-item-men.jpg)');
 
     $carouselTileTopMen.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/carousel-shoe-women.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/popular-item-women.jpg').on('load', function() {
     $(this).remove();
-    $carouselTileTopWomen.css('background-image', 'url(images/carousel-shoe-women.jpg)');
+    $carouselTileTopWomen.css('background-image', 'url(images/popular-item-women.jpg)');
 
     $carouselTileTopWomen.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/carousel-shoe-children.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/popular-item-children.jpg').on('load', function() {
     $(this).remove();
-    $carouselTileTopChildren.css('background-image', 'url(images/carousel-shoe-children.jpg)');
+    $carouselTileTopChildren.css('background-image', 'url(images/popular-item-children.jpg)');
 
     $carouselTileTopChildren.css('filter', 'blur(0)');
   });
