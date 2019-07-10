@@ -632,14 +632,14 @@ i {
 }
 
 #campaign-tile-one {
-  background-image: url("../images/shoe-graffiti-close-tiny.jpg");
+  background-image: url("../images/campaign-one-tiny.jpg");
   background-size: cover;
   background-position: center bottom;
   filter: blur(0.5rem);
 }
 
 #campaign-tile-two {
-  background-image: url("../images/shoe-blur-close-tiny.jpg");
+  background-image: url("../images/campaign-two-tiny.jpg");
   background-size: cover;
   background-position: center bottom;
   filter: blur(0.5rem);

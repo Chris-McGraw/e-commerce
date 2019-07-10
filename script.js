@@ -864,16 +864,16 @@ function containCarouselDrag(ui) {
 
 
 
-  $('<img/>').attr('src', 'images/shoe-graffiti-close.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/campaign-one.jpg').on('load', function() {
     $(this).remove();
-    $campaignTileOne.css('background-image', 'url(images/shoe-graffiti-close.jpg)');
+    $campaignTileOne.css('background-image', 'url(images/campaign-one.jpg)');
 
     $campaignTileOne.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/shoe-blur-close.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/campaign-two.jpg').on('load', function() {
     $(this).remove();
-    $campaignTileTwo.css('background-image', 'url(images/shoe-blur-close.jpg)');
+    $campaignTileTwo.css('background-image', 'url(images/campaign-two.jpg)');
 
     $campaignTileTwo.css('filter', 'blur(0)');
   });
