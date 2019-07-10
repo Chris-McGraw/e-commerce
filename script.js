@@ -903,9 +903,9 @@ function containCarouselDrag(ui) {
 
 
 
-  $('<img/>').attr('src', 'images/shoe-urban.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/feature-stairs.jpg').on('load', function() {
     $(this).remove();
-    $featureTile.css('background-image', 'url(images/shoe-urban.jpg)');
+    $featureTile.css('background-image', 'url(images/feature-stairs.jpg)');
 
     $featureTile.css('filter', 'blur(0)');
   });
