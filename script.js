@@ -818,23 +818,23 @@ function containCarouselDrag(ui) {
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!! TEMPORARY IMAGE PRELOAD !!!!!!!!!!!!!!!!!!!!!!!! */
-  $('<img/>').attr('src', 'images/shoe-pennyboard.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/banner-board.jpg').on('load', function() {
     $(this).remove();
-    $bannerPageImgLeft.css('background-image', 'url(images/shoe-pennyboard.jpg)');
+    $bannerPageImgLeft.css('background-image', 'url(images/banner-board.jpg)');
 
     $bannerPageImgLeft.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/shoe-track.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/banner-track.jpg').on('load', function() {
     $(this).remove();
-    $bannerPageImgCenter.css('background-image', 'url(images/shoe-track.jpg)');
+    $bannerPageImgCenter.css('background-image', 'url(images/banner-track.jpg)');
 
     $bannerPageImgCenter.css('filter', 'blur(0)');
   });
 
-  $('<img/>').attr('src', 'images/shoe-fog.jpg').on('load', function() {
+  $('<img/>').attr('src', 'images/banner-fog.jpg').on('load', function() {
     $(this).remove();
-    $bannerPageImgRight.css('background-image', 'url(images/shoe-fog.jpg)');
+    $bannerPageImgRight.css('background-image', 'url(images/banner-fog.jpg)');
 
     $bannerPageImgRight.css('filter', 'blur(0)');
   });

@@ -451,19 +451,19 @@ i {
 }
 
 #banner-page-img-left {
-  background-image: url("../images/shoe-pennyboard-tiny.jpg");
+  background-image: url("../images/banner-board-tiny.jpg");
   background-position: center 35%;
   filter: blur(0.5rem);
 }
 
 #banner-page-img-center {
-  background-image: url("../images/shoe-track-tiny.jpg");
+  background-image: url("../images/banner-track-tiny.jpg");
   background-position: center 85%;
   filter: blur(0.5rem);
 }
 
 #banner-page-img-right {
-  background-image: url("../images/shoe-fog-tiny.jpg");
+  background-image: url("../images/banner-fog-tiny.jpg");
   background-position: center 35%;
   filter: blur(0.5rem);
 }
