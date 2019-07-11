@@ -3,6 +3,10 @@
   transform: translateY(-50%);
 }
 
+#feature-tile, .carousel-tile-top, .campaign-tile, .category-tile {
+  transition: filter 750ms ease-in-out;
+}
+
 :root {
   font-size: 24px;
   font-weight: 400;
@@ -447,7 +451,7 @@ i {
   height: 20rem;
   background-color: #efefef;
   background-size: cover;
-  transition: opacity 750ms ease-in-out, filter 500ms ease-in-out;
+  transition: opacity 750ms ease-in-out, filter 750ms ease-in-out;
 }
 
 #banner-page-img-left {
@@ -570,7 +574,6 @@ i {
   background-position: center;
   background-color: #efefef;
   cursor: pointer;
-  transition: filter 500ms ease-in-out;
 }
 
 #category-tile-men {
@@ -628,7 +631,6 @@ i {
   justify-content: flex-start;
   height: 100%;
   background-color: #efefef;
-  transition: filter 500ms ease-in-out;
 }
 
 #campaign-tile-one {
@@ -822,7 +824,6 @@ i {
   background-size: cover;
   background-color: #efefef;
   cursor: pointer;
-  transition: filter 500ms ease-in-out;
 }
 
 .carousel-tile-top-men {
@@ -984,7 +985,6 @@ i {
   background-size: cover;
   background-position: center 70%;
   filter: blur(0.5rem);
-  transition: filter 500ms ease-in-out;
 }
 
 #feature-tile-inner {

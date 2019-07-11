@@ -549,7 +549,7 @@ i {
   background-color: $light-gray;
   background-size: cover;
 
-  transition: opacity 750ms ease-in-out, filter 500ms ease-in-out;
+  transition: opacity 750ms ease-in-out, filter 750ms ease-in-out;
 }
 
 #banner-page-img-left {
@@ -696,7 +696,7 @@ i {
 
   cursor: pointer;
 
-  transition: filter 500ms ease-in-out;
+  @extend %filter-blur-transition;
 }
 
 #category-tile-men {
@@ -769,7 +769,7 @@ i {
 
   background-color: $light-gray;
 
-  transition: filter 500ms ease-in-out;
+  @extend %filter-blur-transition;
 }
 
 #campaign-tile-one {
@@ -1002,7 +1002,7 @@ i {
 
   cursor: pointer;
 
-  transition: filter 500ms ease-in-out;
+  @extend %filter-blur-transition;
 }
 
 .carousel-tile-top-men {
@@ -1195,7 +1195,7 @@ i {
 
   filter: blur(0.5rem);
 
-  transition: filter 500ms ease-in-out;
+  @extend %filter-blur-transition;
 }
 
 #feature-tile-inner {
