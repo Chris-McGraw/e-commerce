@@ -4,3 +4,7 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+%filter-blur-transition {
+  transition: filter 750ms ease-in-out;
+}

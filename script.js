@@ -817,7 +817,11 @@ function containCarouselDrag(ui) {
 
 
 
-/* !!!!!!!!!!!!!!!!!!!!!!!! TEMPORARY IMAGE PRELOAD !!!!!!!!!!!!!!!!!!!!!!!! */
+/* ---------------------------- EVENT HANDLERS ---------------------------- */
+$(document).ready(function() {
+
+
+/* !!!!!!!!!!!!!!!!!!!!!! TEMPORARY IMAGE LAZY LOAD !!!!!!!!!!!!!!!!!!!!!! */
   $('<img/>').attr('src', 'images/banner-board.jpg').on('load', function() {
     $(this).remove();
     $bannerPageImgLeft.css('background-image', 'url(images/banner-board.jpg)');
@@ -912,8 +916,6 @@ function containCarouselDrag(ui) {
 
 
 
-/* ---------------------------- EVENT HANDLERS ---------------------------- */
-$(document).ready(function() {
 
 
 /* ~~~~~~~~~~~~~ BODY ~~~~~~~~~~~~~ */
