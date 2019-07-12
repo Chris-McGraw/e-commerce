@@ -26,6 +26,9 @@ var $searchDropdown = $("#search-dropdown");
 
 
 /* ~~~~~~~~ BANNER SECTION ~~~~~~~~ */
+var $homeBannerSectionContainer = $("#home-banner-section-container");
+var bannerSectionLoaded = false;
+
 var $bannerPageImg = $(".banner-page-img");
 var $bannerPageImgLeft = $("#banner-page-img-left");
 var $bannerPageImgCenter = $("#banner-page-img-center");
@@ -48,8 +51,10 @@ var bannerChangeDelay = false;
 
 
 /* ~~~~~~~ CATEGORY SECTION ~~~~~~~ */
-var $categoryTileContainer = $(".category-tile-container");
+var $categorySectionContainer = $("#category-section-container");
+var categorySectionLoaded = false;
 
+var $categoryTileContainer = $(".category-tile-container");
 var $categoryTileMen = $("#category-tile-men");
 var $categoryTileWomen = $("#category-tile-women");
 var $categoryTileChildren = $("#category-tile-children");
@@ -57,6 +62,9 @@ var $categoryTileChildren = $("#category-tile-children");
 
 
 /* ~~~~~~~ CAMPAIGN SECTION ~~~~~~~ */
+var $campaignSectionContainer = $("#campaign-section-container");
+var campaignSectionLoaded = false;
+
 var $campaignTileOne = $("#campaign-tile-one");
 var $campaignTileTwo = $("#campaign-tile-two");
 var $campaignButton = $(".campaign-button");
@@ -64,6 +72,9 @@ var $campaignButton = $(".campaign-button");
 
 
 /* ~~~~~ POPULAR ITEM SECTION ~~~~~ */
+var $popularItemSectionContainer = $("#popular-item-section-container");
+var popularItemSectionLoaded = false;
+
 var $arrowLeftIcon = $("#arrow-left-icon");
 var $arrowRightIcon = $("#arrow-right-icon");
 
@@ -105,6 +116,9 @@ var currentCarouselPosition = 0;
 
 
 /* ~~~~~~~ FEATURE SECTION ~~~~~~~ */
+var $featureSectionContainer = $("#feature-section-container");
+var featureSectionLoaded = false;
+
 var $featureTile = $("#feature-tile");
 var $featureButton = $(".feature-button");
 
@@ -118,6 +132,156 @@ var $footerTileListItem = $(".footer-tile-list-item");
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
+function progressiveLoadBanner() {
+  $('<img/>').attr('src', 'images/banner-board.jpg').on('load', function() {
+    $(this).remove();
+    $bannerPageImgLeft.css('background-image', 'url(images/banner-board.jpg)');
+
+    $bannerPageImgLeft.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/banner-track.jpg').on('load', function() {
+    $(this).remove();
+    $bannerPageImgCenter.css('background-image', 'url(images/banner-track.jpg)');
+
+    $bannerPageImgCenter.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/banner-fog.jpg').on('load', function() {
+    $(this).remove();
+    $bannerPageImgRight.css('background-image', 'url(images/banner-fog.jpg)');
+
+    $bannerPageImgRight.css('filter', 'blur(0)');
+  });
+}
+
+
+function progressiveLoadCategory() {
+  $('<img/>').attr('src', 'images/category-men.jpg').on('load', function() {
+    $(this).remove();
+    $categoryTileMen.css('background-image', 'url(images/category-men.jpg)');
+
+    $categoryTileMen.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/category-women.jpg').on('load', function() {
+    $(this).remove();
+    $categoryTileWomen.css('background-image', 'url(images/category-women.jpg)');
+
+    $categoryTileWomen.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/category-children.jpg').on('load', function() {
+    $(this).remove();
+    $categoryTileChildren.css('background-image', 'url(images/category-children.jpg)');
+
+    $categoryTileChildren.css('filter', 'blur(0)');
+  });
+}
+
+
+function progressiveLoadCampaign() {
+  $('<img/>').attr('src', 'images/campaign-one.jpg').on('load', function() {
+    $(this).remove();
+    $campaignTileOne.css('background-image', 'url(images/campaign-one.jpg)');
+
+    $campaignTileOne.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/campaign-two.jpg').on('load', function() {
+    $(this).remove();
+    $campaignTileTwo.css('background-image', 'url(images/campaign-two.jpg)');
+
+    $campaignTileTwo.css('filter', 'blur(0)');
+  });
+}
+
+
+function progressiveLoadPopularItem() {
+  $('<img/>').attr('src', 'images/popular-item-men.jpg').on('load', function() {
+    $(this).remove();
+    $carouselTileTopMen.css('background-image', 'url(images/popular-item-men.jpg)');
+
+    $carouselTileTopMen.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/popular-item-women.jpg').on('load', function() {
+    $(this).remove();
+    $carouselTileTopWomen.css('background-image', 'url(images/popular-item-women.jpg)');
+
+    $carouselTileTopWomen.css('filter', 'blur(0)');
+  });
+
+  $('<img/>').attr('src', 'images/popular-item-children.jpg').on('load', function() {
+    $(this).remove();
+    $carouselTileTopChildren.css('background-image', 'url(images/popular-item-children.jpg)');
+
+    $carouselTileTopChildren.css('filter', 'blur(0)');
+  });
+}
+
+
+function progressiveLoadFeature() {
+  $('<img/>').attr('src', 'images/feature-stairs.jpg').on('load', function() {
+    $(this).remove();
+    $featureTile.css('background-image', 'url(images/feature-stairs.jpg)');
+
+    $featureTile.css('filter', 'blur(0)');
+  });
+}
+
+
+function lazyLoadSection(sec) {
+  var sectionId = sec.attr("id");
+
+  var newRect = document.getElementById(sectionId).getBoundingClientRect();
+
+  /* console.log("section top = " + newRect.top);
+  console.log("section bottom = " + newRect.bottom);
+  console.log(""); */
+
+  if(newRect.top <= $(window).height() && newRect.bottom >= 65) {
+
+    if(sec === $homeBannerSectionContainer) {
+      progressiveLoadBanner();
+
+      console.log("load section 1");
+
+      bannerSectionLoaded = true;
+    }
+    else if(sec === $categorySectionContainer) {
+      progressiveLoadCategory();
+
+      console.log("load section 2");
+
+      categorySectionLoaded = true;
+    }
+    else if(sec === $campaignSectionContainer) {
+      progressiveLoadCampaign();
+
+      console.log("load section 3");
+
+      campaignSectionLoaded = true;
+    }
+    else if(sec === $popularItemSectionContainer) {
+      progressiveLoadPopularItem();
+
+      console.log("load section 4");
+
+      popularItemSectionLoaded = true;
+    }
+    else if(sec === $featureSectionContainer) {
+      progressiveLoadFeature();
+
+      console.log("load section 5");
+
+      featureSectionLoaded = true;
+    }
+
+  }
+}
+
+
 function toggleBodyMask() {
   if(bodyMaskActive === false) {
     bodyMaskActive = true;
@@ -818,11 +982,36 @@ function containCarouselDrag(ui) {
 
 
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
+$(window).on("DOMContentLoaded load resize scroll", function() {
+
+  if(bannerSectionLoaded === false) {
+    lazyLoadSection($homeBannerSectionContainer);
+  }
+
+  if(categorySectionLoaded === false) {
+    lazyLoadSection($categorySectionContainer);
+  }
+
+  if(campaignSectionLoaded === false) {
+    lazyLoadSection($campaignSectionContainer);
+  }
+
+  if(popularItemSectionLoaded === false) {
+    lazyLoadSection($popularItemSectionContainer);
+  }
+
+  if(featureSectionLoaded === false) {
+    lazyLoadSection($featureSectionContainer);
+  }
+
+});
+
+
+
 $(document).ready(function() {
 
-
 /* !!!!!!!!!!!!!!!!!!!!!! TEMPORARY IMAGE LAZY LOAD !!!!!!!!!!!!!!!!!!!!!! */
-  $('<img/>').attr('src', 'images/banner-board.jpg').on('load', function() {
+  /* $('<img/>').attr('src', 'images/banner-board.jpg').on('load', function() {
     $(this).remove();
     $bannerPageImgLeft.css('background-image', 'url(images/banner-board.jpg)');
 
@@ -841,11 +1030,11 @@ $(document).ready(function() {
     $bannerPageImgRight.css('background-image', 'url(images/banner-fog.jpg)');
 
     $bannerPageImgRight.css('filter', 'blur(0)');
-  });
+  }); */
 
 
 
-  $('<img/>').attr('src', 'images/category-men.jpg').on('load', function() {
+  /* $('<img/>').attr('src', 'images/category-men.jpg').on('load', function() {
     $(this).remove();
     $categoryTileMen.css('background-image', 'url(images/category-men.jpg)');
 
@@ -864,11 +1053,11 @@ $(document).ready(function() {
     $categoryTileChildren.css('background-image', 'url(images/category-children.jpg)');
 
     $categoryTileChildren.css('filter', 'blur(0)');
-  });
+  }); */
 
 
 
-  $('<img/>').attr('src', 'images/campaign-one.jpg').on('load', function() {
+  /* $('<img/>').attr('src', 'images/campaign-one.jpg').on('load', function() {
     $(this).remove();
     $campaignTileOne.css('background-image', 'url(images/campaign-one.jpg)');
 
@@ -880,11 +1069,11 @@ $(document).ready(function() {
     $campaignTileTwo.css('background-image', 'url(images/campaign-two.jpg)');
 
     $campaignTileTwo.css('filter', 'blur(0)');
-  });
+  }); */
 
 
 
-  $('<img/>').attr('src', 'images/popular-item-men.jpg').on('load', function() {
+  /* $('<img/>').attr('src', 'images/popular-item-men.jpg').on('load', function() {
     $(this).remove();
     $carouselTileTopMen.css('background-image', 'url(images/popular-item-men.jpg)');
 
@@ -903,16 +1092,16 @@ $(document).ready(function() {
     $carouselTileTopChildren.css('background-image', 'url(images/popular-item-children.jpg)');
 
     $carouselTileTopChildren.css('filter', 'blur(0)');
-  });
+  }); */
 
 
 
-  $('<img/>').attr('src', 'images/feature-stairs.jpg').on('load', function() {
+  /* $('<img/>').attr('src', 'images/feature-stairs.jpg').on('load', function() {
     $(this).remove();
     $featureTile.css('background-image', 'url(images/feature-stairs.jpg)');
 
     $featureTile.css('filter', 'blur(0)');
-  });
+  }); */
 
 
 
