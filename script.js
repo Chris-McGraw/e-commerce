@@ -982,128 +982,47 @@ function containCarouselDrag(ui) {
 
 
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
-$(window).on("DOMContentLoaded load resize scroll", function() {
-
-  if(bannerSectionLoaded === false) {
-    lazyLoadSection($homeBannerSectionContainer);
-  }
-
-  if(categorySectionLoaded === false) {
-    lazyLoadSection($categorySectionContainer);
-  }
-
-  if(campaignSectionLoaded === false) {
-    lazyLoadSection($campaignSectionContainer);
-  }
-
-  if(popularItemSectionLoaded === false) {
-    lazyLoadSection($popularItemSectionContainer);
-  }
-
-  if(featureSectionLoaded === false) {
-    lazyLoadSection($featureSectionContainer);
-  }
-
-});
-
-
-
 $(document).ready(function() {
 
-/* !!!!!!!!!!!!!!!!!!!!!! TEMPORARY IMAGE LAZY LOAD !!!!!!!!!!!!!!!!!!!!!! */
-  /* $('<img/>').attr('src', 'images/banner-board.jpg').on('load', function() {
-    $(this).remove();
-    $bannerPageImgLeft.css('background-image', 'url(images/banner-board.jpg)');
+/* ~~~~~~~~~~~~ WINDOW ~~~~~~~~~~~~ */
+  $(window).on("DOMContentLoaded load resize scroll", function() {
+    if(bannerSectionLoaded === false) {
+      lazyLoadSection($homeBannerSectionContainer);
+    }
 
-    $bannerPageImgLeft.css('filter', 'blur(0)');
+    if(categorySectionLoaded === false) {
+      lazyLoadSection($categorySectionContainer);
+    }
+
+    if(campaignSectionLoaded === false) {
+      lazyLoadSection($campaignSectionContainer);
+    }
+
+    if(popularItemSectionLoaded === false) {
+      lazyLoadSection($popularItemSectionContainer);
+    }
+
+    if(featureSectionLoaded === false) {
+      lazyLoadSection($featureSectionContainer);
+    }
   });
 
-  $('<img/>').attr('src', 'images/banner-track.jpg').on('load', function() {
-    $(this).remove();
-    $bannerPageImgCenter.css('background-image', 'url(images/banner-track.jpg)');
 
-    $bannerPageImgCenter.css('filter', 'blur(0)');
+
+  $(window).resize(function() {
+    if(carouselClicked === true) {
+      /* changeCarouselPosition(); */
+
+      $popularItemCarouselInner.removeClass("carousel-animation");
+
+      scrollCarousel();
+    }
+
+    if(dropdownNavActive === true && $(window).width() > 785) {
+      toggleBodyMask();
+      toggleDropdownNav();
+    }
   });
-
-  $('<img/>').attr('src', 'images/banner-fog.jpg').on('load', function() {
-    $(this).remove();
-    $bannerPageImgRight.css('background-image', 'url(images/banner-fog.jpg)');
-
-    $bannerPageImgRight.css('filter', 'blur(0)');
-  }); */
-
-
-
-  /* $('<img/>').attr('src', 'images/category-men.jpg').on('load', function() {
-    $(this).remove();
-    $categoryTileMen.css('background-image', 'url(images/category-men.jpg)');
-
-    $categoryTileMen.css('filter', 'blur(0)');
-  });
-
-  $('<img/>').attr('src', 'images/category-women.jpg').on('load', function() {
-    $(this).remove();
-    $categoryTileWomen.css('background-image', 'url(images/category-women.jpg)');
-
-    $categoryTileWomen.css('filter', 'blur(0)');
-  });
-
-  $('<img/>').attr('src', 'images/category-children.jpg').on('load', function() {
-    $(this).remove();
-    $categoryTileChildren.css('background-image', 'url(images/category-children.jpg)');
-
-    $categoryTileChildren.css('filter', 'blur(0)');
-  }); */
-
-
-
-  /* $('<img/>').attr('src', 'images/campaign-one.jpg').on('load', function() {
-    $(this).remove();
-    $campaignTileOne.css('background-image', 'url(images/campaign-one.jpg)');
-
-    $campaignTileOne.css('filter', 'blur(0)');
-  });
-
-  $('<img/>').attr('src', 'images/campaign-two.jpg').on('load', function() {
-    $(this).remove();
-    $campaignTileTwo.css('background-image', 'url(images/campaign-two.jpg)');
-
-    $campaignTileTwo.css('filter', 'blur(0)');
-  }); */
-
-
-
-  /* $('<img/>').attr('src', 'images/popular-item-men.jpg').on('load', function() {
-    $(this).remove();
-    $carouselTileTopMen.css('background-image', 'url(images/popular-item-men.jpg)');
-
-    $carouselTileTopMen.css('filter', 'blur(0)');
-  });
-
-  $('<img/>').attr('src', 'images/popular-item-women.jpg').on('load', function() {
-    $(this).remove();
-    $carouselTileTopWomen.css('background-image', 'url(images/popular-item-women.jpg)');
-
-    $carouselTileTopWomen.css('filter', 'blur(0)');
-  });
-
-  $('<img/>').attr('src', 'images/popular-item-children.jpg').on('load', function() {
-    $(this).remove();
-    $carouselTileTopChildren.css('background-image', 'url(images/popular-item-children.jpg)');
-
-    $carouselTileTopChildren.css('filter', 'blur(0)');
-  }); */
-
-
-
-  /* $('<img/>').attr('src', 'images/feature-stairs.jpg').on('load', function() {
-    $(this).remove();
-    $featureTile.css('background-image', 'url(images/feature-stairs.jpg)');
-
-    $featureTile.css('filter', 'blur(0)');
-  }); */
-
-
 
 
 
@@ -1440,22 +1359,6 @@ $(document).ready(function() {
     $(this).removeClass("nav-link-hovered");
   });
 
-
-
-  $(window).resize(function() {
-    if(carouselClicked === true) {
-      /* changeCarouselPosition(); */
-
-      $popularItemCarouselInner.removeClass("carousel-animation");
-
-      scrollCarousel();
-    }
-
-    if(dropdownNavActive === true && $(window).width() > 785) {
-      toggleBodyMask();
-      toggleDropdownNav();
-    }
-  });
 
 
 });
