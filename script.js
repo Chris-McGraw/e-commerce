@@ -1,4 +1,5 @@
 /* ------------------------- VARIABLE DECLARATIONS ------------------------- */
+var windowTop = 0;
 
 var $bodyMask = $("#body-mask");
 var bodyMaskActive = false;
@@ -233,15 +234,9 @@ function progressiveLoadFeature() {
 
 function lazyLoadSection(sec) {
   var sectionId = sec.attr("id");
+  var rect = document.getElementById(sectionId).getBoundingClientRect();
 
-  var newRect = document.getElementById(sectionId).getBoundingClientRect();
-
-  /* console.log("section top = " + newRect.top);
-  console.log("section bottom = " + newRect.bottom);
-  console.log(""); */
-
-  if(newRect.top <= $(window).height() && newRect.bottom >= 65) {
-
+  if(rect.top <= $(window).height() && rect.bottom >= windowTop) {
     if(sec === $homeBannerSectionContainer) {
       progressiveLoadBanner();
 
@@ -277,7 +272,6 @@ function lazyLoadSection(sec) {
 
       featureSectionLoaded = true;
     }
-
   }
 }
 
@@ -986,6 +980,12 @@ $(document).ready(function() {
 
 /* ~~~~~~~~~~~~ WINDOW ~~~~~~~~~~~~ */
   $(window).on("DOMContentLoaded load resize scroll", function() {
+    if(bannerSectionLoaded === false || categorySectionLoaded === false ||
+    campaignSectionLoaded === false || popularItemSectionLoaded === false ||
+    featureSectionLoaded === false) {
+      windowTop = $homeBannerSectionContainer.position().top;
+    }
+
     if(bannerSectionLoaded === false) {
       lazyLoadSection($homeBannerSectionContainer);
     }
