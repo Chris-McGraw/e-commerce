@@ -1066,6 +1066,7 @@ i {
 
 #register-text {
   grid-column: span 3;
+  z-index: 10;
   height: auto;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
@@ -1080,6 +1081,7 @@ i {
 
 #register-email-container {
   grid-column: span 2;
+  z-index: 10;
   height: 2.5rem;
   text-align: right;
 }
@@ -1101,7 +1103,6 @@ i {
 }
 
 #register-email-submit {
-  z-index: 20;
   position: relative;
   top: -2.5rem;
   width: 2.5rem;
