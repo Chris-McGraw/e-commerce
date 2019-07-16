@@ -1294,6 +1294,8 @@ i {
 #register-text {
   grid-column: span 3;
 
+  z-index: 10;
+
   height: auto;
 
   font-family: $font-stack-main;
@@ -1310,6 +1312,8 @@ i {
 
 #register-email-container {
   grid-column: span 2;
+
+  z-index: 10;
 
   height: 2.5rem;
 
@@ -1338,7 +1342,6 @@ i {
 }
 
 #register-email-submit {
-  z-index: 20;
   position: relative;
   top: -2.5rem;
 
