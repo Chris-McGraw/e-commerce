@@ -14,6 +14,7 @@ var $loginExitButton = $("#login-exit-button");
 var loginDropdownActive = false;
 
 var $hamburgerMenu = $("#hamburger-menu");
+var $hamburgerCircle = $(".hamburger-circle");
 var $hamburgerBar = $(".hamburger-bar");
 
 var $navbarDropdown = $("#navbar-dropdown");
@@ -1096,10 +1097,12 @@ $(document).ready(function() {
 
 
   $hamburgerMenu.on("mouseenter", function() {
+    $hamburgerCircle.addClass("nav-link-icon-hovered");
     $hamburgerBar.addClass("nav-link-icon-hovered");
   });
 
   $hamburgerMenu.on("mouseleave", function() {
+    $hamburgerCircle.removeClass("nav-link-icon-hovered");
     $hamburgerBar.removeClass("nav-link-icon-hovered");
   });
 
